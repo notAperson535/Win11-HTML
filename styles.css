@@ -1,7 +1,11 @@
 body{
     background-image: url("https://win11.blueedge.me/img/wallpaper/default/img0.jpg");
+    background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+    transition: all .2s ease;
     margin:0;
     padding:0;
   }

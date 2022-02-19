@@ -2,6 +2,8 @@ body{
     background-image: url("https://win11.blueedge.me/img/wallpaper/default/img0.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin:0;
+    padding:0;
   }
   
   .taskbaricons {

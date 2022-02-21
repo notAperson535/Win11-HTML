@@ -1,50 +1,53 @@
 body{
-    background-image: url("img/background.jpg");
-    overflow: hidden;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    min-width: 100vw;
-    transition: all .2s ease;
-    margin:0;
-    padding:0;
-  }
-  
-  .taskbaricons {
-    width:25px;margin: 11px 10px;
-  }
-  .taskbar{
-    backdrop-filter: saturate(3) blur(20px);
-    background-color: rgba(255,255,255,.80);
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    margin:0;
-    padding:0;
-    display:flex;
-    justify-content: center;
-  }
-
-  .startmenu{
-    position: absolute;
-    bottom: -655px;
-    width: 100%;
-    text-align: center;
-    transition: all 0.3s ease-in; 
+  background-image: url("img/background.jpg");
+  overflow: hidden;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  transition: all .2s ease;
+  margin:0;
+  padding:0;
 }
 
-  .startmenu img{
-    width: 289;
-    border-radius: 8px;
-  }
-
-.box-wrapper {
-  -webkit-transition-duration: 600ms;
-  transition-duration: 600ms;
+.taskbaricons {
+  width:25px;margin: 11px 10px;
+}
+.taskbar{
+  backdrop-filter: saturate(3) blur(20px);
+  background-color: rgba(255,255,255,.80);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content: center;
 }
 
-.box-wrapper.loading {
-  transform: translate(100%);
-  -webkit-transform: translate(100%);    
+.startmenu{
+  position: absolute;
+  bottom: -655px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease-in; 
+}
+
+.startmenu img{
+  width: 600;
+  border-radius: 8px;
+}
+
+.searchmenu{
+  position: absolute;
+  bottom: -655px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease-in; 
+}
+
+.searchmenu img{
+  width: 600;
+  border-radius: 8px;
 }

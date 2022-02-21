@@ -1,5 +1,6 @@
 body{
     background-image: url("img/background.jpg");
+    overflow: hidden;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,3 +25,26 @@ body{
     display:flex;
     justify-content: center;
   }
+
+  .startmenu{
+    position: absolute;
+    bottom: -655px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in; 
+}
+
+  .startmenu img{
+    width: 289;
+    border-radius: 8px;
+  }
+
+.box-wrapper {
+  -webkit-transition-duration: 600ms;
+  transition-duration: 600ms;
+}
+
+.box-wrapper.loading {
+  transform: translate(100%);
+  -webkit-transform: translate(100%);    
+}

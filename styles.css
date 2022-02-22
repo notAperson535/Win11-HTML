@@ -35,7 +35,7 @@ body{
 }
 
 .startmenu img{
-  width: 600;
+  height: 600;
   border-radius: 8px;
 }
 
@@ -48,6 +48,6 @@ body{
 }
 
 .searchmenu img{
-  width: 600;
+  height: 600;
   border-radius: 8px;
 }

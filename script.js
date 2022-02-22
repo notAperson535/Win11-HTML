@@ -1,18 +1,21 @@
 let startbutton = document.getElementsByClassName("startbutton")[0]
 let startmenu = document.getElementsByClassName("startmenu")[0]
+let searchbutton = document.getElementsByClassName("searchbutton")[0]
+let searchmenu = document.getElementsByClassName("searchmenu")[0]
 
 startbutton.addEventListener("click", ()=>{
 	console.log("clicked");
 	if(startmenu.style.bottom == "50px"){
+		startmenu.style.transition = "all 0.3s ease-in"
 		startmenu.style.bottom = "-655px"
 	}
 	else{
+		startmenu.style.transition = "all 0.3s ease-in"
 		startmenu.style.bottom = "50px"
+		searchmenu.style.bottom = "-655px"
+		searchmenu.style.transition = "all 0.0s ease-in"
 	}
 })
-
-let searchbutton = document.getElementsByClassName("searchbutton")[0]
-let searchmenu = document.getElementsByClassName("searchmenu")[0]
 
 searchbutton.addEventListener("click", ()=>{
 	console.log("clicked");
@@ -20,6 +23,9 @@ searchbutton.addEventListener("click", ()=>{
 		searchmenu.style.bottom = "-655px"
 	}
 	else{
+		searchmenu.style.transition = "all 0.3s ease-in"
 		searchmenu.style.bottom = "50px"
+		startmenu.style.bottom = "-655px"
+		startmenu.style.transition = "all 0.0s ease-in"
 	}
 })

@@ -11,7 +11,7 @@ startbutton.addEventListener("click", ()=>{
 	}
 	else{
 		if(searchmenu.style.bottom == "50px"){
-			startmenu.style.transition = "all 0.0s ease-in"
+			searchmenu.style.transition = "all 0.0s ease-in"
 			searchmenu.style.bottom = "-655px"
 			startmenu.style.transition = "all 0.0s ease-in"
 			startmenu.style.bottom = "50px"

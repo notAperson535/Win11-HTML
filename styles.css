@@ -9,6 +9,21 @@ body{
   transition: all .2s ease;
   margin:0;
   padding:0;
+  font-family: 'Segoe UI Variable', sans-serif;
+}
+
+.taskbar{
+  backdrop-filter: saturate(3) blur(20px);
+  background-color: rgba(255,255,255,.80);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin:0;
+  padding:0;
+  height:47px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .taskbaricons {
@@ -25,32 +40,70 @@ body{
   
 }
 
-
-.taskbar{
-  backdrop-filter: saturate(3) blur(20px);
-  background-color: rgba(255,255,255,.80);
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  margin:0;
-  padding:0;
-  height:47px;
-  display:flex;
-  align-items: center;
+.center{
+  display: flex;
   justify-content: center;
+}
+
+.sTop{
+   margin-top: 25px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.allapps img{
+  height: 20px;
+  border-radius: 5px;
+  margin-right: 25px;
 }
 
 .startmenu{
   position: absolute;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255,255,255,.80);
   bottom: -655px;
-  width: 100%;
-  text-align: center;
-  transition: all 0.3s ease-in; 
+  height: 600px;
+  width: 550px;
+  transition: all 0.3s ease-in;
+  border-radius: 8px; 
 }
 
-.startmenu img{
-  height: 600;
-  border-radius: 8px;
+.startlabels{
+  margin: 25px;
+  margin-top: 5px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.pinnedlabel{
+  margin: 30px;
+  margin-bottom: 0px;
+  margin-top: -5px;
+}
+
+.starticons{
+  position: absolute;
+  justify-content: center;
+  margin: 25px;
+  margin-top: 5px;
+}
+
+.starticons img{
+  width:40px;
+  display: block;
+  margin: 25px;
+  margin-bottom: 0px;
+}
+
+.starticons:hover{
+  border:solid 5px white;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255,255,255,.80);
+  border-radius:5px;
+  margin: 20px;
+  margin-top: 0px;
 }
 
 .searchmenu{
@@ -73,6 +126,6 @@ body{
 }
 
 .widgetsmenu img{
-  height: 575px;
+  width: 575px;
   border-radius: 8px;
 }

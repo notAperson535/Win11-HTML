@@ -2,6 +2,8 @@ let startbutton = document.getElementsByClassName("startbutton")[0]
 let startmenu = document.getElementsByClassName("startmenu")[0]
 let searchbutton = document.getElementsByClassName("searchbutton")[0]
 let searchmenu = document.getElementsByClassName("searchmenu")[0]
+let widgetsbutton = document.getElementsByClassName("widgetsbutton")[0]
+let widgetsmenu = document.getElementsByClassName("widgetsmenu")[0]
 
 startbutton.addEventListener("click", ()=>{
 	console.log("clicked");
@@ -42,4 +44,18 @@ searchbutton.addEventListener("click", ()=>{
 		}
 
 	}
+})
+
+widgetsbutton.addEventListener("click", ()=>{
+	console.log("clicked");
+	if(widgetsmenu.style.left == "10px"){
+		widgetsmenu.style.transition = "all 0.3s ease-in"
+		widgetsmenu.style.left = "-1000px"
+	}
+	else{
+		widgetsmenu.style.transition = "all 0.3s ease-in"
+		widgetsmenu.style.left = "10px"
+		}
+
+	
 })

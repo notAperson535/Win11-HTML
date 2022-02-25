@@ -65,3 +65,14 @@ body{
   height: 600;
   border-radius: 8px;
 }
+.widgetsmenu{
+  position: absolute;
+  left: -1000px;
+  width: 100%;
+  transition: all 0.3s ease-in; 
+}
+
+.widgetsmenu img{
+  height: 575px;
+  border-radius: 8px;
+}

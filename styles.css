@@ -45,7 +45,7 @@ body{
   justify-content: center;
 }
 
-.sTop{
+.sTopLabels{
    margin-top: 25px;
    margin-bottom: 25px;
    display: flex;
@@ -64,8 +64,8 @@ body{
   backdrop-filter: blur(20px);
   background-color: rgba(255,255,255,.80);
   bottom: -655px;
-  height: 600px;
-  width: 550px;
+  height: 650px;
+  width: 600px;
   transition: all 0.3s ease-in;
   border-radius: 8px; 
 }

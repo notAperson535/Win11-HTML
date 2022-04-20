@@ -89,11 +89,16 @@ body{
   margin: 0px;
 }
 
+.sApps{
+  display: flex;
+  justify-content: center;
+}
+
 .starticons{
    text-align: justify;
    justify-content: center;
    margin: 0px;
-   margin-left: 10px;
+   margin-left: 15px;
    width: 80px;
    float: left;
 }

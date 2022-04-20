@@ -84,19 +84,24 @@ body{
   margin-top: -5px;
 }
 
+.startIconContainer{
+  margin-bottom: 10px;
+  margin: 0px;
+}
+
 .starticons{
    text-align: justify;
    justify-content: center;
    margin: 0px;
-   margin-left: 15px;
-   width: 100px;
+   margin-left: 10px;
+   width: 80px;
    float: left;
 }
 
 .starticons img{
   display: block;
   margin: 0 auto;
-  width:40px;
+  width:35px;
 }
 
 .starticons:hover{

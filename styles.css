@@ -71,7 +71,6 @@ body{
 }
 
 .startlabels{
-  margin: 10px;
   margin-top: 5px;
   justify-content: center;
   text-align: center;
@@ -115,7 +114,6 @@ body{
   background-color: rgba(255,255,255,.80);
   border-radius:5px;
   margin: -5px;
-  margin-left: 10px;
 }
 
 .searchmenu{

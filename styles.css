@@ -45,7 +45,7 @@ body{
   justify-content: center;
 }
 
-.sTopLabels{
+.sTop{
    margin-top: 25px;
    margin-bottom: 25px;
    display: flex;
@@ -65,7 +65,7 @@ body{
   background-color: rgba(255,255,255,.80);
   bottom: -655px;
   height: 650px;
-  width: 600px;
+  width: 625px;
   transition: all 0.3s ease-in;
   border-radius: 8px; 
 }

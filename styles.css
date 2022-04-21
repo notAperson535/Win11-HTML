@@ -84,11 +84,12 @@ body{
 .starticons img{
   display: block;
   margin: 0 auto;
+  margin-top: 15px;
   width:30px;
 }
 
 .starticons{
-  width: 75px;
+  width: 100px;
 }
 
 .startlabels{

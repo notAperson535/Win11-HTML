@@ -70,22 +70,10 @@ body{
   border-radius: 8px; 
 }
 
-.startlabels{
-  margin-top: 5px;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-
 .pinnedlabel{
   margin: 30px;
   margin-bottom: 0px;
   margin-top: -5px;
-}
-
-.startIconContainer{
-  margin-bottom: 10px;
-  margin: 0px;
 }
 
 .sApps{
@@ -93,28 +81,24 @@ body{
   justify-content: center;
 }
 
-.starticons{
-   text-align: justify;
-   justify-content: center;
-   margin: 0px;
-   margin-left: 15px;
-   width: 80px;
-   float: left;
-}
-
 .starticons img{
   display: block;
   margin: 0 auto;
-  width:35px;
+  width:30px;
+}
+
+.starticons{
+  width: 75px;
+}
+
+.startlabels{
+  margin-top: 3px
 }
 
 .starticons:hover{
-  border:solid 5px white;
-  backdrop-filter: blur(20px);
-  background-color: rgba(255,255,255,.80);
-  border-radius:5px;
-  margin-left: 10px;
-  margin: -5px;
+  background: white;
+  width: 100px;
+  border-radius: 5px;
 }
 
 .searchmenu{
@@ -129,6 +113,7 @@ body{
   height: 600;
   border-radius: 8px;
 }
+
 .widgetsmenu{
   position: absolute;
   left: -1000px;

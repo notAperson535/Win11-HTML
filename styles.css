@@ -77,8 +77,15 @@ body{
 }
 
 .sApps{
+  position: absolute;
+}
+
+.startrow{
   display: flex;
   justify-content: center;
+  margin-left: 15px;
+  width: 595px;
+  max-width: 595px;
 }
 
 .starticons img{

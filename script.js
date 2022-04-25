@@ -7,7 +7,10 @@ let widgetsmenu = document.getElementsByClassName("widgetsmenu")[0]
 
 startbutton.addEventListener("click", ()=>{
 
-	if(startmenu.style.bottom == "-655px"){
+	if(startmenu.style.bottom == "50px"){
+		startmenu.style.bottom = "-655px"
+	}
+	else{
 		startmenu.style.bottom = "50px"
 	}
 })
@@ -24,9 +27,12 @@ searchbutton.addEventListener("click", ()=>{
 
 widgetsbutton.addEventListener("click", ()=>{
 
-	if(widgetsmenu.style.left == "-1000px"){
-		widgetsmenu.style.left = "10px"
-	}	
+	if(widgetsmenu.style.bottom == "50px"){
+		widgetsmenu.style.bottom = "-655px"
+	}
+	else{
+		widgetsmenu.style.bottom = "50px"
+	}
 })
 
 window.addEventListener('mouseup', function(e) {

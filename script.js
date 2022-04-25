@@ -55,7 +55,7 @@ widgetsbutton.addEventListener("click", ()=>{
 })
 
 var startexceptions = [
-	document.getElementByClassName('startbutton')
+	document.getElementsByClassName('startbutton')
    ]
    
    startmenu.addEventListener('outclick', function (e) {

@@ -1,5 +1,5 @@
 let startbutton = document.getElementsByClassName("startbutton")[0]
-let startmenu = document.getElementsByClassName("startmenu")[0]
+var startmenu = document.getElementsByClassName("startmenu")[0]
 let searchbutton = document.getElementsByClassName("searchbutton")[0]
 let searchmenu = document.getElementsByClassName("searchmenu")[0]
 let widgetsbutton = document.getElementsByClassName("widgetsbutton")[0]
@@ -53,3 +53,7 @@ widgetsbutton.addEventListener("click", ()=>{
 
 	
 })
+
+startmenu.onoutclick = function () {
+	hide(startmenu)
+}

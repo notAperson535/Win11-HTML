@@ -53,12 +53,3 @@ widgetsbutton.addEventListener("click", ()=>{
 
 	
 })
-
-var startexceptions = [
-	document.getElementsByClassName('startbutton')
-   ]
-   
-   startmenu.addEventListener('outclick', function (e) {
-	   startmenu.style.transition = "all 0.2s ease-in"
-	   startmenu.style.bottom = "-655px"
-   }, startexceptions)

@@ -28,10 +28,10 @@ searchbutton.addEventListener("click", ()=>{
 widgetsbutton.addEventListener("click", ()=>{
 
 	if(widgetsmenu.style.left == "10px"){
-		widgetsmenu.style.bottom = "-1000px"
+		widgetsmenu.style.left = "-1000px"
 	}
 	else{
-		widgetsmenu.style.bottom = "10px"
+		widgetsmenu.style.left = "10px"
 	}
 })
 

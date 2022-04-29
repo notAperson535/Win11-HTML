@@ -153,10 +153,50 @@
       <img class="taskbaricons widgetsbutton" src="img/widgets.png">
       <img class="taskbaricons" src="img/chat.png">
       <img class="taskbaricons" src="img/explorer.png">
-      <img class="taskbaricons" src="img/edge.png">
+      <img class="taskbaricons edgebutton" src="img/edge.png">
+      <div class=taskbarindicator"></div>
       <img class="taskbaricons" src="img/store.ico">
     </div>
 
+    <div class="edgeapp" id="edgeapp">
+      <div class="edgeappheader" id="edgeappheader">
+
+        <div class="edgeheaderleftside">
+          <img src="img/edge.png">
+          Edge
+	        <div class="edgetab">
+	          <img src="img/newtab.png">
+	          New Tab
+	        </div>
+        </div>
+
+        <div class="edgeheaderrightside">
+
+          <div class="edgemaxandmin">
+            <img id="edgeminimize" src="img/minimize.png">
+          </div>
+        
+
+          <div class="edgemaxandmin">
+            <img id="edgemaximize" src="img/maxmin.png">
+          </div>
+
+          <div class="edgeclose">
+            <img id="edgeclose" src="img/close.png">
+          </div>
+
+        </div>
+      </div>
+      <div class="edgeurlarea">
+	      <img src="img/backarrow.png"> 
+	      <img src="img/forwardarrow.png"> 
+        <input type="text" value="https://bing.com" class="edgeurlbar" ID="URL">
+      </div>
+      <iframe align="center" width="100%" height="100%" src="https://bing.com" scrolling="yes" name="edgeIframe" id="edgeIframe" frameborder="0"> </iframe>
+    </div>
+
+    <script src="edgescript.js"></script>
     <script src="script.js"></script>
+
   </body>
 </html>

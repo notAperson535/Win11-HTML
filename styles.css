@@ -10,6 +10,7 @@ body{
   margin:0;
   padding:0;
   font-family: 'Segoe UI Variable', sans-serif;
+  user-select: none
 }
 
 .taskbar{
@@ -37,7 +38,6 @@ body{
   backdrop-filter: blur(20px);
   background-color: rgba(255,255,255,.80);
   border-radius:5px;
-  
 }
 
 .center{
@@ -68,6 +68,7 @@ body{
   width: 625px;
   transition: all 0.3s ease-in;
   border-radius: 8px; 
+  z-index: 10;
 }
 
 .pinnedlabel{
@@ -116,6 +117,7 @@ body{
   width: 100%;
   text-align: center;
   transition: all 0.3s ease-in; 
+  z-index: 10;
 }
 
 .searchmenu img{
@@ -128,9 +130,109 @@ body{
   left: -1000px;
   width: 100%;
   transition: all 0.3s ease-in; 
+  z-index: 10;
 }
 
 .widgetsmenu img{
   width: 575px;
   border-radius: 8px;
+}
+
+.edgeapp {
+  position: absolute;
+  z-index: 9;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  overflow: hidden;
+  resize: both;
+  width: 700px;
+  height: 500px;
+  opacity: 0;
+  left: 300px;
+  top: 40px;
+  transition: opacity 200ms linear;
+}
+
+.edgeheaderleftside {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.edgeheaderleftside img{
+  width: 20px;
+  margin: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.edgeappheader{
+  display:flex;
+  background-color: #CDCDCD;
+  justify-content: space-between;
+  max-height: 30px;
+  overflow: hidden;
+}
+
+.edgeheaderrightside {
+  display: flex;
+  align-items: center;
+}
+
+.edgeheaderrightside img{
+  width: 15px;
+  margin: 15px;
+}
+
+.edgeclose:hover{
+  background: red;
+}
+
+.edgemaxandmin:hover{
+  background: #c4c4c4;
+}
+
+.edgeurlarea{
+  background-color: #F7F7F7;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  max-height: 35px;
+  overflow: hidden;
+}
+
+.edgeurlarea img{
+  width: 20px;
+  margin: 7.5px;
+}
+
+.edgetab{
+  background-color: white;
+  width: 175px;
+  display:flex;
+  align-items: center;
+  margin-left: 16px;
+  height: 30px;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.edgetab img{
+  width: 17px;
+  height: 17px;
+  margin-left: 10px;
+}
+
+.edgeurlbar{
+  border: none;
+  height: 30px;
+  box-shadow: .5px .5px 10px #969696;
+  border-radius: 3px;
+  margin: 15px;
+  margin-right: 22.5px;
+  width: 800px;
+  overflow: hidden;
+}
+
+.edgeurlbar:focus{
+  outline: none;
 }

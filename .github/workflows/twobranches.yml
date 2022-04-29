@@ -1,0 +1,35 @@
+name: Deploy from two branches
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the `main` branch
+      - uses: actions/checkout@v2
+      # Install Node.js
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
+      # Install npm dependencies
+      # (similar to npm install)
+      - run: npm ci
+      - run: npm run build
+
+      # Checkout the `app-challenge` branch
+      - uses: actions/checkout@v2
+        with:
+          ref: app-challenge
+          path: Win11-HTML/Dev
+          clean: false
+      - run: rm -rf Win11-HTML/Dev/.git
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: './Win11-HTML'
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'

@@ -42,15 +42,47 @@ function dragElement(elmnt) {
   }
 }
 
-   function LoadPage(){ 
-     var objFrame=document.getElementById("edgeIframe"); 
-     objFrame.src=document.getElementById("URL").value;
-    }
 
+window.onload = function() {
+    goToPage(document.getElementById("URL").value)
+    console.log(document.getElementById("edgeIframe").contentWindow.location.href)
+};
 
 const edgetext = document.getElementsByClassName("edgeURL")[0];
 edgetext.addEventListener("keyup", ({key}) => {
     if (key === "Enter") {
-     LoadPage()
+     goToPage(document.getElementById("URL").value);
+     //document.getElementById("URL").value = document.getElementById("edgeIframe").contentWindow.location.href
     }
 })
+
+var urlList = new Array();
+var pos = 0;
+function goToPage(pageUrl)
+{
+    urlList[urlList.length] = pageUrl;
+    pos = urlList.length - 1;
+    document.getElementById('edgeIframe').src = pageUrl;
+}
+function goBack()
+{
+    if (pos > 0)
+    {
+        pos--;
+        document.getElementById('edgeIframe').src = urlList[pos];
+        document.getElementById("URL").value = document.getElementById("edgeIframe").contentWindow.location.href
+    }
+    else
+        void 0;
+
+}
+function goForward()
+{
+    if (pos < (urlList.length-1))
+    {
+        pos++;
+        document.getElementById('edgeIframe').src = urlList[pos];
+    }
+    else
+        void 0;
+}

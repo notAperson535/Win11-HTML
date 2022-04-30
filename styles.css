@@ -10,7 +10,7 @@ body{
   margin:0;
   padding:0;
   font-family: 'Segoe UI Variable', sans-serif;
-  user-select: none
+  user-select: none;
 }
 
 .taskbar{
@@ -25,6 +25,7 @@ body{
   display:flex;
   align-items: center;
   justify-content: center;
+  z-index: 11;
 }
 
 .taskbaricons {
@@ -141,17 +142,19 @@ body{
 .edgeapp {
   position: absolute;
   z-index: 9;
-  border: 1px solid #d3d3d3;
+  border: 1px solid #B4B4B4;
+  box-shadow: 1px 1px 50px #969696;
   border-radius: 5px;
   overflow: hidden;
   resize: both;
-  width: 700px;
-  height: 500px;
+  width: 850px;
+  height: 550px;
   opacity: 0;
-  left: 300px;
-  top: 40px;
+  top: 50px;
+  left: 350px;
   transition: opacity 200ms linear;
 }
+
 
 .edgeheaderleftside {
   font-size: 13px;
@@ -188,12 +191,21 @@ body{
   background: red;
 }
 
-.edgemaxandmin:hover{
+.edgemaximize:hover{
+  background: #c4c4c4;
+}
+
+.edgemaxmin:hover{
+  background: #c4c4c4;
+}
+
+.edgeminimize:hover{
   background: #c4c4c4;
 }
 
 .edgeurlarea{
   background-color: #F7F7F7;
+  box-shadow: 1px 1px 65px #969696;
   display: flex;
   align-items: center;
   height: 36px;
@@ -203,7 +215,7 @@ body{
 
 .edgeurlarea img{
   width: 20px;
-  margin: 7.5px;
+  margin: 10px;
 }
 
 .edgetab{
@@ -225,14 +237,25 @@ body{
 .edgeurlbar{
   border: none;
   height: 30px;
-  box-shadow: .5px .5px 10px #969696;
+  box-shadow: .1px .1px 65px #969696;
   border-radius: 3px;
   margin: 15px;
-  margin-right: 22.5px;
-  width: 800px;
+  width: 100%;
   overflow: hidden;
 }
 
 .edgeurlbar:focus{
   outline: none;
+}
+
+#edgemaxmin{
+  display: none;
+}
+
+.edgemaximizeandmaxmin{
+  display: flex;
+}
+
+.edgeprofilepicture{
+  border-radius: 15px;
 }

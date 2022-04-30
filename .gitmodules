@@ -1,3 +1,6 @@
 [submodule "Win11-HTML"]
 	path = Win11-HTML
 	url = https://github.com/notAperson535/Win11-HTML
+[submodule "Submod"]
+	branch = dev
+	path = dev

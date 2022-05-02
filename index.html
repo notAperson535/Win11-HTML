@@ -1,29 +1,204 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/segoe-ui-variable" rel="stylesheet">
+    <link rel="icon" href="StartIcon.ico">
     <title>Windows 11 in HTML</title>
   </head>
   <body>
 
-    <div class="startmenu">
-      <img src="img/startmenu.jpg">
+    <audio autoplay>
+      <source src="audio/startup.mp3" type="audio/mpeg">
+    </audio>
+
+<div class="center">
+
+  <div class="startmenu">
+
+    <div class="sTop">
+      <div class="pinnedlabel">
+        Pinned
+      </div>
+      <div class="allapps">
+        <img src="img/allapps.png">
+      </div>
+    </div>
+
+<div class="sApps">
+
+  <div class="startrow">
+
+    <div class="starticons">
+      <img src="img/edge.png">
+      <p class="startlabels" align="center"> Microsoft Edge </p>
+    </div>
+
+    <div class="starticons">
+      <img src="img/word.ico">
+      <p class="startlabels" align="center"> Word </p>
+    </div>
+
+    <div class="starticons">
+      <img src="img/excel.ico">
+      <p class="startlabels" align="center"> Excel </p>
+    </div>
+
+    <div class="starticons">
+      <img src="img/powerpoint.ico">
+      <p class="startlabels" align="center"> PowerPoint </p>
+    </div>
+
+    <div class="starticons">
+      <img src="img/mail.ico">
+      <p class="startlabels" align="center"> Mail </p>
+    </div>
+
+    <div class="starticons">
+      <img src="img/calendar.ico">
+      <p class="startlabels" align="center"> Calendar </p>
+    </div>
+    
   </div>
+
+  <div>
+
+    <div class="startrow">
+
+      <div class="starticons">
+        <img src="img/store.ico">
+        <p class="startlabels" align="center"> Microsoft Store </p>
+      </div>
+
+      <div class="starticons">
+        <img src="img/photos.ico">
+        <p class="startlabels" align="center"> Photos </p>
+      </div>
+
+      <div class="starticons">
+        <img src="img/office.ico">
+        <p class="startlabels" align="center"> Office </p>
+      </div>
+
+      <div class="starticons">
+        <img src="img/settings.ico">
+        <p class="startlabels" align="center"> Settings </p>
+      </div>
+
+      <div class="starticons">
+        <img src="img/xbox.png">
+        <p class="startlabels" align="center"> Xbox </p>
+      </div>
+
+      <div class="starticons">
+        <img src="img/solitaire.ico">
+        <p class="startlabels" align="center"> Solitaire </p>
+      </div>
+
+    </div>
+
+    <div class="startrow">
+
+      <div class="starticons">
+        <img src="img/setup.ico">
+        <p class="startlabels" align="center"> Get Started </p>
+      </div>
+  
+      <div class="starticons">
+        <img src="img/taskmanager.ico">
+        <p class="startlabels" align="center"> Task Manager </p>
+      </div>
+
+      <div class="starticons">
+        <img src="img/snippingtool.ico">
+        <p class="startlabels" align="center"> Snipping Tool </p>
+      </div>
+
+      <div class="starticons">
+        <img src="img/teams.ico">
+        <p class="startlabels" align="center"> Microsoft Teams </p>
+      </div>
+
+      <div class="starticons">
+        <img src="img/paint.ico">
+        <p class="startlabels" align="center"> Paint </p>
+      </div>
+
+
+      <div class="starticons">
+        <img src="img/visualcode.ico">
+        <p class="startlabels" align="center"> VS Code </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+</div>
 
     <div class="searchmenu">
       <img src="img/searchmenu.jpg">
-  </div>
+    </div>
+
+    <div class="widgetsmenu">
+      <img src="img/widgetsmenu.jpg">
+    </div>
 
     <div class="taskbar">
       <img class="taskbaricons startbutton" src="img/startbutton.png">
       <img class="taskbaricons searchbutton" src="img/search.png">
       <img class="taskbaricons" src="img/taskview.png">
-      <img class="taskbaricons" src="img/widgets.png">
+      <img class="taskbaricons widgetsbutton" src="img/widgets.png">
       <img class="taskbaricons" src="img/chat.png">
       <img class="taskbaricons" src="img/explorer.png">
-      <img class="taskbaricons" src="img/edge.png">
-      <img class="taskbaricons" src="img/store.png">
-      </div>
+      <img class="taskbaricons edgebutton" src="img/edge.png">
+      <div class=taskbarindicator"></div>
+      <img class="taskbaricons" src="img/store.ico">
+    </div>
 
+    <div class="edgeapp" id="edgeapp">
+      <div class="edgeappheader" id="edgeappheader">
+
+        <div class="edgeheaderleftside">
+          <img src="img/edge.png">
+          Edge
+	        <div class="edgetab">
+	          <img src="img/newtab.png">
+	          New Tab
+	        </div>
+        </div>
+
+        <div class="edgeheaderrightside">
+
+          <div class="edgemaxandmin">
+            <img id="edgeminimize" src="img/minimize.png">
+          </div>
+        
+
+          <div class="edgemaxandmin">
+            <img id="edgemaximize" src="img/maxmin.png">
+          </div>
+
+          <div class="edgeclose">
+            <img id="edgeclose" src="img/close.png">
+          </div>
+
+        </div>
+      </div>
+      <div class="edgeurlarea">
+	      <img src="img/backarrow.png"> 
+	      <img src="img/forwardarrow.png"> 
+        <img src="img/reload.png"> 
+        <input type="text" value="https://bing.com" class="edgeurlbar" ID="URL">
+      </div>
+      <iframe align="center" width="100%" height="100%" src="https://bing.com" scrolling="yes" name="edgeIframe" id="edgeIframe" frameborder="0"> </iframe>
+    </div>
+
+    <script src="edgescript.js"></script>
     <script src="script.js"></script>
+
   </body>
 </html>

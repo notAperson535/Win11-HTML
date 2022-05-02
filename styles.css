@@ -28,6 +28,11 @@ body{
   z-index: 11;
 }
 
+.center{
+  display: flex;
+  justify-content: center;
+}
+
 .taskbaricons {
   width:25px;
   margin: 11px 10px;

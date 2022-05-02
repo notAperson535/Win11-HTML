@@ -150,12 +150,9 @@ body{
   width: 850px;
   height: 550px;
   opacity: 0;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  top: 25%;
+  left: 350px;
   margin: auto;
-  position: absolute;
   transition: opacity 200ms linear;
 }
 

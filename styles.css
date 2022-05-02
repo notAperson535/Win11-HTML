@@ -150,7 +150,7 @@ body{
   width: 850px;
   height: 550px;
   opacity: 0;
-  top: 25%;
+  top: (50% - 275px);
   left: 350px;
   margin: auto;
   transition: opacity 200ms linear;

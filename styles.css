@@ -21,7 +21,7 @@ body{
   bottom: 0;
   margin:0;
   padding:0;
-  height:47px;
+  height: 48px;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +69,7 @@ body{
   width: 625px;
   transition: all 0.3s ease-in;
   border-radius: 8px; 
-  z-index: 10;
+  z-index: 11;
 }
 
 .pinnedlabel{
@@ -118,7 +118,7 @@ body{
   width: 100%;
   text-align: center;
   transition: all 0.3s ease-in; 
-  z-index: 10;
+  z-index: 11;
 }
 
 .searchmenu img{
@@ -141,18 +141,15 @@ body{
 
 .edgeapp {
   position: absolute;
-  z-index: 9;
   border: 1px solid #B4B4B4;
   box-shadow: 1px 1px 50px #969696;
   border-radius: 5px;
   overflow: hidden;
-  resize: both;
-  width: 850px;
-  height: 550px;
+  width: 60%;
+  height: 75%;
   opacity: 0;
-  top: calc(50% - 275px);
-  left: calc(50% - 425px);
-  margin: auto;
+  top: 7%;
+  left: 20%;
   transition: opacity 200ms linear;
 }
 
@@ -175,6 +172,7 @@ body{
   background-color: #CDCDCD;
   justify-content: space-between;
   max-height: 30px;
+  height: 30px;
   overflow: hidden;
 }
 
@@ -186,6 +184,7 @@ body{
 .edgeheaderrightside img{
   width: 15px;
   margin: 15px;
+  display: block;
 }
 
 .edgeclose:hover{
@@ -209,7 +208,7 @@ body{
   box-shadow: 1px 1px 65px #969696;
   display: flex;
   align-items: center;
-  height: 36px;
+  height: 35px;
   max-height: 35px;
   overflow: hidden;
 }
@@ -259,4 +258,32 @@ body{
 
 .edgeprofilepicture{
   border-radius: 15px;
+}
+
+.edgeresizer {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: 10;
+}
+.edgeresizer.top-left {
+  top: -1px;
+  left: -1px;
+  cursor: nw-resize;
+}
+.edgeresizer.top-right {
+  top: -1px;
+  right: -1px;
+  cursor: ne-resize;
+}
+
+.edgeresizer.bottom-left {
+  bottom: -1px;
+  left: -1px;
+  cursor: sw-resize;
+}
+.edgeresizer.bottom-right {
+  bottom: -1px;
+  right: -1px;
+  cursor: se-resize;
 }

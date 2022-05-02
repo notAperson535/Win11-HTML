@@ -82,24 +82,34 @@ edgeclose.addEventListener("click", ()=>{
         edgeapp.style.opacity = "0"
 });
 
+edgeminimize.addEventListener("click", ()=>{
+	edgeapp.style.opacity = "0"
+});
+
 edgemaximize.addEventListener("click", ()=>{
-	edgeapp.style.transition = "opacity 200ms linear, all .3s"
+	edgeapp.style.transition = "all .3s"
 	edgeapp.style.left = "0px"
 	edgeapp.style.width = "100%"
 	edgeapp.style.height = "100%"
 	edgeapp.style.top = "0px"
 	edgemaximizeimage.style.display = "none"
 	edgemaxminimage.style.display = "block"
-	edgeapp.style.resize = "none"
 });
 
-edgemaxmin.addEventListener("click", ()=>{
-	edgeapp.style.width = "850px"
-	edgeapp.style.height = "550px"
-	edgeapp.style.left = "calc(50% - 425px)"
-	edgeapp.style.top = "calc(50% - 275px)"
+function showmaximizehideminmax(){
 	edgemaximizeimage.style.display = "block"
 	edgemaxminimage.style.display = "none"
-	edgeapp.style.resize = "both"
-	edgeapp.style.transition = "opacity 200ms linear"
+}
+
+edgemaxmin.addEventListener("click", ()=>{
+	edgeapp.style.transition = "all .3s"
+	edgeapp.style.width = "60%"
+	edgeapp.style.height = "75%"
+	edgeapp.style.left = "20%"
+	edgeapp.style.top = "7%"
+	showmaximizehideminmax();
 });
+
+function removetransition(){
+	edgeapp.style.transition = "opacity 200ms linear"
+}

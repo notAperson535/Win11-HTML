@@ -17,6 +17,7 @@ function dragElement(elmnt) {
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
     pos4 = e.clientY;
+    removetransition();
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
@@ -33,6 +34,7 @@ function dragElement(elmnt) {
     // set the element's new position:
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    showmaximizehideminmax();
   }
 
   function closeDragElement() {
@@ -45,14 +47,14 @@ function dragElement(elmnt) {
 
 window.onload = function() {
     goToPage(document.getElementById("URL").value)
-    console.log(document.getElementById("edgeIframe").contentWindow.location.href)
+    console.log(document.getElementById("edgeIframe").edgeheaderWindow.location.href)
 };
 
 const edgetext = document.getElementsByClassName("edgeURL")[0];
 edgetext.addEventListener("keyup", ({key}) => {
     if (key === "Enter") {
      goToPage(document.getElementById("URL").value);
-     //document.getElementById("URL").value = document.getElementById("edgeIframe").contentWindow.location.href
+     //document.getElementById("URL").value = document.getElementById("edgeIframe").edgeheaderWindow.location.href
     }
 })
 
@@ -70,7 +72,7 @@ function goBack()
     {
         pos--;
         document.getElementById('edgeIframe').src = urlList[pos];
-        document.getElementById("URL").value = document.getElementById("edgeIframe").contentWindow.location.href
+        document.getElementById("URL").value = document.getElementById("edgeIframe").edgeheaderWindow.location.href
     }
     else
         void 0;
@@ -86,3 +88,125 @@ function goForward()
     else
         void 0;
 }
+
+//resizable part
+
+
+let divs = Array.from(document.querySelectorAll('.edgeapp')),
+		minWidth = 400,
+		minHeight = 65,
+		maxWidth = 100000,
+		maxHeight = 100000,
+		isResizing = false;
+
+divs.forEach(div => {
+	div.addEventListener('mousedown', mousedown);
+	//select the edgeresizers
+	let edgeresizers = div.querySelectorAll('.edgeresizer');
+
+	edgeresizers.forEach(function(edgeresizer) {
+		edgeresizer.addEventListener('mousedown', mousedownOnedgeresizer);
+	})
+	
+	function mousedownOnedgeresizer(e) {
+			let prevX = e.clientX,
+					prevY = e.clientY,
+					currentedgeresizer = e.target,
+					rect = div.getBoundingClientRect(),
+					prevLeft = rect.left,
+					prevTop  = rect.top,
+					newWidth,
+					newHeight;
+          removetransition();
+
+			isResizing = true;
+
+			window.addEventListener('mousemove', mousemove);
+			window.addEventListener('mouseup', mouseup);
+
+
+			function mousemove(e){
+				let newX = prevX - e.clientX, //negative to the right, positive to the left
+						newY = prevY - e.clientY; //negative to the bottom, positive to the top
+				if (currentedgeresizer.classList.contains('bottom-right')) {
+					newWidth = rect.width - newX;
+					newHeight = rect.height - newY;
+					if (newWidth > minWidth && newWidth < maxWidth) {
+						div.style.width = newWidth + 'px';
+					}
+					if (newHeight > minHeight && newHeight < maxHeight) {
+						div.style.height = newHeight + 'px';
+					}
+
+				}
+				else if (currentedgeresizer.classList.contains('bottom-left')) {
+					newWidth = rect.width + newX;
+					newHeight = rect.height - newY;
+
+					if (newWidth > minWidth && newWidth < maxWidth) {
+						div.style.left = prevLeft - newX + 'px';
+						div.style.width = newWidth + 'px';
+					} 
+					if (newHeight > minHeight && newHeight < maxHeight) {
+						div.style.height = newHeight + 'px';
+					}
+
+				}
+				else if (currentedgeresizer.classList.contains('top-right')) {
+					newWidth = rect.width - newX;
+					newHeight = rect.height + newY;
+
+					if (newWidth > minWidth && newWidth < maxWidth) {
+						div.style.width = newWidth + 'px';
+					}
+					if (newHeight > minHeight && newHeight < maxHeight) {
+						div.style.top = prevTop - newY + 'px';
+						div.style.height = newHeight + 'px';
+					}
+
+				}
+				else if (currentedgeresizer.classList.contains('top-left')) {
+					newWidth = rect.width + newX;
+					newHeight = rect.height + newY;
+
+					if (newWidth > minWidth && newWidth < maxWidth) {
+						div.style.left = prevLeft - newX + 'px';
+						div.style.width = newWidth + 'px';
+					}
+					if (newHeight > minHeight && newHeight < maxHeight) {
+						div.style.top = prevTop - newY + 'px';
+						div.style.height = newHeight + 'px';
+					}
+				}
+			}
+
+			function mouseup() {
+				isResizing = false;
+				window.removeEventListener('mousemove', mousemove);
+				window.removeEventListener('mouseup', mouseup);
+			}
+		}
+})
+	
+
+function mousedown(e) {
+	//get the initial mouse corrdinates and the position coordinates of the element
+	let div = this,
+			prevX = e.clientX,
+			prevY = e.clientY,
+			rect = div.getBoundingClientRect(),
+			prevLeft = rect.left,
+			prevTop  = rect.top;
+	
+	function mousemove(e) {
+			//get horizontal and vertical distance of the mouse move
+			let newX = prevX - e.clientX, //negative to the right, positive to the left
+					newY = prevY - e.clientY; //negative to the bottom, positive to the top
+
+			//set coordinates of the element to move it to its new position
+			div.style.left = prevLeft - newX + 'px';
+			div.style.top = prevTop - newY + 'px';
+	}
+}
+
+

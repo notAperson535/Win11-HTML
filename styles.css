@@ -41,11 +41,6 @@ body{
   border-radius:5px;
 }
 
-.center{
-  display: flex;
-  justify-content: center;
-}
-
 .sTop{
    margin-top: 25px;
    margin-bottom: 25px;

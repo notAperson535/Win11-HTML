@@ -10,11 +10,7 @@ body{
   margin:0;
   padding:0;
   font-family: 'Segoe UI Variable', sans-serif;
-<<<<<<< HEAD
   user-select: none;
-=======
-  user-select: none
->>>>>>> main
 }
 
 .taskbar{
@@ -25,7 +21,6 @@ body{
   bottom: 0;
   margin:0;
   padding:0;
-<<<<<<< HEAD
   height: 48px;
   display:flex;
   align-items: center;
@@ -36,12 +31,6 @@ body{
 .center{
   display: flex;
   justify-content: center;
-=======
-  height:47px;
-  display:flex;
-  align-items: center;
-  justify-content: center;
->>>>>>> main
 }
 
 .taskbaricons {
@@ -57,7 +46,6 @@ body{
   border-radius:5px;
 }
 
-<<<<<<< HEAD
 .sTop{
    margin-top: 25px;
    margin-bottom: 25px;
@@ -66,21 +54,6 @@ body{
    justify-content: space-between;
 }
 
-=======
-.center{
-  display: flex;
-  justify-content: center;
-}
-
-.sTop{
-   margin-top: 25px;
-   margin-bottom: 25px;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-}
-
->>>>>>> main
 .allapps img{
   height: 20px;
   border-radius: 4px;
@@ -96,11 +69,7 @@ body{
   width: 625px;
   transition: all 0.3s ease-in;
   border-radius: 8px; 
-<<<<<<< HEAD
   z-index: 11;
-=======
-  z-index: 10;
->>>>>>> main
 }
 
 .pinnedlabel{
@@ -149,11 +118,7 @@ body{
   width: 100%;
   text-align: center;
   transition: all 0.3s ease-in; 
-<<<<<<< HEAD
   z-index: 11;
-=======
-  z-index: 10;
->>>>>>> main
 }
 
 .searchmenu img{
@@ -176,7 +141,6 @@ body{
 
 .edgeapp {
   position: absolute;
-<<<<<<< HEAD
   border: 1px solid #B4B4B4;
   box-shadow: 1px 1px 50px #969696;
   border-radius: 5px;
@@ -190,21 +154,6 @@ body{
 }
 
 
-=======
-  z-index: 9;
-  border: 1px solid #d3d3d3;
-  border-radius: 5px;
-  overflow: hidden;
-  resize: both;
-  width: 700px;
-  height: 500px;
-  opacity: 0;
-  left: 300px;
-  top: 40px;
-  transition: opacity 200ms linear;
-}
-
->>>>>>> main
 .edgeheaderleftside {
   font-size: 13px;
   display: flex;
@@ -223,10 +172,7 @@ body{
   background-color: #CDCDCD;
   justify-content: space-between;
   max-height: 30px;
-<<<<<<< HEAD
   height: 30px;
-=======
->>>>>>> main
   overflow: hidden;
 }
 
@@ -238,17 +184,13 @@ body{
 .edgeheaderrightside img{
   width: 15px;
   margin: 15px;
-<<<<<<< HEAD
   display: block;
-=======
->>>>>>> main
 }
 
 .edgeclose:hover{
   background: red;
 }
 
-<<<<<<< HEAD
 .edgemaximize:hover{
   background: #c4c4c4;
 }
@@ -258,35 +200,22 @@ body{
 }
 
 .edgeminimize:hover{
-=======
-.edgemaxandmin:hover{
->>>>>>> main
   background: #c4c4c4;
 }
 
 .edgeurlarea{
   background-color: #F7F7F7;
-<<<<<<< HEAD
   box-shadow: 1px 1px 65px #969696;
   display: flex;
   align-items: center;
   height: 35px;
-=======
-  display: flex;
-  align-items: center;
-  height: 36px;
->>>>>>> main
   max-height: 35px;
   overflow: hidden;
 }
 
 .edgeurlarea img{
   width: 20px;
-<<<<<<< HEAD
   margin: 10px;
-=======
-  margin: 7.5px;
->>>>>>> main
 }
 
 .edgetab{
@@ -308,24 +237,15 @@ body{
 .edgeurlbar{
   border: none;
   height: 30px;
-<<<<<<< HEAD
   box-shadow: .1px .1px 65px #969696;
   border-radius: 3px;
   margin: 15px;
   width: 100%;
-=======
-  box-shadow: .5px .5px 10px #969696;
-  border-radius: 3px;
-  margin: 15px;
-  margin-right: 22.5px;
-  width: 800px;
->>>>>>> main
   overflow: hidden;
 }
 
 .edgeurlbar:focus{
   outline: none;
-<<<<<<< HEAD
 }
 
 #edgemaxmin{
@@ -367,6 +287,3 @@ body{
   right: -1px;
   cursor: se-resize;
 }
-=======
-}
->>>>>>> main

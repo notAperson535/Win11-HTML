@@ -1,0 +1,24 @@
+name: Update Submodule
+
+on:
+  push:
+    branches: 
+      - dev
+      
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: update
+        run: |
+          git submodule sync
+          git submodule update --init --recursive --remote
+          git config user.name "notAperson535"
+          git config user.email "notAperson939@gmail.com"
+          git add .
+          git commit -m "update dev submodule"
+          git push

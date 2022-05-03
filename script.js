@@ -6,7 +6,18 @@ let widgetsbutton = document.getElementsByClassName("widgetsbutton")[0]
 let widgetsmenu = document.getElementsByClassName("widgetsmenu")[0]
 let edgebutton = document.getElementsByClassName("edgebutton")[0]
 let edgeapp = document.getElementsByClassName("edgeapp")[0]
-let edgeclose = document.getElementById("edgeclose")
+let edgeclose = document.getElementsByClassName("edgeclose")[0]
+let edgemaximize = document.getElementsByClassName("edgemaximize")[0]
+let edgeminimize = document.getElementsByClassName("edgeminimize")[0]
+let edgemaxmin = document.getElementsByClassName("edgemaxmin")[0]
+let edgemaximizeimage = document.getElementById("edgemaximize")
+let edgemaxminimage = document.getElementById("edgemaxmin")
+
+function sleep(seconds){
+    var waitUntil = new Date().getTime() + seconds*1000;
+    while(new Date().getTime() < waitUntil) 
+        true;
+}
 
 startbutton.addEventListener("click", ()=>{
 
@@ -67,6 +78,38 @@ window.addEventListener('mouseup', function(e) {
     }
 });
 
-edgeclose.addEventListener("click", function(e){
-        edgeapp.style.opacity = '0';
+edgeclose.addEventListener("click", ()=>{
+        edgeapp.style.opacity = "0"
 });
+
+edgeminimize.addEventListener("click", ()=>{
+	edgeapp.style.opacity = "0"
+});
+
+edgemaximize.addEventListener("click", ()=>{
+	edgeapp.style.transition = "all .3s"
+	edgeapp.style.left = "0px"
+	edgeapp.style.width = "100%"
+	edgeapp.style.height = "100%"
+	edgeapp.style.top = "0px"
+	edgemaximizeimage.style.display = "none"
+	edgemaxminimage.style.display = "block"
+});
+
+function showmaximizehideminmax(){
+	edgemaximizeimage.style.display = "block"
+	edgemaxminimage.style.display = "none"
+}
+
+edgemaxmin.addEventListener("click", ()=>{
+	edgeapp.style.transition = "all .3s"
+	edgeapp.style.width = "60%"
+	edgeapp.style.height = "75%"
+	edgeapp.style.left = "20%"
+	edgeapp.style.top = "7%"
+	showmaximizehideminmax();
+});
+
+function removetransition(){
+	edgeapp.style.transition = "opacity 200ms linear"
+}

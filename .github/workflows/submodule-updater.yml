@@ -15,6 +15,7 @@ jobs:
 
       - name: update
         run: |
+          git checkout main
           git submodule sync
           git submodule update --init --recursive --remote
           git config user.name "notAperson535"

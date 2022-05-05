@@ -147,16 +147,43 @@
     </div>
 
     <div class="taskbar">
-      <img class="taskbaricons startbutton" src="img/startbutton.png">
-      <img class="taskbaricons searchbutton" src="img/search.png">
-      <img class="taskbaricons" src="img/taskview.png">
-      <img class="taskbaricons widgetsbutton" src="img/widgets.png">
-      <img class="taskbaricons" src="img/chat.png">
-      <img class="taskbaricons" src="img/explorer.png">
-      <img class="taskbaricons edgebutton" src="img/edge.png">
-      <div class=taskbarindicator"></div>
-      <img class="taskbaricons" src="img/store.ico">
+
+      <div class="taskbariconscenter">
+        <img class="taskbaricons startbutton" src="img/startbutton.png">
+        <img class="taskbaricons searchbutton" src="img/search.png">
+        <img class="taskbaricons" src="img/taskview.png">
+        <img class="taskbaricons" src="img/chat.png">
+        <img class="taskbaricons" src="img/explorer.png">
+        <img class="taskbaricons edgebutton" src="img/edge.png">
+        <img class="taskbaricons" src="img/store.ico">
+      </div>
+
+     
     </div>
+
+    <div class="widgetsmenuicon">
+      <img class="taskbaricons widgetsbutton" src="img/widgets.png">
+    </div>
+
+    <div class="taskbariconsright">
+
+      <div class="actioncenter">
+        <img src="img/wifi.png">
+        <img src="img/volume.png">
+        <img src="img/battery.png">
+      </div>
+
+      <div class="timeanddate">
+        <div class="time">
+          <p id="clock"></p>
+        </div>
+        <div class="date">
+          <p id="date"></p>
+        </div>
+      </div>
+
+  </div>
+
 
     <div class="edgeapp" id="edgeapp">
 
@@ -213,9 +240,10 @@
       <iframe align="center" width="100%" height="100%" scrolling="yes" name="edgeIframe" id="edgeIframe" frameborder="0"> </iframe>
     
     </div>
-
+    
     <script src="edgescript.js"></script>
     <script src="script.js"></script>
+    <script src="clock.js"></script>
 
   </body>
 </html>

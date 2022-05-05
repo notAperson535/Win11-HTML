@@ -17,6 +17,7 @@ body{
   backdrop-filter: saturate(3) blur(20px);
   background-color: rgba(255,255,255,.80);
   width: 100%;
+  min-width: 100%;
   position: absolute;
   bottom: 0;
   margin:0;
@@ -26,6 +27,71 @@ body{
   align-items: center;
   justify-content: center;
   z-index: 11;
+}
+
+.widgetsmenuicon{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 12;
+  bottom: 0;
+  float: left;
+}
+
+.taskbariconscenter{
+  display: flex;
+}
+
+.taskbariconsright{
+  display: flex;
+  align-items: center;
+  z-index: 12;
+  position: absolute;
+  bottom: 3;
+  right: 0;
+  float: right;
+}
+
+.actioncenter:hover{
+  background-color: white;
+  border-radius: 3px;
+}
+
+.actioncenter{
+  display: flex;
+  margin-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;;
+}
+
+.actioncenter img{
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.taskbariconsright img{
+  height: 20px;
+}
+
+.timeanddate{
+  margin-right: 10px;
+  font-size: 13px;
+  text-align: right;
+  padding: 4px;
+  padding-left: 10px;
+}
+
+.timeanddate:hover{
+  background-color: white;
+  border-radius: 3px;
+}
+
+#clock{
+  margin: 0px;
+}
+
+#date{
+  margin: 0px;
 }
 
 .center{

@@ -13,6 +13,7 @@ let edgemaxmin = document.getElementsByClassName("edgemaxmin")[0]
 let edgemaximizeimage = document.getElementById("edgemaximize")
 let edgemaxminimage = document.getElementById("edgemaxmin")
 let timeanddate = document.getElementsByClassName("timeanddate")[0]
+let calendar = document.getElementsByClassName("calendar")[0]
 
 function sleep(seconds){
     var waitUntil = new Date().getTime() + seconds*1000;

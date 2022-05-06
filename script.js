@@ -12,6 +12,7 @@ let edgeminimize = document.getElementsByClassName("edgeminimize")[0]
 let edgemaxmin = document.getElementsByClassName("edgemaxmin")[0]
 let edgemaximizeimage = document.getElementById("edgemaximize")
 let edgemaxminimage = document.getElementById("edgemaxmin")
+let timeanddate = document.getElementsByClassName("timeanddate")[0]
 
 function sleep(seconds){
     var waitUntil = new Date().getTime() + seconds*1000;
@@ -49,6 +50,16 @@ widgetsbutton.addEventListener("click", ()=>{
 	}
 })
 
+timeanddate.addEventListener("click", ()=>{
+
+	if(calendar.style.right == "3px"){
+		calendar.style.right = "-655px"
+	}
+	else{
+		calendar.style.right = "3px"
+	}
+})
+
 edgebutton.addEventListener("click", ()=>{
 
 	if(edgeapp.style.opacity == "1"){
@@ -61,20 +72,26 @@ edgebutton.addEventListener("click", ()=>{
 })
 
 window.addEventListener('mouseup', function(e) {
-    if (event.target != document.querySelector(".startbutton")) {
+    if (!event.target.closest(".startmenu")) {
         startmenu.style.bottom = "-655px";
     }
 });
 
 window.addEventListener('mouseup', function(e) {
-    if (event.target != document.querySelector(".searchbutton")) {
+    if (!event.target.closest(".searchmenu")) {
         searchmenu.style.bottom = "-655px";
     }
 });
 
 window.addEventListener('mouseup', function(e) {
-    if (event.target != document.querySelector(".widgetsbutton")) {
+    if (!event.target.closest(".widgetsmenu")) {
         widgetsmenu.style.left = "-1000px";
+    }
+});
+
+window.addEventListener('mouseup', function(e) {
+    if (!event.target.closest(".calendar")) {
+        calendar.style.right = "-655px";
     }
 });
 
@@ -87,7 +104,7 @@ edgeminimize.addEventListener("click", ()=>{
 });
 
 edgemaximize.addEventListener("click", ()=>{
-	edgeapp.style.transition = "all .3s"
+	edgeapp.style.transition = "all 0.2s ease-in"
 	edgeapp.style.left = "0px"
 	edgeapp.style.width = "100%"
 	edgeapp.style.height = "100%"
@@ -102,7 +119,7 @@ function showmaximizehideminmax(){
 }
 
 edgemaxmin.addEventListener("click", ()=>{
-	edgeapp.style.transition = "all .3s"
+	edgeapp.style.transition = "all 0.2s ease-in"
 	edgeapp.style.width = "60%"
 	edgeapp.style.height = "75%"
 	edgeapp.style.left = "20%"

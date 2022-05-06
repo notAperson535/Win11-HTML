@@ -158,7 +158,6 @@
         <img class="taskbaricons edgebutton" src="img/edge.png">
         <img class="taskbaricons" src="img/store.ico">
       </div>
-
      
     </div>
 
@@ -185,7 +184,11 @@
 
   </div>
 
-  <div id="dycalendar"><div class="dycalendar-month-container"><div class="dycalendar-header" data-option="{&quot;target&quot;:&quot;#dycalendar&quot;,&quot;type&quot;:&quot;month&quot;,&quot;dayformat&quot;:&quot;ddd&quot;,&quot;monthformat&quot;:&quot;full&quot;,&quot;prevnextbutton&quot;:&quot;show&quot;,&quot;highlighttoday&quot;:true,&quot;month&quot;:4,&quot;year&quot;:2022,&quot;date&quot;:5,&quot;highlighttargetdate&quot;:false}"><span class="dycalendar-span-month-year">May 2022</span><span class="dycalendar-prev-next-btn prev-btn" data-date="5" data-month="4" data-year="2022" data-action="CALNPREV" data-btn="prev">▲</span><span class="dycalendar-prev-next-btn next-btn" data-date="5" data-month="4" data-year="2022" data-action="CALNNEXT" data-btn="next">▼</span></div><div class="dycalendar-body"><table><tbody><tr><td>Su</td><td>Mo</td><td>Tu</td><td>We</td><td>Th</td><td>Fr</td><td>Sa</td></tr><tr><td>1</td><td>2</td><td>3</td><td>4</td><td class="dycalendar-today-date">5</td><td>6</td><td>7</td></tr><tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr><tr><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td></tr><tr><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td></tr><tr><td>29</td><td>30</td><td>31</td></tr></tbody></table></div></div></div>
+  <div class="calendar">
+    <div id="dycalendar" class="dycalendar-container">
+        <div class="dycalendar-header" data-option="{&quot;target&quot;:&quot;#dycalendar&quot;,&quot;type&quot;:&quot;month&quot;,&quot;dayformat&quot;:&quot;ddd&quot;,&quot;monthformat&quot;:&quot;full&quot;,&quot;prevnextbutton&quot;:&quot;show&quot;,&quot;highlighttoday&quot;:true,&quot;month&quot;:4,&quot;year&quot;:2022,&quot;date&quot;:5,&quot;highlighttargetdate&quot;:false}"><span class="dycalendar-span-month-year">May 2022</span><span class="dycalendar-prev-next-btn prev-btn" data-date="5" data-month="4" data-year="2022" data-action="CALNPREV" data-btn="prev">▲</span><span class="dycalendar-prev-next-btn next-btn" data-date="5" data-month="4" data-year="2022" data-action="CALNNEXT" data-btn="next">▼</span></div>
+    </div>
+</div>
 
 
     <div class="edgeapp" id="edgeapp">
@@ -240,13 +243,27 @@
         <img class="edgeurlareaicon edgeprofilepicture" src="img/profilepicture.png">
         <img class="edgeurlareaicon" src="img/more.png">
       </div>
-      <iframe align="center" width="100%" height="100%" scrolling="yes" name="edgeIframe" id="edgeIframe" frameborder="0"> </iframe>
+      <iframe is="x-frame-bypass" style="background-color: white;" align="center" width="100%" height="100%" scrolling="yes" name="edgeIframe" id="edgeIframe" frameborder="0"> </iframe>
     
     </div>
     
     <script src="edgescript.js"></script>
     <script src="script.js"></script>
     <script src="clock.js"></script>
+    <script src="dycalendar.js"></script>
+    
+    <script>
+      dycalendar.draw({
+        "target":"#dycalendar",
+        "type":"month",
+        "dayformat":"ddd",
+        "monthformat":"full",
+        "prevnextbutton":"show",
+        "highlighttoday":true,
+        "month":4,"year":2022,
+        "date":5,
+        "highlighttargetdate":false});
+    </script>
 
   </body>
 </html>

@@ -1,3 +1,91 @@
+let edgebutton = document.getElementsByClassName("edgebutton")[0]
+let edgeapp = document.getElementsByClassName("edgeapp")[0]
+let edgeclose = document.getElementsByClassName("edgeclose")[0]
+let edgemaximize = document.getElementsByClassName("edgemaximize")[0]
+let edgeminimize = document.getElementsByClassName("edgeminimize")[0]
+let edgemaxmin = document.getElementsByClassName("edgemaxmin")[0]
+let edgemaximizeimage = document.getElementById("edgemaximize")
+let edgemaxminimage = document.getElementById("edgemaxmin")
+var edgetop = "8%"
+var edgeleft = "20%"
+var edgewidth = "60%"
+var edgeheight = "75%"
+
+
+function getedgeproperties(){
+	edgetop = getComputedStyle(edgeapp).getPropertyValue('top');
+	edgeleft = getComputedStyle(edgeapp).getPropertyValue('left');
+	edgewidth = getComputedStyle(edgeapp).getPropertyValue('width');
+	edgeheight = getComputedStyle(edgeapp).getPropertyValue('height');
+}
+
+function edgeminorclose(){
+	getedgeproperties();
+	edgeapp.style.transition = "all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear"
+	edgeapp.style.opacity = "0"
+	edgeapp.style.left = "50%"
+	edgeapp.style.top = "50%"
+	edgeapp.style.width = "0%"
+	edgeapp.style.height = "0%"
+}
+
+function recoveredgeproperties(){
+	edgeapp.style.transition = "all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear"
+	edgeapp.style.top = edgetop
+	edgeapp.style.left = edgeleft
+	edgeapp.style.width = edgewidth
+	edgeapp.style.height = edgeheight
+}
+
+edgebutton.addEventListener("click", ()=>{
+
+	if(edgeapp.style.opacity == "1"){
+        edgeminorclose();
+		edgeapp.style.top = "200%"
+	}
+	else{
+		recoveredgeproperties();
+		edgeapp.style.opacity = "1"
+	}
+
+})
+
+edgeclose.addEventListener("click", ()=>{
+	edgeminorclose();
+});
+
+edgeminimize.addEventListener("click", ()=>{
+	edgeminorclose();
+	edgeapp.style.top = "200%"
+});
+
+edgemaximize.addEventListener("click", ()=>{
+	edgeapp.style.transition = "all 0.2s ease-in"
+	edgeapp.style.left = "0px"
+	edgeapp.style.width = "100%"
+	edgeapp.style.height = "calc(100% - 48px)"
+	edgeapp.style.top = "0px"
+	getedgeproperties();
+	edgemaximizeimage.style.display = "none"
+	edgemaxminimage.style.display = "block"
+});
+
+function showmaximizehideminmax(){
+	edgemaximizeimage.style.display = "block"
+	edgemaxminimage.style.display = "none"
+}
+
+edgemaxmin.addEventListener("click", ()=>{
+	edgeapp.style.transition = "all 0.2s ease-in"
+	recoveredgeproperties();
+	showmaximizehideminmax();
+});
+
+function removetransition(){
+	edgeapp.style.transition = "opacity 200ms linear"
+}
+
+
 //Make the DIV element draggagle:
 dragElement(document.getElementById("edgeapp"));
 

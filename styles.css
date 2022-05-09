@@ -7,8 +7,8 @@ body{
   min-height: 100vh;
   min-width: 100vw;
   transition: all .2s ease;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   font-family: 'Segoe UI Variable', sans-serif;
   user-select: none;
 }
@@ -142,7 +142,7 @@ body{
   position: absolute;
   backdrop-filter: blur(20px);
   background-color: rgba(255,255,255,.80);
-  bottom: -655px;
+  bottom: -675px;
   height: 650px;
   width: 625px;
   transition: all 0.2s ease-in;
@@ -223,13 +223,14 @@ body{
   box-shadow: 1px 1px 50px #969696;
   border-radius: 5px;
   overflow: hidden;
-  width: 60%;
-  height: 75%;
+  width: 0%;
+  height: 0%;
   opacity: 0;
-  top: 7%;
-  left: 20%;
-  transition: display 200ms linear;
-  z-index: 10;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear;
+  z-index: 1;
 }
 
 

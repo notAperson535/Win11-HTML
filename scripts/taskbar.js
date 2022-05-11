@@ -54,25 +54,25 @@ timeanddate.addEventListener("click", ()=>{
 })
 
 window.addEventListener('mouseup', function(e) {
-    if (!event.target.closest(".startmenu")){
+    if (!event.target.closest(".startmenu") && !event.target.closest(".startbutton")){
         startmenu.style.bottom = "-675px";
     }
 });
 
 window.addEventListener('mouseup', function(e) {
-    if (!event.target.closest(".searchmenu")){
+    if (!event.target.closest(".searchmenu") && !event.target.closest(".searchtbutton")){
         searchmenu.style.bottom = "-655px";
     }
 });
 
 window.addEventListener('mouseup', function(e) {
-    if (!event.target.closest(".widgetsmenu")){
+    if (!event.target.closest(".widgetsmenu") && !event.target.closest(".widgetsbutton")){
         widgetsmenu.style.left = "-1000px";
     }
 });
 
 window.addEventListener('mouseup', function(e) {
-    if (!event.target.closest(".calendar")){
+    if (!event.target.closest(".calendar") && !event.target.closest(".timeanddate")){
         calendar.style.right = "-655px";
     }
 });

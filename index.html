@@ -44,7 +44,7 @@
       <p class="startlabels" align="center"> Excel </p>
     </div>
 
-    <div class="starticons">
+    <div class="starticons powerpointstartmenuicon">
       <img src="img/powerpoint.ico">
       <p class="startlabels" align="center"> PowerPoint </p>
     </div>
@@ -167,7 +167,6 @@
 
         <div class="taskbaricons">
           <img class="taskbariconsimg" src="img/chat.png">
-          <div class="center"><div class="taskbariconhighlight"></div></div>
         </div>
 
         <div class="taskbaricons">
@@ -185,13 +184,18 @@
           <div class="center"><div class="taskbariconhighlight"></div></div>
         </div>
 
-        <div class="taskbaricons wordtaskbaricon">
+        <div class="taskbaricons wordtaskbaricon hidden">
           <img class="taskbariconsimg" src="img/word.ico">
           <div class="center"><div class="taskbariconhighlight"></div></div>
         </div>
 
-        <div class="taskbaricons exceltaskbaricon">
+        <div class="taskbaricons exceltaskbaricon hidden">
           <img class="taskbariconsimg" src="img/excel.ico">
+          <div class="center"><div class="taskbariconhighlight"></div></div>
+        </div>
+
+        <div class="taskbaricons powerpointtaskbaricon hidden">
+          <img class="taskbariconsimg" src="img/powerpoint.ico">
           <div class="center"><div class="taskbariconhighlight"></div></div>
         </div>
 
@@ -199,7 +203,7 @@
      
     </div>
 
-    <div class="widgetsmenuicon">
+    <div class="taskbariconsleft">
       <img class="taskbariconsimg widgetsbutton" src="img/widgets.png">
     </div>
 
@@ -364,15 +368,57 @@
     </div>
     <iframe class="appIframe" src="apps/excel.html" align="center" width="100%" height="100%" scrolling="yes" name="excelIframe" id="excelIframe" frameborder="0"> </iframe>
     </div>
+
+    <div class="powerpointapp app" id="powerpointapp">
+
+      <div class="powerpointresizer resizer top-left"></div>
+      <div class="powerpointresizer resizer top-right"></div>
+      <div class="powerpointresizer resizer bottom-left"></div>
+      <div class="powerpointresizer resizer bottom-right"></div>
+
+      <div class="powerpointappheader appheader" id="powerpointappheader">
+        
+        <div class="headerleftside">
+          <img src="img/powerpoint.ico">
+          Powerpoint
+        </div>
+
+        <div class="headerrightside">
+
+          <div class="powerpointminimize minimize">
+            <img id="powerpointminimize" src="img/minimize.png">
+          </div>
+        
+        <div class="maximizeandmaxmin">
+
+          <div class="powerpointmaximize maximize">
+            <img id="powerpointmaximize" src="img/maximize.png">
+          </div>
+
+          <div class="powerpointmaxmin maxmin">
+            <img id="powerpointmaxmin" src="img/maxmin.png">
+          </div>
+        </div>
+
+          <div class="powerpointclose close">
+            <img id="powerpointclose" src="img/close.png">
+          </div>
+
+      </div>
+    </div>
+    <iframe class="appIframe" src="https://app.deckdeckgo.com/" align="center" width="100%" height="100%" scrolling="yes" name="powerpointIframe" id="powerpointIframe" frameborder="0"> </iframe>
+    </div>
     
     <script type='text/javascript'>
       var zIndex = "1"
       zIndex = zIndex - 2
       zIndex = zIndex + 2
     </script>
+    <script src="scripts/apptemplate.js"></script>
     <script src="scripts/edgescript.js"></script>
     <script src="scripts/wordscript.js"></script>
     <script src="scripts/excelscript.js"></script>
+    <script src="scripts/powerpointscript.js"></script>
     <script src="scripts/taskbar.js"></script>
     <script src="scripts/clock.js"></script>
     <script src="scripts/dycalendar.js"></script>

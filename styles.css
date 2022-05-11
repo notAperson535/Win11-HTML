@@ -4,8 +4,6 @@ body{
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
-  min-width: 100vw;
   transition: all .2s ease;
   margin: 0;
   padding: 0;
@@ -30,12 +28,11 @@ body{
   z-index: 11000;
 }
 
-.widgetsmenuicon{
+.taskbariconsleft{
+  margin-left: 10px;
   position: absolute;
-  display: flex;
-  align-items: center;
-  z-index: 12000;
-  bottom: 0;
+  z-index: 11001;
+  bottom: 11.5;
   float: left;
 }
 
@@ -44,9 +41,10 @@ body{
 }
 
 .taskbariconsright{
+  margin-right: 10px;
   display: flex;
   align-items: center;
-  z-index: 12000;
+  z-index: 11001;
   position: absolute;
   bottom: 3;
   right: 0;
@@ -75,7 +73,6 @@ body{
 }
 
 .timeanddate{
-  margin-right: 10px;
   font-size: 13px;
   text-align: right;
   padding: 4px;
@@ -114,26 +111,27 @@ body{
 
 .taskbariconsimg {
   width: 25px;
-  margin: 3px 5px;
+  margin: 0px 0px;
 }
 
 .taskbaricons{
-  margin: 0px 7px;
+  margin: 0px 9px;
 }
 
 .taskbariconhighlight{
-  margin-top: -1px;
-  height: 5px;
+  position: absolute;
+  margin-top: 4px;
+  height: 3px;
   border-radius: 5px;
-  width: 25%;
+  width: 7.5px;
   background-color: blue;
   opacity: 0;
   transition: all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear;
 }
 
 .taskbaricons:hover{
-  margin: -5px 2px;
-  border: solid 5px white;
+  margin: -7px 2px;
+  border: solid 7px white;
   backdrop-filter: blur(20px);
   background-color: rgba(255,255,255,.80);
   border-radius:5px;
@@ -292,6 +290,10 @@ body{
   background: #c4c4c4;
 }
 
+.maxmin{
+  display: none;
+}
+
 .maxmin:hover{
   background: #c4c4c4;
 }
@@ -345,18 +347,6 @@ body{
   outline: none;
 }
 
-#edgemaxmin{
-  display: none;
-}
-
-#wordmaxmin{
-  display: none;
-}
-
-#excelmaxmin{
-  display: none;
-}
-
 .maximizeandmaxmin{
   display: flex;
 }
@@ -392,10 +382,6 @@ body{
   cursor: se-resize;
 }
 
-.wordtaskbaricon{
-  display: none;
-}
-
-.exceltaskbaricon{
+.hidden{
   display: none;
 }

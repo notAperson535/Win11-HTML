@@ -14,7 +14,7 @@
 
  :root{
   --hover-color: lightgrey;
-  --current-day-highlight-color: blue;
+  --current-day-highlight-color: #0067c0;
   --current-day-text-color: white;
   --up-and-down-color: grey;
 }

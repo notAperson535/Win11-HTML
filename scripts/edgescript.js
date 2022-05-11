@@ -17,10 +17,22 @@ var edgeleftminmax = "20%"
 var edgewidthminmax = "60%"
 var edgeheightminmax = "75%"
 
+function edgeactive(){
+	edgetaskbariconhighlight.style.backgroundColor = "blue"
+	edgetaskbariconhighlight.style.width = "15px"
+}
+
+function edgenotactive(){
+	edgetaskbariconhighlight.style.backgroundColor = "grey"
+	edgetaskbariconhighlight.style.width = "7.5px"
+}
+
 window.addEventListener('mouseup', function(e) {
     if (!event.target.closest(".edgeapp")) {
         edgeapp.style.boxShadow = "none"
+		edgenotactive();
     }else{
+		edgeactive();
 		edgeapp.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
 		zIndex = zIndex + 2
 		edgeapp.style.zIndex = zIndex;
@@ -42,6 +54,7 @@ function getedgepropertiesmax(){
 }
 
 function edgeminorclose(){
+	edgenotactive();
 	getedgeproperties();
 	edgeapp.style.transition = "all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear"
 	edgeapp.style.opacity = "0"
@@ -69,6 +82,9 @@ function recoveredgepropertiesmaxmin(){
 
 edgestartmenuicon.addEventListener("click", ()=>{
 
+	edgeactive();
+	startmenu.style.bottom = "-675px"
+
 	if(edgeapp.style.opacity == "1"){
 		zIndex = zIndex + 2
 		edgeapp.style.zIndex = zIndex
@@ -78,7 +94,6 @@ edgestartmenuicon.addEventListener("click", ()=>{
 		edgeapp.style.opacity = "1"
 		zIndex = zIndex + 2
 		edgeapp.style.zIndex = zIndex
-		edgetaskbariconhighlight.style.width = "25%"
 		edgetaskbariconhighlight.style.opacity = "1"
 	}
 
@@ -86,6 +101,12 @@ edgestartmenuicon.addEventListener("click", ()=>{
 
 edgetaskbaricon.addEventListener("click", ()=>{
 
+	if(edgeapp.style.zIndex != zIndex){
+		edgeactive();
+		zIndex = zIndex + 2
+		edgeapp.style.zIndex = zIndex;
+		return;
+	}
 	if(edgeapp.style.opacity == "1"){
 		zIndex = zIndex + 2
 		edgeapp.style.zIndex = zIndex
@@ -93,11 +114,11 @@ edgetaskbaricon.addEventListener("click", ()=>{
 		edgeapp.style.top = "200%"
 	}
 	else{
+		edgeactive();
 		zIndex = zIndex + 2
 		edgeapp.style.zIndex = zIndex
 		recoveredgeproperties();
 		edgeapp.style.opacity = "1"
-		edgetaskbariconhighlight.style.width = "25%"
 		edgetaskbariconhighlight.style.opacity = "1"
 	}
 

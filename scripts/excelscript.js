@@ -17,10 +17,22 @@ var excelleftminmax = "20%"
 var excelwidthminmax = "60%"
 var excelheightminmax = "75%"
 
+function excelactive(){
+	exceltaskbariconhighlight.style.backgroundColor = "blue"
+	exceltaskbariconhighlight.style.width = "15px"
+}
+
+function excelnotactive(){
+	exceltaskbariconhighlight.style.backgroundColor = "grey"
+	exceltaskbariconhighlight.style.width = "7.5px"
+}
+
 window.addEventListener('mouseup', function(e) {
     if (!event.target.closest(".excelapp")) {
         excelapp.style.boxShadow = "none"
+		excelnotactive();
     }else{
+		excelactive();
 		excelapp.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
 		zIndex = zIndex + 2
 		excelapp.style.zIndex = zIndex;
@@ -42,6 +54,7 @@ function getexcelpropertiesmax(){
 }
 
 function excelminorclose(){
+	excelnotactive();
 	getexcelproperties();
 	excelapp.style.transition = "all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear"
 	excelapp.style.left = "50%"
@@ -71,6 +84,9 @@ function recoverexcelpropertiesmaxmin(){
 
 excelstartmenuicon.addEventListener("click", ()=>{
 
+	excelactive();
+	startmenu.style.bottom = "-675px"
+
 	if(excelapp.style.opacity == "1"){
 		zIndex = zIndex + 2
 		excelapp.style.zIndex = zIndex
@@ -81,13 +97,18 @@ excelstartmenuicon.addEventListener("click", ()=>{
 		zIndex = zIndex + 2
 		excelapp.style.zIndex = zIndex
 		exceltaskbariconhighlight.style.opacity = "1"
-		exceltaskbariconhighlight.style.width = "25%"
 	}
 
 })
 
 exceltaskbaricon.addEventListener("click", ()=>{
 
+	if(excelapp.style.zIndex != zIndex){
+		excelactive();
+		zIndex = zIndex + 2
+		excelapp.style.zIndex = zIndex;
+		return;
+	}
 	if(excelapp.style.opacity == "1"){
         excelminorclose();
 		excelapp.style.top = "200%"
@@ -95,6 +116,7 @@ exceltaskbaricon.addEventListener("click", ()=>{
 		excelapp.style.zIndex = zIndex
 	}
 	else{
+		excelactive();
 		recoverexcelproperties();
 		zIndex = zIndex + 2
 		excelapp.style.zIndex = zIndex
@@ -106,7 +128,7 @@ exceltaskbaricon.addEventListener("click", ()=>{
 excelclose.addEventListener("click", ()=>{
 	excelminorclose();
 	exceltaskbaricon.style.display = "none"
-	exceltaskbaricon.style.opacity = "0"
+	exceltaskbariconhighlight.style.opacity = "0"
 	exceltaskbariconhighlight.style.width = "0px"
 });
 
@@ -116,6 +138,7 @@ excelminimize.addEventListener("click", ()=>{
 });
 
 excelmaximize.addEventListener("click", ()=>{
+	excelapp.style.borderRadius = "0px"
 	excelapp.style.transition = "all 0.2s ease-in"
 	excelapp.style.left = "0px"
 	excelapp.style.width = "100%"
@@ -132,6 +155,7 @@ function excelshowmaximizehideminmax(){
 }
 
 excelmaxmin.addEventListener("click", ()=>{
+	excelapp.style.borderRadius = "5px"
 	excelapp.style.transition = "all 0.2s ease-in"
 	recoverexcelpropertiesmaxmin();
 	excelshowmaximizehideminmax();
@@ -194,7 +218,7 @@ function dragElement(elmnt) {
 
 let exceldivs = Array.from(document.querySelectorAll('.excelapp')),
 		excelminWidth = 400,
-		excelminHeight = 65,
+		excelminHeight = 30,
 		excelmaxWidth = 100000,
 		excelmaxHeight = 100000,
 		excelisResizing = false;

@@ -17,7 +17,7 @@ jobs:
         run: |
           git submodule sync
           git submodule update --init --recursive --remote
-          git config user.name "notAperson535"
+          git config user.name "github-pages[bot]"
           git config user.email "notAperson939@gmail.com"
           git add .
           git commit -m "update dev submodule"

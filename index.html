@@ -29,17 +29,17 @@
 
   <div class="startrow">
 
-    <div class="starticons">
+    <div class="starticons edgestartmenuicon">
       <img src="img/edge.png">
       <p class="startlabels" align="center"> Microsoft Edge </p>
     </div>
 
-    <div class="starticons">
+    <div class="starticons wordstartmenuicon">
       <img src="img/word.ico">
       <p class="startlabels" align="center"> Word </p>
     </div>
 
-    <div class="starticons">
+    <div class="starticons excelstartmenuicon">
       <img src="img/excel.ico">
       <p class="startlabels" align="center"> Excel </p>
     </div>
@@ -139,8 +139,10 @@
 </div>
 </div>
 
+<div class="center">
     <div class="searchmenu">
       <img src="img/searchmenu.jpg">
+    </div>
     </div>
 
     <div class="widgetsmenu">
@@ -150,19 +152,55 @@
     <div class="taskbar">
 
       <div class="taskbariconscenter">
-        <img class="taskbaricons startbutton" src="img/startbutton.png">
-        <img class="taskbaricons searchbutton" src="img/search.png">
-        <img class="taskbaricons" src="img/taskview.png">
-        <img class="taskbaricons" src="img/chat.png">
-        <img class="taskbaricons" src="img/explorer.png">
-        <img class="taskbaricons edgebutton" src="img/edge.png">
-        <img class="taskbaricons" src="img/store.ico">
+
+        <div class="taskbaricons startbutton">
+          <img class="taskbariconsimg" src="img/startbutton.png">
+        </div>
+
+        <div class="taskbaricons searchbutton">
+          <img class="taskbariconsimg" src="img/search.png">
+        </div>
+
+        <div class="taskbaricons">
+          <img class="taskbariconsimg" src="img/taskview.png">
+        </div>
+
+        <div class="taskbaricons">
+          <img class="taskbariconsimg" src="img/chat.png">
+          <div class="center"><div class="taskbariconhighlight"></div></div>
+        </div>
+
+        <div class="taskbaricons">
+          <img class="taskbariconsimg" src="img/explorer.png">
+          <div class="center"><div class="taskbariconhighlight"></div></div>
+        </div>
+
+        <div class="taskbaricons edgetaskbaricon">
+          <img class="taskbariconsimg" src="img/edge.png">
+          <div class="center"><div class="taskbariconhighlight"></div></div>
+        </div>
+
+        <div class="taskbaricons">
+          <img class="taskbariconsimg" src="img/store.ico">
+          <div class="center"><div class="taskbariconhighlight"></div></div>
+        </div>
+
+        <div class="taskbaricons wordtaskbaricon">
+          <img class="taskbariconsimg" src="img/word.ico">
+          <div class="center"><div class="taskbariconhighlight"></div></div>
+        </div>
+
+        <div class="taskbaricons exceltaskbaricon">
+          <img class="taskbariconsimg" src="img/excel.ico">
+          <div class="center"><div class="taskbariconhighlight"></div></div>
+        </div>
+
       </div>
      
     </div>
 
     <div class="widgetsmenuicon">
-      <img class="taskbaricons widgetsbutton" src="img/widgets.png">
+      <img class="taskbariconsimg widgetsbutton" src="img/widgets.png">
     </div>
 
     <div class="taskbariconsright">
@@ -191,16 +229,16 @@
 </div>
 
 
-    <div class="edgeapp" id="edgeapp">
+    <div class="edgeapp app" id="edgeapp">
 
-      <div class="edgeresizer top-left"></div>
-      <div class="edgeresizer top-right"></div>
-      <div class="edgeresizer bottom-left"></div>
-      <div class="edgeresizer bottom-right"></div>
+      <div class="edgeresizer resizer top-left"></div>
+      <div class="edgeresizer resizer top-right"></div>
+      <div class="edgeresizer resizer bottom-left"></div>
+      <div class="edgeresizer resizer bottom-right"></div>
 
-      <div class="edgeappheader" id="edgeappheader">
+      <div class="edgeappheader appheader" id="edgeappheader">
 
-        <div class="edgeheaderleftside">
+        <div class="headerleftside">
           <img src="img/edge.png">
           Edge
 	        <div class="edgetab">
@@ -209,24 +247,24 @@
 	        </div>
         </div>
 
-        <div class="edgeheaderrightside">
+        <div class="headerrightside">
 
-          <div class="edgeminimize">
+          <div class="edgeminimize minimize">
             <img id="edgeminimize" src="img/minimize.png">
           </div>
         
-        <div class="edgemaximizeandmaxmin">
+        <div class="maximizeandmaxmin">
 
-          <div class="edgemaximize">
+          <div class="edgemaximize maximize">
             <img id="edgemaximize" src="img/maximize.png">
           </div>
 
-          <div class="edgemaxmin">
+          <div class="edgemaxmin maxmin">
             <img id="edgemaxmin" src="img/maxmin.png">
           </div>
         </div>
 
-          <div class="edgeclose">
+          <div class="edgeclose close">
             <img id="edgeclose" src="img/close.png">
           </div>
         
@@ -235,22 +273,109 @@
       </div>
 
       <div class="edgeurlarea">
-	      <img class="edgeurlareaicon" src="img/backarrow.png" onclick="goBack()"> 
-	      <img class="edgeurlareaicon" src="img/forwardarrow.png" onclick="goForward()"> 
+	      <img class="edgeurlareaicon" src="img/backarrow.svg" onclick="goBack()"> 
+	      <img class="edgeurlareaicon" src="img/forwardarrow.svg" onclick="goForward()"> 
         <img class="edgeurlareaicon" src="img/reload.png" onclick="edgereload()">
         <input type="text" value="https://bing.com" class="edgeurlbar edgeURL" ID="URL">
         <img class="edgeurlareaicon" src="img/favorites.png">
         <img class="edgeurlareaicon edgeprofilepicture" src="img/profilepicture.png">
         <img class="edgeurlareaicon" src="img/more.png">
       </div>
-      <iframe is="x-frame-bypass" style="background-color: white;" align="center" width="100%" height="100%" scrolling="yes" name="edgeIframe" id="edgeIframe" frameborder="0"> </iframe>
+      <iframe class="appIframe" style="background-color: white;" align="center" width="100%" height="100%" scrolling="yes" name="edgeIframe" id="edgeIframe" frameborder="0"> </iframe>
     
     </div>
+
+    <div class="wordapp app" id="wordapp">
+
+      <div class="wordresizer resizer top-left"></div>
+      <div class="wordresizer resizer top-right"></div>
+      <div class="wordresizer resizer bottom-left"></div>
+      <div class="wordresizer resizer bottom-right"></div>
+
+      <div class="wordappheader appheader" id="wordappheader">
+        
+        <div class="headerleftside">
+          <img src="img/word.ico">
+          Word
+        </div>
+
+        <div class="headerrightside">
+
+          <div class="wordminimize minimize">
+            <img id="wordminimize" src="img/minimize.png">
+          </div>
+        
+        <div class="maximizeandmaxmin">
+
+          <div class="wordmaximize maximize">
+            <img id="wordmaximize" src="img/maximize.png">
+          </div>
+
+          <div class="wordmaxmin maxmin">
+            <img id="wordmaxmin" src="img/maxmin.png">
+          </div>
+        </div>
+
+          <div class="wordclose close">
+            <img id="wordclose" src="img/close.png">
+          </div>
+
+      </div>
+    </div>
+    <iframe class="appIframe" src="apps/word.html" align="center" width="100%" height="100%" scrolling="yes" name="wordIframe" id="wordIframe" frameborder="0"> </iframe>
+    </div>
+
+    <div class="excelapp app" id="excelapp">
+
+      <div class="excelresizer resizer top-left"></div>
+      <div class="excelresizer resizer top-right"></div>
+      <div class="excelresizer resizer bottom-left"></div>
+      <div class="excelresizer resizer bottom-right"></div>
+
+      <div class="excelappheader appheader" id="excelappheader">
+        
+        <div class="headerleftside">
+          <img src="img/excel.ico">
+          Excel
+        </div>
+
+        <div class="headerrightside">
+
+          <div class="excelminimize minimize">
+            <img id="excelminimize" src="img/minimize.png">
+          </div>
+        
+        <div class="maximizeandmaxmin">
+
+          <div class="excelmaximize maximize">
+            <img id="excelmaximize" src="img/maximize.png">
+          </div>
+
+          <div class="excelmaxmin maxmin">
+            <img id="excelmaxmin" src="img/maxmin.png">
+          </div>
+        </div>
+
+          <div class="excelclose close">
+            <img id="excelclose" src="img/close.png">
+          </div>
+
+      </div>
+    </div>
+    <iframe class="appIframe" src="apps/excel.html" align="center" width="100%" height="100%" scrolling="yes" name="excelIframe" id="excelIframe" frameborder="0"> </iframe>
+    </div>
     
-    <script src="edgescript.js"></script>
-    <script src="script.js"></script>
-    <script src="clock.js"></script>
-    <script src="dycalendar.js"></script>
+    <script type='text/javascript'>
+      var zIndex = "1"
+      zIndex = zIndex - 2
+      zIndex = zIndex + 2
+    </script>
+    <script src="scripts/edgescript.js"></script>
+    <script src="scripts/wordscript.js"></script>
+    <script src="scripts/excelscript.js"></script>
+    <script src="scripts/taskbar.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/dycalendar.js"></script>
     
     <script>
       dycalendar.draw({

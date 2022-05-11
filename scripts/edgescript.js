@@ -1,4 +1,4 @@
-let edgebutton = document.getElementsByClassName("edgebutton")[0]
+let edgestartmenuicon = document.getElementsByClassName("edgestartmenuicon")[0]
 let edgeapp = document.getElementsByClassName("edgeapp")[0]
 let edgeclose = document.getElementsByClassName("edgeclose")[0]
 let edgemaximize = document.getElementsByClassName("edgemaximize")[0]
@@ -6,17 +6,39 @@ let edgeminimize = document.getElementsByClassName("edgeminimize")[0]
 let edgemaxmin = document.getElementsByClassName("edgemaxmin")[0]
 let edgemaximizeimage = document.getElementById("edgemaximize")
 let edgemaxminimage = document.getElementById("edgemaxmin")
-var edgetop = "8%"
-var edgeleft = "20%"
-var edgewidth = "60%"
-var edgeheight = "75%"
+let edgetaskbariconhighlight = document.querySelector(".edgetaskbaricon .taskbariconhighlight")
+let edgetaskbaricon = document.getElementsByClassName("edgetaskbaricon")[0]
+var edgetopminclose = "8%"
+var edgeleftminclose = "20%"
+var edgewidthminclose = "60%"
+var edgeheightminclose = "75%"
+var edgetopminmax = "8%"
+var edgeleftminmax = "20%"
+var edgewidthminmax = "60%"
+var edgeheightminmax = "75%"
 
+window.addEventListener('mouseup', function(e) {
+    if (!event.target.closest(".edgeapp")) {
+        edgeapp.style.boxShadow = "none"
+    }else{
+		edgeapp.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
+		zIndex = zIndex + 2
+		edgeapp.style.zIndex = zIndex;
+	}
+});
 
 function getedgeproperties(){
-	edgetop = getComputedStyle(edgeapp).getPropertyValue('top');
-	edgeleft = getComputedStyle(edgeapp).getPropertyValue('left');
-	edgewidth = getComputedStyle(edgeapp).getPropertyValue('width');
-	edgeheight = getComputedStyle(edgeapp).getPropertyValue('height');
+	edgetopminclose = getComputedStyle(edgeapp).getPropertyValue('top');
+	edgeleftminclose = getComputedStyle(edgeapp).getPropertyValue('left');
+	edgewidthminclose = getComputedStyle(edgeapp).getPropertyValue('width');
+	edgeheightminclose = getComputedStyle(edgeapp).getPropertyValue('height');
+}
+
+function getedgepropertiesmax(){
+	edgetopminmax = getComputedStyle(edgeapp).getPropertyValue('top');
+	edgeleftminmax = getComputedStyle(edgeapp).getPropertyValue('left');
+	edgewidthminmax = getComputedStyle(edgeapp).getPropertyValue('width');
+	edgeheightminmax = getComputedStyle(edgeapp).getPropertyValue('height');
 }
 
 function edgeminorclose(){
@@ -31,27 +53,60 @@ function edgeminorclose(){
 
 function recoveredgeproperties(){
 	edgeapp.style.transition = "all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear"
-	edgeapp.style.top = edgetop
-	edgeapp.style.left = edgeleft
-	edgeapp.style.width = edgewidth
-	edgeapp.style.height = edgeheight
+	edgeapp.style.top = edgetopminclose
+	edgeapp.style.left = edgeleftminclose
+	edgeapp.style.width = edgewidthminclose
+	edgeapp.style.height = edgeheightminclose
 }
 
-edgebutton.addEventListener("click", ()=>{
+function recoveredgepropertiesmaxmin(){
+	edgeapp.style.transition = "all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear"
+	edgeapp.style.top = edgetopminmax
+	edgeapp.style.left = edgeleftminmax
+	edgeapp.style.width = edgewidthminmax
+	edgeapp.style.height = edgeheightminmax
+}
+
+edgestartmenuicon.addEventListener("click", ()=>{
 
 	if(edgeapp.style.opacity == "1"){
-        edgeminorclose();
-		edgeapp.style.top = "200%"
+		zIndex = zIndex + 2
+		edgeapp.style.zIndex = zIndex
 	}
 	else{
 		recoveredgeproperties();
 		edgeapp.style.opacity = "1"
+		zIndex = zIndex + 2
+		edgeapp.style.zIndex = zIndex
+		edgetaskbariconhighlight.style.width = "25%"
+		edgetaskbariconhighlight.style.opacity = "1"
+	}
+
+})
+
+edgetaskbaricon.addEventListener("click", ()=>{
+
+	if(edgeapp.style.opacity == "1"){
+		zIndex = zIndex + 2
+		edgeapp.style.zIndex = zIndex
+        edgeminorclose();
+		edgeapp.style.top = "200%"
+	}
+	else{
+		zIndex = zIndex + 2
+		edgeapp.style.zIndex = zIndex
+		recoveredgeproperties();
+		edgeapp.style.opacity = "1"
+		edgetaskbariconhighlight.style.width = "25%"
+		edgetaskbariconhighlight.style.opacity = "1"
 	}
 
 })
 
 edgeclose.addEventListener("click", ()=>{
 	edgeminorclose();
+	edgetaskbariconhighlight.style.opacity = "0"
+	edgetaskbariconhighlight.style.width = "0px"
 });
 
 edgeminimize.addEventListener("click", ()=>{
@@ -65,26 +120,25 @@ edgemaximize.addEventListener("click", ()=>{
 	edgeapp.style.width = "100%"
 	edgeapp.style.height = "calc(100% - 48px)"
 	edgeapp.style.top = "0px"
-	getedgeproperties();
+	getedgepropertiesmax();
 	edgemaximizeimage.style.display = "none"
 	edgemaxminimage.style.display = "block"
 });
 
-function showmaximizehideminmax(){
+function edgeshowmaximizehideminmax(){
 	edgemaximizeimage.style.display = "block"
 	edgemaxminimage.style.display = "none"
 }
 
 edgemaxmin.addEventListener("click", ()=>{
 	edgeapp.style.transition = "all 0.2s ease-in"
-	recoveredgeproperties();
-	showmaximizehideminmax();
+	recoveredgepropertiesmaxmin();
+	edgeshowmaximizehideminmax();
 });
 
-function removetransition(){
+function edgeremovetransition(){
 	edgeapp.style.transition = "opacity 200ms linear"
 }
-
 
 //Make the DIV element draggagle:
 dragElement(document.getElementById("edgeapp"));
@@ -105,7 +159,7 @@ function dragElement(elmnt) {
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
     pos4 = e.clientY;
-    removetransition();
+    edgeremovetransition();
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
@@ -122,7 +176,7 @@ function dragElement(elmnt) {
     // set the element's new position:
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    showmaximizehideminmax();
+    edgeshowmaximizehideminmax();
   }
 
   function closeDragElement() {
@@ -133,67 +187,17 @@ function dragElement(elmnt) {
 }
 
 
-window.onload = function() {
-    goToPage(document.getElementById("URL").value)
-    console.log(document.getElementById("edgeIframe").edgeheaderWindow.location.href)
-};
-
-const edgetext = document.getElementsByClassName("edgeURL")[0];
-edgetext.addEventListener("keyup", ({key}) => {
-    if (key === "Enter") {
-     goToPage(document.getElementById("URL").value);
-     //document.getElementById("URL").value = document.getElementById("edgeIframe").edgeheaderWindow.location.href
-    }
-})
-
-var urlList = new Array();
-var pos = 0;
-function goToPage(pageUrl)
-{
-    urlList[urlList.length] = pageUrl;
-    pos = urlList.length - 1;
-    document.getElementById('edgeIframe').src = pageUrl;
-}
-function goBack()
-{
-    if (pos > 0)
-    {
-        pos--;
-        document.getElementById('edgeIframe').src = urlList[pos];
-        document.getElementById("URL").value = document.getElementById("edgeIframe").edgeheaderWindow.location.href
-    }
-    else
-        void 0;
-
-}
-function goForward()
-{
-    if (pos < (urlList.length-1))
-    {
-        pos++;
-        document.getElementById('edgeIframe').src = urlList[pos];
-    }
-    else
-        void 0;
-}
-
-function edgereload() {
-    var ifr = document.getElementsByName('edgeIframe')[0];
-    ifr.src = ifr.src;
-}
-
-
 //resizable part
 
 
-let divs = Array.from(document.querySelectorAll('.edgeapp')),
-		minWidth = 400,
-		minHeight = 65,
-		maxWidth = 100000,
-		maxHeight = 100000,
-		isResizing = false;
+let edgedivs = Array.from(document.querySelectorAll('.edgeapp')),
+		edgeminWidth = 400,
+		edgeminHeight = 65,
+		edgemaxWidth = 100000,
+		edgemaxHeight = 100000,
+		edgeisResizing = false;
 
-divs.forEach(div => {
+edgedivs.forEach(div => {
 	div.addEventListener('mousedown', mousedown);
 	//select the edgeresizers
 	let edgeresizers = div.querySelectorAll('.edgeresizer');
@@ -211,9 +215,9 @@ divs.forEach(div => {
 					prevTop  = rect.top,
 					newWidth,
 					newHeight;
-          removetransition();
+          edgeremovetransition();
 
-			isResizing = true;
+			edgeisResizing = true;
 
 			window.addEventListener('mousemove', mousemove);
 			window.addEventListener('mouseup', mouseup);
@@ -225,10 +229,10 @@ divs.forEach(div => {
 				if (currentedgeresizer.classList.contains('bottom-right')) {
 					newWidth = rect.width - newX;
 					newHeight = rect.height - newY;
-					if (newWidth > minWidth && newWidth < maxWidth) {
+					if (newWidth > edgeminWidth && newWidth < edgemaxWidth) {
 						div.style.width = newWidth + 'px';
 					}
-					if (newHeight > minHeight && newHeight < maxHeight) {
+					if (newHeight > edgeminHeight && newHeight < edgemaxHeight) {
 						div.style.height = newHeight + 'px';
 					}
 
@@ -237,11 +241,11 @@ divs.forEach(div => {
 					newWidth = rect.width + newX;
 					newHeight = rect.height - newY;
 
-					if (newWidth > minWidth && newWidth < maxWidth) {
+					if (newWidth > edgeminWidth && newWidth < edgemaxWidth) {
 						div.style.left = prevLeft - newX + 'px';
 						div.style.width = newWidth + 'px';
 					} 
-					if (newHeight > minHeight && newHeight < maxHeight) {
+					if (newHeight > edgeminHeight && newHeight < edgemaxHeight) {
 						div.style.height = newHeight + 'px';
 					}
 
@@ -250,10 +254,10 @@ divs.forEach(div => {
 					newWidth = rect.width - newX;
 					newHeight = rect.height + newY;
 
-					if (newWidth > minWidth && newWidth < maxWidth) {
+					if (newWidth > edgeminWidth && newWidth < edgemaxWidth) {
 						div.style.width = newWidth + 'px';
 					}
-					if (newHeight > minHeight && newHeight < maxHeight) {
+					if (newHeight > edgeminHeight && newHeight < edgemaxHeight) {
 						div.style.top = prevTop - newY + 'px';
 						div.style.height = newHeight + 'px';
 					}
@@ -263,11 +267,11 @@ divs.forEach(div => {
 					newWidth = rect.width + newX;
 					newHeight = rect.height + newY;
 
-					if (newWidth > minWidth && newWidth < maxWidth) {
+					if (newWidth > edgeminWidth && newWidth < edgemaxWidth) {
 						div.style.left = prevLeft - newX + 'px';
 						div.style.width = newWidth + 'px';
 					}
-					if (newHeight > minHeight && newHeight < maxHeight) {
+					if (newHeight > edgeminHeight && newHeight < edgemaxHeight) {
 						div.style.top = prevTop - newY + 'px';
 						div.style.height = newHeight + 'px';
 					}
@@ -275,7 +279,8 @@ divs.forEach(div => {
 			}
 
 			function mouseup() {
-				isResizing = false;
+				edgeshowmaximizehideminmax();
+				edgeisResizing = false;
 				window.removeEventListener('mousemove', mousemove);
 				window.removeEventListener('mouseup', mouseup);
 			}
@@ -303,4 +308,48 @@ function mousedown(e) {
 	}
 }
 
+window.onload = function() {
+    goToPage(document.getElementById("URL").value)
+};
 
+const edgetext = document.getElementsByClassName("edgeURL")[0];
+edgetext.addEventListener("keyup", ({key}) => {
+    if (key === "Enter") {
+     goToPage(document.getElementById("URL").value);
+    }
+})
+
+var urlList = new Array();
+var pos = 0;
+function goToPage(pageUrl)
+{
+    urlList[urlList.length] = pageUrl;
+    pos = urlList.length - 1;
+    document.getElementById('edgeIframe').src = pageUrl;
+}
+function goBack()
+{
+    if (pos > 0)
+    {
+        pos--;
+        document.getElementById('edgeIframe').src = urlList[pos];
+    }
+    else
+        void 0;
+
+}
+function goForward()
+{
+    if (pos < (urlList.length-1))
+    {
+        pos++;
+        document.getElementById('edgeIframe').src = urlList[pos];
+    }
+    else
+        void 0;
+}
+
+function edgereload() {
+    var ifr = document.getElementsByName('edgeIframe')[0];
+    ifr.src = ifr.src;
+}

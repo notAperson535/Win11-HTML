@@ -1,9 +1,9 @@
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="dycalendar.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dycalendar.css">
     <link href="https://fonts.cdnfonts.com/css/segoe-ui-variable" rel="stylesheet">
-    <link rel="icon" href="StartIcon.ico">
+    <link rel="icon" href="img/favicon.ico">
     <title>Windows 11 in HTML</title>
   </head>
   <body>
@@ -90,7 +90,7 @@
         <p class="startlabels" align="center"> Xbox </p>
       </div>
 
-      <div class="starticons">
+      <div class="starticons solitairestartmenuicon">
         <img src="img/solitaire.ico">
         <p class="startlabels" align="center"> Solitaire </p>
       </div>
@@ -125,8 +125,8 @@
       </div>
 
 
-      <div class="starticons">
-        <img src="img/visualcode.ico">
+      <div class="starticons vscodestartmenuicon">
+        <img src="img/vscode.ico">
         <p class="startlabels" align="center"> VS Code </p>
       </div>
 
@@ -199,6 +199,16 @@
           <div class="center"><div class="taskbariconhighlight"></div></div>
         </div>
 
+        <div class="taskbaricons vscodetaskbaricon hidden">
+          <img class="taskbariconsimg" src="img/vscode.ico">
+          <div class="center"><div class="taskbariconhighlight"></div></div>
+        </div>
+
+        <div class="taskbaricons solitairetaskbaricon hidden">
+          <img class="taskbariconsimg" src="img/solitaire.ico">
+          <div class="center"><div class="taskbariconhighlight"></div></div>
+        </div>
+
       </div>
      
     </div>
@@ -264,7 +274,7 @@
           </div>
 
           <div class="edgemaxmin maxmin">
-            <img id="edgemaxmin" src="img/maxmin.png">
+            <img id="edgemaxmin" class="maxminimage" src="img/maxmin.png">
           </div>
         </div>
 
@@ -316,7 +326,7 @@
           </div>
 
           <div class="wordmaxmin maxmin">
-            <img id="wordmaxmin" src="img/maxmin.png">
+            <img id="wordmaxmin" class="maxminimage" src="img/maxmin.png">
           </div>
         </div>
 
@@ -326,7 +336,7 @@
 
       </div>
     </div>
-    <iframe class="appIframe" src="apps/word.html" align="center" width="100%" height="100%" scrolling="yes" name="wordIframe" id="wordIframe" frameborder="0"> </iframe>
+    <iframe class="appIframe wordIframe" align="center" width="100%" height="100%" scrolling="yes" name="wordIframe" id="wordIframe" frameborder="0"> </iframe>
     </div>
 
     <div class="excelapp app" id="excelapp">
@@ -356,7 +366,7 @@
           </div>
 
           <div class="excelmaxmin maxmin">
-            <img id="excelmaxmin" src="img/maxmin.png">
+            <img id="excelmaxmin" class="maxminimage" src="img/maxmin.png">
           </div>
         </div>
 
@@ -366,7 +376,7 @@
 
       </div>
     </div>
-    <iframe class="appIframe" src="apps/excel.html" align="center" width="100%" height="100%" scrolling="yes" name="excelIframe" id="excelIframe" frameborder="0"> </iframe>
+    <iframe class="appIframe excelIframe" align="center" width="100%" height="100%" scrolling="yes" name="excelIframe" id="excelIframe" frameborder="0"> </iframe>
     </div>
 
     <div class="powerpointapp app" id="powerpointapp">
@@ -396,7 +406,7 @@
           </div>
 
           <div class="powerpointmaxmin maxmin">
-            <img id="powerpointmaxmin" src="img/maxmin.png">
+            <img id="powerpointmaxmin" class="maxminimage" src="img/maxmin.png">
           </div>
         </div>
 
@@ -406,7 +416,87 @@
 
       </div>
     </div>
-    <iframe class="appIframe" src="https://app.deckdeckgo.com/" align="center" width="100%" height="100%" scrolling="yes" name="powerpointIframe" id="powerpointIframe" frameborder="0"> </iframe>
+    <iframe class="appIframe powerpointIframe" align="center" width="100%" height="100%" scrolling="yes" name="powerpointIframe" id="powerpointIframe" frameborder="0"> </iframe>
+    </div>
+
+    <div class="vscodeapp app" id="vscodeapp">
+
+      <div class="vscoderesizer resizer top-left"></div>
+      <div class="vscoderesizer resizer top-right"></div>
+      <div class="vscoderesizer resizer bottom-left"></div>
+      <div class="vscoderesizer resizer bottom-right"></div>
+
+      <div class="vscodeappheader appheader" id="vscodeappheader">
+        
+        <div class="headerleftside">
+          <img src="img/vscode.ico">
+          VS Code
+        </div>
+
+        <div class="headerrightside">
+
+          <div class="vscodeminimize minimize">
+            <img id="vscodeminimize" src="img/minimize.png">
+          </div>
+        
+        <div class="maximizeandmaxmin">
+
+          <div class="vscodemaximize maximize">
+            <img id="vscodemaximize" src="img/maximize.png">
+          </div>
+
+          <div class="vscodemaxmin maxmin">
+            <img id="vscodemaxmin" class="maxminimage" src="img/maxmin.png">
+          </div>
+        </div>
+
+          <div class="vscodeclose close">
+            <img id="vscodeclose" src="img/close.png">
+          </div>
+
+      </div>
+    </div>
+    <iframe class="appIframe vscodeIframe" align="center" width="100%" height="100%" scrolling="yes" name="vscodeIframe" id="vscodeIframe" frameborder="0"> </iframe>
+    </div>
+
+    <div class="solitaireapp app" id="solitaireapp">
+
+      <div class="solitaireresizer resizer top-left"></div>
+      <div class="solitaireresizer resizer top-right"></div>
+      <div class="solitaireresizer resizer bottom-left"></div>
+      <div class="solitaireresizer resizer bottom-right"></div>
+
+      <div class="solitaireappheader appheader" id="solitaireappheader">
+        
+        <div class="headerleftside">
+          <img src="img/solitaire.ico">
+          Solitaire
+        </div>
+
+        <div class="headerrightside">
+
+          <div class="solitaireminimize minimize">
+            <img id="solitaireminimize" src="img/minimize.png">
+          </div>
+        
+        <div class="maximizeandmaxmin">
+
+          <div class="solitairemaximize maximize">
+            <img id="solitairemaximize" src="img/maximize.png">
+          </div>
+
+          <div class="solitairemaxmin maxmin">
+            <img id="solitairemaxmin" class="maxminimage" src="img/maxmin.png">
+          </div>
+        </div>
+
+          <div class="solitaireclose close">
+            <img id="solitaireclose" src="img/close.png">
+          </div>
+
+      </div>
+    </div>
+    <iframe class="appIframe solitaireIframe" align="center" width="100%" height="100%" scrolling="yes" name="solitaireIframe" id="solitaireIframe" frameborder="0"> </iframe>
     </div>
     
     <script type='text/javascript'>
@@ -414,15 +504,12 @@
       zIndex = zIndex - 2
       zIndex = zIndex + 2
     </script>
-    <script src="scripts/apptemplate.js"></script>
+    <script src="scripts/appcreater.js"></script>
+    <script src="scripts/applist.js"></script>
     <script src="scripts/edgescript.js"></script>
-    <script src="scripts/wordscript.js"></script>
-    <script src="scripts/excelscript.js"></script>
-    <script src="scripts/powerpointscript.js"></script>
     <script src="scripts/taskbar.js"></script>
     <script src="scripts/clock.js"></script>
     <script src="scripts/dycalendar.js"></script>
-    
     <script>
       dycalendar.draw({
         "target":"#dycalendar",

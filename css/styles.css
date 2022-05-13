@@ -1,5 +1,5 @@
 body{
-  background-image: url("img/background.jpg");
+  background-image: url("https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/background.jpg");
   overflow: hidden;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -268,7 +268,8 @@ body{
 }
 
 .appIframe{
-  height: calc(100% - 30px);
+  height: calc(100% - 29px);
+  min-height: calc(100% - 29px);
 }
 
 .headerrightside {
@@ -279,7 +280,6 @@ body{
 .headerrightside img{
   width: 15px;
   margin: 15px;
-  display: block;
 }
 
 .close:hover{
@@ -290,7 +290,7 @@ body{
   background: #c4c4c4;
 }
 
-.maxmin{
+.maxminimage{
   display: none;
 }
 

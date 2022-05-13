@@ -270,6 +270,23 @@ body{
 .appIframe{
   height: calc(100% - 29px);
   min-height: calc(100% - 29px);
+  width: 100%;
+  border-width: 0px;
+  background-color: white;
+}
+
+.loadingimg{
+  width: 100%;
+  height: calc(100% - 29px);
+  background-color: white;
+}
+
+.loadinggif{
+  position: absolute;
+  left: 40%;
+  top: 60%;
+  width: 20%;
+  margin: auto;
 }
 
 .headerrightside {

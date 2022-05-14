@@ -239,7 +239,7 @@ body{
 
 .app {
   position: fixed;
-  box-shadow: 1px 1px 50px #969696;
+  box-shadow: 1px 10px 50px #969696;
   border-radius: 5px;
   border: 1px solid #B4B4B4;
   overflow: hidden;
@@ -330,8 +330,7 @@ body{
 }
 
 .edgeurlarea{
-  background-color: #F7F7F7;
-  box-shadow: 1px 1px 100px #969696;
+  background: var(--fakeMica);
   display: flex;
   align-items: center;
   height: 35px;
@@ -346,12 +345,13 @@ body{
 
 .edgetab{
   background-color: white;
+  box-shadow: 1px 3px 10px lightgrey;
   width: 175px;
   display:flex;
   align-items: center;
   margin-left: 16px;
-  height: 30px;
-  border-radius: 3px 3px 0px 0px;
+  height: 26px;
+  border-radius: 3px;
 }
 
 .edgetab img{
@@ -363,7 +363,7 @@ body{
 .edgeurlbar{
   border: none;
   height: 30px;
-  box-shadow: .1px .1px 125px #969696;
+  box-shadow: .1px .1px 5px rgb(230, 230, 230);
   border-radius: 3px;
   margin: 15px;
   width: 100%;

@@ -4,14 +4,19 @@ let searchbutton = document.getElementsByClassName("searchbutton")[0]
 let searchmenu = document.getElementsByClassName("searchmenu")[0]
 let widgetsbutton = document.getElementsByClassName("widgetsbutton")[0]
 let widgetsmenu = document.getElementsByClassName("widgetsmenu")[0]
-let edgebutton = document.getElementsByClassName("edgebutton")[0]
-let edgeapp = document.getElementsByClassName("edgeapp")[0]
-let edgeclose = document.getElementById("edgeclose")
+let timeanddate = document.getElementsByClassName("timeanddate")[0]
+let calendar = document.getElementsByClassName("calendar")[0]
+
+function sleep(seconds){
+    var waitUntil = new Date().getTime() + seconds*1000;
+    while(new Date().getTime() < waitUntil) 
+        true;
+}
 
 startbutton.addEventListener("click", ()=>{
 
 	if(startmenu.style.bottom == "50px"){
-		startmenu.style.bottom = "-655px"
+		startmenu.style.bottom = "-675px"
 	}
 	else{
 		startmenu.style.bottom = "50px"
@@ -38,35 +43,36 @@ widgetsbutton.addEventListener("click", ()=>{
 	}
 })
 
-edgebutton.addEventListener("click", ()=>{
+timeanddate.addEventListener("click", ()=>{
 
-	if(edgeapp.style.opacity == "1"){
-        	edgeapp.style.opacity = '0'
+	if(calendar.style.right == "3px"){
+		calendar.style.right = "-655px"
 	}
 	else{
-        	edgeapp.style.opacity = '1'
+		calendar.style.right = "3px"
 	}
-
 })
 
 window.addEventListener('mouseup', function(e) {
-    if (event.target != document.querySelector(".startbutton")) {
-        startmenu.style.bottom = "-655px";
+    if (!event.target.closest(".startmenu") && !event.target.closest(".startbutton")){
+        startmenu.style.bottom = "-675px";
     }
 });
 
 window.addEventListener('mouseup', function(e) {
-    if (event.target != document.querySelector(".searchbutton")) {
+    if (!event.target.closest(".searchmenu") && !event.target.closest(".searchtbutton")){
         searchmenu.style.bottom = "-655px";
     }
 });
 
 window.addEventListener('mouseup', function(e) {
-    if (event.target != document.querySelector(".widgetsbutton")) {
+    if (!event.target.closest(".widgetsmenu") && !event.target.closest(".widgetsbutton")){
         widgetsmenu.style.left = "-1000px";
     }
 });
 
-edgeclose.addEventListener("click", function(e){
-        edgeapp.style.opacity = '0';
+window.addEventListener('mouseup', function(e) {
+    if (!event.target.closest(".calendar") && !event.target.closest(".timeanddate")){
+        calendar.style.right = "-655px";
+    }
 });

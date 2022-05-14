@@ -1,11 +1,13 @@
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dycalendar.css">
     <link href="https://fonts.cdnfonts.com/css/segoe-ui-variable" rel="stylesheet">
-    <link rel="icon" href="StartIcon.ico">
+    <link rel="icon" href="img/favicon.ico">
+    <script src="https://codegena.com/assets/js/async-iframe.js"></script>
     <title>Windows 11 in HTML</title>
   </head>
-  <body>
+  <body class="body">
 
     <audio autoplay>
       <source src="audio/startup.mp3" type="audio/mpeg">
@@ -24,112 +26,9 @@
       </div>
     </div>
 
-<div class="sApps">
+<div class="sAppscontainer">
 
-  <div class="startrow">
-
-    <div class="starticons">
-      <img src="img/edge.png">
-      <p class="startlabels" align="center"> Microsoft Edge </p>
-    </div>
-
-    <div class="starticons">
-      <img src="img/word.ico">
-      <p class="startlabels" align="center"> Word </p>
-    </div>
-
-    <div class="starticons">
-      <img src="img/excel.ico">
-      <p class="startlabels" align="center"> Excel </p>
-    </div>
-
-    <div class="starticons">
-      <img src="img/powerpoint.ico">
-      <p class="startlabels" align="center"> PowerPoint </p>
-    </div>
-
-    <div class="starticons">
-      <img src="img/mail.ico">
-      <p class="startlabels" align="center"> Mail </p>
-    </div>
-
-    <div class="starticons">
-      <img src="img/calendar.ico">
-      <p class="startlabels" align="center"> Calendar </p>
-    </div>
-    
-  </div>
-
-  <div>
-
-    <div class="startrow">
-
-      <div class="starticons">
-        <img src="img/store.ico">
-        <p class="startlabels" align="center"> Microsoft Store </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/photos.ico">
-        <p class="startlabels" align="center"> Photos </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/office.ico">
-        <p class="startlabels" align="center"> Office </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/settings.ico">
-        <p class="startlabels" align="center"> Settings </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/xbox.png">
-        <p class="startlabels" align="center"> Xbox </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/solitaire.ico">
-        <p class="startlabels" align="center"> Solitaire </p>
-      </div>
-
-    </div>
-
-    <div class="startrow">
-
-      <div class="starticons">
-        <img src="img/setup.ico">
-        <p class="startlabels" align="center"> Get Started </p>
-      </div>
-  
-      <div class="starticons">
-        <img src="img/taskmanager.ico">
-        <p class="startlabels" align="center"> Task Manager </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/snippingtool.ico">
-        <p class="startlabels" align="center"> Snipping Tool </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/teams.ico">
-        <p class="startlabels" align="center"> Microsoft Teams </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/paint.ico">
-        <p class="startlabels" align="center"> Paint </p>
-      </div>
-
-
-      <div class="starticons">
-        <img src="img/visualcode.ico">
-        <p class="startlabels" align="center"> VS Code </p>
-      </div>
-
-    </div>
+  <div class="sApps">
 
   </div>
 
@@ -138,8 +37,10 @@
 </div>
 </div>
 
+<div class="center">
     <div class="searchmenu">
       <img src="img/searchmenu.jpg">
+    </div>
     </div>
 
     <div class="widgetsmenu">
@@ -147,21 +48,89 @@
     </div>
 
     <div class="taskbar">
-      <img class="taskbaricons startbutton" src="img/startbutton.png">
-      <img class="taskbaricons searchbutton" src="img/search.png">
-      <img class="taskbaricons" src="img/taskview.png">
-      <img class="taskbaricons widgetsbutton" src="img/widgets.png">
-      <img class="taskbaricons" src="img/chat.png">
-      <img class="taskbaricons" src="img/explorer.png">
-      <img class="taskbaricons edgebutton" src="img/edge.png">
-      <div class=taskbarindicator"></div>
-      <img class="taskbaricons" src="img/store.ico">
+
+      <div class="taskbariconsleft">
+        <div class="taskbaricons">
+          <img class="taskbariconsimg widgetsbutton" src="img/widgets.png">
+        </div>
+      </div>
+
+      <div class="taskbariconscenter">
+
+        <div class="taskbaricons startbutton">
+          <img class="taskbariconsimg" src="img/startbutton.png">
+        </div>
+
+        <div class="taskbaricons searchbutton">
+          <img class="taskbariconsimg" src="img/search.png">
+        </div>
+
+        <div class="taskbaricons">
+          <img class="taskbariconsimg" src="img/taskview.png">
+        </div>
+
+        <div class="taskbaricons">
+          <img class="taskbariconsimg" src="img/chat.png">
+        </div>
+
+        <div class="taskbaricons">
+          <img class="taskbariconsimg" src="img/explorer.png">
+          <div class="center"><div class="taskbariconhighlight"></div></div>
+        </div>
+
+        <div class="taskbaricons edgetaskbaricon">
+          <img class="taskbariconsimg" src="img/edge.png">
+          <div class="center"><div class="taskbariconhighlight"></div></div>
+        </div>
+
+        <div class="taskbaricons">
+          <img class="taskbariconsimg" src="img/store.ico">
+          <div class="center"><div class="taskbariconhighlight"></div></div>
+        </div>
+
+      </div>
+
+
+      <div class="taskbariconsright">
+
+        <div class="actioncenter">
+          <img src="img/wifi.png">
+          <img src="img/volume.png">
+          <img src="img/battery.png">
+        </div>
+  
+        <div class="timeanddate">
+          <div class="time">
+            <p id="clock"></p>
+          </div>
+          <div class="date">
+            <p id="date"></p>
+          </div>
+        </div>
+  
+    </div>
+     
     </div>
 
-    <div class="edgeapp" id="edgeapp">
-      <div class="edgeappheader" id="edgeappheader">
+    
 
-        <div class="edgeheaderleftside">
+  <div class="calendar">
+    <div id="dycalendar" class="dycalendar-container">
+        <div class="dycalendar-header" data-option="{&quot;target&quot;:&quot;#dycalendar&quot;,&quot;type&quot;:&quot;month&quot;,&quot;dayformat&quot;:&quot;ddd&quot;,&quot;monthformat&quot;:&quot;full&quot;,&quot;prevnextbutton&quot;:&quot;show&quot;,&quot;highlighttoday&quot;:true,&quot;month&quot;:4,&quot;year&quot;:2022,&quot;date&quot;:5,&quot;highlighttargetdate&quot;:false}"><span class="dycalendar-span-month-year">May 2022</span><span class="dycalendar-prev-next-btn prev-btn" data-date="5" data-month="4" data-year="2022" data-action="CALNPREV" data-btn="prev">▲</span><span class="dycalendar-prev-next-btn next-btn" data-date="5" data-month="4" data-year="2022" data-action="CALNNEXT" data-btn="next">▼</span></div>
+    </div>
+</div>
+
+
+    <div class="edgeapp app" id="edgeapp">
+
+      <div class="edgeresizer resizer top-left"></div>
+      <div class="edgeresizer resizer top-right"></div>
+      <div class="edgeresizer resizer bottom-left"></div>
+      <div class="edgeresizer resizer bottom-right"></div>
+
+      <div class="edgeappheader appheader" id="edgeappheader">
+
+        <div class="headerleftside">
           <img src="img/edge.png">
           Edge
 	        <div class="edgetab">
@@ -170,34 +139,67 @@
 	        </div>
         </div>
 
-        <div class="edgeheaderrightside">
+        <div class="headerrightside">
 
-          <div class="edgemaxandmin">
+          <div class="edgeminimize minimize">
             <img id="edgeminimize" src="img/minimize.png">
           </div>
         
+        <div class="maximizeandmaxmin">
 
-          <div class="edgemaxandmin">
-            <img id="edgemaximize" src="img/maxmin.png">
+          <div class="edgemaximize maximize">
+            <img id="edgemaximize" src="img/maximize.png">
           </div>
 
-          <div class="edgeclose">
+          <div class="edgemaxmin maxmin">
+            <img id="edgemaxmin" class="maxminimage" src="img/maxmin.png">
+          </div>
+        </div>
+
+          <div class="edgeclose close">
             <img id="edgeclose" src="img/close.png">
           </div>
+        
 
         </div>
       </div>
-      <div class="edgeurlarea">
-	      <img src="img/backarrow.png"> 
-	      <img src="img/forwardarrow.png"> 
-        <img src="img/reload.png"> 
-        <input type="text" value="https://bing.com" class="edgeurlbar" ID="URL">
-      </div>
-      <iframe align="center" width="100%" height="100%" src="https://bing.com" scrolling="yes" name="edgeIframe" id="edgeIframe" frameborder="0"> </iframe>
-    </div>
 
-    <script src="edgescript.js"></script>
-    <script src="script.js"></script>
+      <div class="edgeurlarea">
+	      <img class="edgeurlareaicon" src="img/backarrow.svg" onclick="goBack()"> 
+	      <img class="edgeurlareaicon" src="img/forwardarrow.svg" onclick="goForward()"> 
+        <img class="edgeurlareaicon" src="img/reload.png" onclick="edgereload()">
+        <input type="text" value="https://bing.com" class="edgeurlbar edgeURL" ID="URL">
+        <img class="edgeurlareaicon" src="img/favorites.png">
+        <img class="edgeurlareaicon edgeprofilepicture" src="img/profilepicture.png">
+        <img class="edgeurlareaicon" src="img/more.png">
+      </div>
+      <iframe class="appIframe" style="background-color: white;" align="center" width="100%" height="100%" scrolling="yes" name="edgeIframe" id="edgeIframe" frameborder="0"> </iframe>
+    
+    </div>
+    
+    <script type='text/javascript'>
+      var zIndex = "1"
+      zIndex = zIndex - 2
+      zIndex = zIndex + 2
+    </script>
+    <script src="scripts/appcreater.js"></script>
+    <script src="scripts/edgescript.js"></script>
+    <script src="scripts/applist.js"></script>
+    <script src="scripts/taskbar.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/dycalendar.js"></script>
+    <script>
+      dycalendar.draw({
+        "target":"#dycalendar",
+        "type":"month",
+        "dayformat":"ddd",
+        "monthformat":"full",
+        "prevnextbutton":"show",
+        "highlighttoday":true,
+        "month":4,"year":2022,
+        "date":5,
+        "highlighttargetdate":false});
+    </script>
 
   </body>
 </html>

@@ -57,7 +57,7 @@ body{
 
 .actioncenter{
   display: flex;
-  margin-right: 5px;
+  margin: 0px 5px;
   padding-top: 10px;
   padding-bottom: 10px;;
 }
@@ -79,6 +79,22 @@ body{
 }
 
 .timeanddate:hover{
+  background-color: white;
+  border-radius: 3px;
+}
+
+.moreapps{
+  display: flex;
+  align-items: center;
+  height: 38px;
+}
+
+.moreapps img{
+  margin: 0px 5px;
+  width: 12px;
+}
+
+.moreapps:hover{
   background-color: white;
   border-radius: 3px;
 }
@@ -114,7 +130,7 @@ body{
 }
 
 .taskbaricons{
-  margin: 0px 9px;
+  margin: 0px 9.5px;
 }
 
 .taskbariconhighlight{
@@ -129,7 +145,7 @@ body{
 }
 
 .taskbaricons:hover{
-  margin: -7px 2px;
+  margin: -7px 2.5px;
   border: solid 7px white;
   backdrop-filter: blur(20px);
   background-color: rgba(255,255,255,.80);
@@ -240,8 +256,8 @@ body{
 .app {
   position: fixed;
   box-shadow: 1px 10px 50px #969696;
-  border-radius: 5px;
-  border: 1px solid #B4B4B4;
+  border-radius: 10px;
+  border: 1.5px solid #B4B4B4;
   overflow: hidden;
   width: 0%;
   height: 0%;

@@ -60,7 +60,7 @@ window.addEventListener('mouseup', function(e) {
 });
 
 window.addEventListener('mouseup', function(e) {
-    if (!event.target.closest(".searchmenu") && !event.target.closest(".searchtbutton")){
+    if (!event.target.closest(".searchmenu") && !event.target.closest(".searchbutton")){
         searchmenu.style.bottom = "-655px";
     }
 });

@@ -175,7 +175,7 @@ function goToPage(pageUrl)
 }
 
 function roundedcorners(){
-	app.style.borderRadius = "5px"
+	app.style.borderRadius = "10px"
 }
 
 function active(){

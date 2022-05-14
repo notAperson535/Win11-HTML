@@ -29,8 +29,8 @@ body{
 }
 
 .taskbariconsleft{
-  margin-left: 10px;
   position: absolute;
+  left: 10;
   z-index: 11001;
   bottom: 11.5;
   float: left;
@@ -41,13 +41,12 @@ body{
 }
 
 .taskbariconsright{
-  margin-right: 10px;
   display: flex;
   align-items: center;
   z-index: 11001;
   position: absolute;
   bottom: 3;
-  right: 0;
+  right: 10;
   float: right;
 }
 
@@ -169,8 +168,18 @@ body{
   margin-top: -5px;
 }
 
+.sAppscontainer{
+  display: grid;
+  justify-items: center;
+}
+
 .sApps{
+  margin: 0 auto;
   position: absolute;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  align-items: center;
+  justify-items: center;
 }
 
 .startrow{
@@ -232,6 +241,7 @@ body{
   position: fixed;
   box-shadow: 1px 1px 50px #969696;
   border-radius: 5px;
+  border: 1px solid #B4B4B4;
   overflow: hidden;
   width: 0%;
   height: 0%;

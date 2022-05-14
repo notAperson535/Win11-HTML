@@ -26,112 +26,9 @@
       </div>
     </div>
 
-<div class="sApps">
+<div class="sAppscontainer">
 
-  <div class="startrow">
-
-    <div class="starticons edgestartmenuicon">
-      <img src="img/edge.png">
-      <p class="startlabels" align="center"> Microsoft Edge </p>
-    </div>
-
-    <div class="starticons wordstartmenuicon">
-      <img src="img/word.ico">
-      <p class="startlabels" align="center"> Word </p>
-    </div>
-
-    <div class="starticons excelstartmenuicon">
-      <img src="img/excel.ico">
-      <p class="startlabels" align="center"> Excel </p>
-    </div>
-
-    <div class="starticons powerpointstartmenuicon">
-      <img src="img/powerpoint.ico">
-      <p class="startlabels" align="center"> PowerPoint </p>
-    </div>
-
-    <div class="starticons">
-      <img src="img/mail.ico">
-      <p class="startlabels" align="center"> Mail </p>
-    </div>
-
-    <div class="starticons">
-      <img src="img/calendar.ico">
-      <p class="startlabels" align="center"> Calendar </p>
-    </div>
-    
-  </div>
-
-  <div>
-
-    <div class="startrow">
-
-      <div class="starticons">
-        <img src="img/store.ico">
-        <p class="startlabels" align="center"> Microsoft Store </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/photos.ico">
-        <p class="startlabels" align="center"> Photos </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/office.ico">
-        <p class="startlabels" align="center"> Office </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/settings.ico">
-        <p class="startlabels" align="center"> Settings </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/xbox.png">
-        <p class="startlabels" align="center"> Xbox </p>
-      </div>
-
-      <div class="starticons solitairestartmenuicon">
-        <img src="img/solitaire.ico">
-        <p class="startlabels" align="center"> Solitaire </p>
-      </div>
-
-    </div>
-
-    <div class="startrow">
-
-      <div class="starticons">
-        <img src="img/setup.ico">
-        <p class="startlabels" align="center"> Get Started </p>
-      </div>
-  
-      <div class="starticons">
-        <img src="img/taskmanager.ico">
-        <p class="startlabels" align="center"> Task Manager </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/snippingtool.ico">
-        <p class="startlabels" align="center"> Snipping Tool </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/teams.ico">
-        <p class="startlabels" align="center"> Microsoft Teams </p>
-      </div>
-
-      <div class="starticons">
-        <img src="img/paint.ico">
-        <p class="startlabels" align="center"> Paint </p>
-      </div>
-
-
-      <div class="starticons vscodestartmenuicon">
-        <img src="img/vscode.ico">
-        <p class="startlabels" align="center"> VS Code </p>
-      </div>
-
-    </div>
+  <div class="sApps">
 
   </div>
 
@@ -151,6 +48,12 @@
     </div>
 
     <div class="taskbar">
+
+      <div class="taskbariconsleft">
+        <div class="taskbaricons">
+          <img class="taskbariconsimg widgetsbutton" src="img/widgets.png">
+        </div>
+      </div>
 
       <div class="taskbariconscenter">
 
@@ -185,57 +88,31 @@
           <div class="center"><div class="taskbariconhighlight"></div></div>
         </div>
 
-        <div class="taskbaricons wordtaskbaricon hidden">
-          <img class="taskbariconsimg" src="img/word.ico">
-          <div class="center"><div class="taskbariconhighlight"></div></div>
-        </div>
-
-        <div class="taskbaricons exceltaskbaricon hidden">
-          <img class="taskbariconsimg" src="img/excel.ico">
-          <div class="center"><div class="taskbariconhighlight"></div></div>
-        </div>
-
-        <div class="taskbaricons powerpointtaskbaricon hidden">
-          <img class="taskbariconsimg" src="img/powerpoint.ico">
-          <div class="center"><div class="taskbariconhighlight"></div></div>
-        </div>
-
-        <div class="taskbaricons vscodetaskbaricon hidden">
-          <img class="taskbariconsimg" src="img/vscode.ico">
-          <div class="center"><div class="taskbariconhighlight"></div></div>
-        </div>
-
-        <div class="taskbaricons solitairetaskbaricon hidden">
-          <img class="taskbariconsimg" src="img/solitaire.ico">
-          <div class="center"><div class="taskbariconhighlight"></div></div>
-        </div>
-
       </div>
+
+
+      <div class="taskbariconsright">
+
+        <div class="actioncenter">
+          <img src="img/wifi.png">
+          <img src="img/volume.png">
+          <img src="img/battery.png">
+        </div>
+  
+        <div class="timeanddate">
+          <div class="time">
+            <p id="clock"></p>
+          </div>
+          <div class="date">
+            <p id="date"></p>
+          </div>
+        </div>
+  
+    </div>
      
     </div>
 
-    <div class="taskbariconsleft">
-      <img class="taskbariconsimg widgetsbutton" src="img/widgets.png">
-    </div>
-
-    <div class="taskbariconsright">
-
-      <div class="actioncenter">
-        <img src="img/wifi.png">
-        <img src="img/volume.png">
-        <img src="img/battery.png">
-      </div>
-
-      <div class="timeanddate">
-        <div class="time">
-          <p id="clock"></p>
-        </div>
-        <div class="date">
-          <p id="date"></p>
-        </div>
-      </div>
-
-  </div>
+    
 
   <div class="calendar">
     <div id="dycalendar" class="dycalendar-container">
@@ -306,8 +183,8 @@
       zIndex = zIndex + 2
     </script>
     <script src="scripts/appcreater.js"></script>
-    <script src="scripts/applist.js"></script>
     <script src="scripts/edgescript.js"></script>
+    <script src="scripts/applist.js"></script>
     <script src="scripts/taskbar.js"></script>
     <script src="scripts/clock.js"></script>
     <script src="scripts/dycalendar.js"></script>

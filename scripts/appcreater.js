@@ -1,16 +1,54 @@
 function createapp(appname, website, icon, visualappname){
   buildapp(appname,website,icon,visualappname);
-  addstartmenuandtaskbaricons(appname, icon, visualappname);
+  createstartmenuicon(appname, icon, visualappname);
+  createtaskbaricon(appname, icon);
   makeappusable(appname,website);
-}
-
-function addstartmenuandtaskbaricons(apname, icon, visualappname){
-  void 0;
 }
 
 function createedgeapp(appname, website, icon, visualappname){
+  createstartmenuicon(appname, icon, visualappname);
   makeappusable(appname,website);
 }
+
+function createstartmenuicon(appname , icon, visualappname){
+
+  var startmenuicondiv = document.createElement("div");
+  document.getElementsByClassName('sApps')[0].appendChild(startmenuicondiv);
+  startmenuicondiv.classList.add(appname + "startmenuicon", "starticons");
+
+  var startmenuicondivimage = document.createElement("img")
+  startmenuicondivimage.src = icon
+  document.getElementsByClassName(appname + "startmenuicon")[0].appendChild(startmenuicondivimage)
+
+  var startmenuicondivtext = document.createElement("p")
+  document.getElementsByClassName(appname + "startmenuicon")[0].appendChild(startmenuicondivtext)
+  startmenuicondivtext.classList.add("startlabels")
+  startmenuicondivtext.setAttribute("align", "center")
+  startmenuicondivtext.innerHTML = visualappname
+
+}
+
+function createtaskbaricon(appname, icon){
+
+  var taskbaricondiv = document.createElement("div");
+  document.getElementsByClassName('taskbariconscenter')[0].appendChild(taskbaricondiv);
+  taskbaricondiv.classList.add(appname + "taskbaricon", "taskbaricons", "hidden");
+
+  var taskbaricondivimage = document.createElement("img")
+  taskbaricondivimage.src = icon
+  document.getElementsByClassName(appname + "taskbaricon")[0].appendChild(taskbaricondivimage)
+  taskbaricondivimage.classList.add("taskbariconsimg")
+
+  var centerdiv = document.createElement("div");
+  centerdiv.classList.add(appname + "center", "center");
+  document.getElementsByClassName(appname + "taskbaricon")[0].appendChild(centerdiv);
+
+  var taskbariconhighlightdiv = document.createElement("div");
+  document.getElementsByClassName(appname + 'center')[0].appendChild(taskbariconhighlightdiv);
+  taskbariconhighlightdiv.classList.add("taskbariconhighlight");
+
+}
+
 
 function buildapp(appname, website, icon, visualappname) {
 
@@ -65,6 +103,7 @@ function buildapp(appname, website, icon, visualappname) {
   document.getElementsByClassName(appname + "maximizeandmaxmin")[0].appendChild(maximizediv);
   var maximizedivimage = document.createElement("img");
   maximizedivimage.src = "img/maximize.png";
+  maximizedivimage.id = appname + "maximize"
   document.getElementsByClassName(appname + "maximize")[0].appendChild(maximizedivimage);
 
   var maxmindiv = document.createElement("div");
@@ -73,6 +112,7 @@ function buildapp(appname, website, icon, visualappname) {
   var maxmindivimage = document.createElement("img");
   maxmindivimage.src = "img/maxmin.png";
   maxmindivimage.classList.add("maxminimage")
+  maxmindivimage.id = appname + "maxmin"
   document.getElementsByClassName(appname + "maxmin")[0].appendChild(maxmindivimage);
 
   var closediv = document.createElement("div");
@@ -101,6 +141,7 @@ function buildapp(appname, website, icon, visualappname) {
 function makeappusable(appname, website){
 let startmenuicon = document.getElementsByClassName(appname + "startmenuicon")[0]
 let app = document.getElementsByClassName(appname + "app")[0]
+let appheader = document.getElementsByClassName(appname + "appheader")[0]
 let close = document.getElementsByClassName(appname + "close")[0]
 let maximize = document.getElementsByClassName(appname + "maximize")[0]
 let minimize = document.getElementsByClassName(appname + "minimize")[0]
@@ -118,6 +159,10 @@ var leftminmax = "20%"
 var widthminmax = "60%"
 var heightminmax = "75%"
 app.style.zIndex = zIndex
+
+function sleep(ms){
+  return new Promise( resolver => setTimeout(resolver, ms));
+ };
 
 function bringtofront(){
   zIndex = zIndex + 2
@@ -143,7 +188,7 @@ function notactive(){
 	taskbariconhighlight.style.width = "7.5px"
 }
 
-window.addEventListener('mouseup', function(e) {
+window.addEventListener('mousedown', function(e) {
     if (!event.target.closest("." + appname + "app")) {
         app.style.boxShadow = "none"
 		    notactive();
@@ -199,6 +244,7 @@ function recoverpropertiesmaxmin(){
 
 startmenuicon.addEventListener("click", ()=>{
 
+  app.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
 	active();
 	startmenu.style.bottom = "-675px"
 
@@ -211,7 +257,6 @@ startmenuicon.addEventListener("click", ()=>{
 		taskbaricon.style.display = "block"
 		bringtofront();
 		taskbariconhighlight.style.opacity = "1"
-    document.getElementsByClassName(appname + "loadingimg")[0].style.display = "block"
   }
 	else{
 		recoverproperties();
@@ -224,6 +269,7 @@ startmenuicon.addEventListener("click", ()=>{
 
 taskbaricon.addEventListener("click", ()=>{
 
+  app.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
   active();
   taskbariconhighlight.style.opacity = "1"
 	startmenu.style.bottom = "-675px"
@@ -234,14 +280,6 @@ taskbaricon.addEventListener("click", ()=>{
     app.style.opacity = "1"
     return;
   }
-  if(app.style.width = "0px"){
-    goToPage(website);
-    recoverproperties();
-		taskbaricon.style.display = "block"
-		bringtofront();
-		taskbariconhighlight.style.opacity = "1"
-    document.getElementsByClassName(appname + "loadingimg")[0].style.display = "block"
-    }
 	if(app.style.opacity == "1"){
     minorclose();
 		app.style.top = "200%"
@@ -261,8 +299,15 @@ close.addEventListener("click", ()=>{
   minorclose();
 	taskbariconhighlight.style.opacity = "0"
 	taskbariconhighlight.style.width = "0px"
-	taskbaricon.style.display = "none"
-  goToPage();
+  if(appname == "edge"){
+    void 0;
+  }else{
+    taskbaricon.style.display = "none"
+    sleep(1000).then(()=>{
+      goToPage();
+     })
+  }
+  
 });
 
 minimize.addEventListener("click", ()=>{
@@ -304,12 +349,7 @@ function removetransition(){
 
     function dragElement() {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-        if (document.getElementById(app.id + "header")) {
-          /* if present, the header is where you move the DIV from:*/
-          document.getElementById(app.id + "header").onmousedown = dragMouseDown;
-        } else {
-          /* otherwise, move the DIV from anywhere inside the DIV:*/
-          app.onmousedown = dragMouseDown;
+        appheader.onmousedown = dragMouseDown;
         }
       
         function dragMouseDown(e) {
@@ -345,7 +385,7 @@ function removetransition(){
           document.onmouseup = null;
           document.onmousemove = null;
         }
-      }
+      
 
 
 // resizable

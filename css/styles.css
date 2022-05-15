@@ -269,7 +269,6 @@ body{
   z-index: 1;
 }
 
-
 .headerleftside {
   font-size: 13px;
   display: flex;
@@ -293,12 +292,22 @@ body{
   overflow: hidden;
 }
 
+.edgeappheader{
+  height: 35px;
+  min-height: 35px;
+}
+
 .appIframe{
   height: calc(100% - 29px);
   min-height: calc(100% - 29px);
   width: 100%;
   border-width: 0px;
   background-color: white;
+}
+
+.edgeappIframe{
+    height: calc(100% - 69px);
+    min-height: calc(100% - 69px);
 }
 
 .loadingimg{
@@ -362,11 +371,11 @@ body{
 .edgetab{
   background-color: white;
   box-shadow: 1px 3px 10px lightgrey;
-  width: 175px;
+  width: 185px;
   display:flex;
   align-items: center;
   margin-left: 16px;
-  height: 26px;
+  height: 28px;
   border-radius: 3px;
 }
 

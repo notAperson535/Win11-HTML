@@ -1,8 +1,8 @@
 function createapp(appname, website, icon, visualappname){
-  buildapp(appname,website,icon,visualappname);
+  buildapp(appname, icon, visualappname);
   createstartmenuicon(appname, icon, visualappname);
   createtaskbaricon(appname, icon);
-  makeappusable(appname,website);
+  makeappusable(appname, website);
 }
 
 function createedgeapp(appname, website, icon, visualappname){
@@ -49,8 +49,7 @@ function createtaskbaricon(appname, icon){
 
 }
 
-
-function buildapp(appname, website, icon, visualappname) {
+function buildapp(appname, icon, visualappname) {
 
   var appdiv = document.createElement("div");
   document.getElementsByClassName('body')[0].appendChild(appdiv);
@@ -251,7 +250,7 @@ startmenuicon.addEventListener("click", ()=>{
 	if(app.style.opacity == "1"){
 		bringtofront();
 	}
-  if(app.style.width = "0px"){
+  if(app.style.width = "0%"){
     goToPage(website);
     recoverproperties();
 		taskbaricon.style.display = "block"

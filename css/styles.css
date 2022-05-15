@@ -116,7 +116,7 @@ body{
   backdrop-filter: saturate(3) blur(20px);
   background-color: rgba(255,255,255,.80);
   z-index: 13000;
-  transition: all 0.2s ease-in;
+  transition: all .2s cubic-bezier(.79,.14,.15,.86);
 }
 
 .center{
@@ -126,11 +126,19 @@ body{
 
 .taskbariconsimg {
   width: 25px;
-  margin: 0px 0px;
+  transition: all .2s ease;
+  vertical-align: middle;
 }
 
 .taskbaricons{
   margin: 0px 9.5px;
+  text-align: center;
+  width: 25px;
+}
+
+.taskbariconsimg:active{
+  width: 18px;
+  margin-top: 3px;
 }
 
 .taskbariconhighlight{
@@ -173,7 +181,7 @@ body{
   bottom: -675px;
   height: 650px;
   width: 625px;
-  transition: all 0.2s ease-in;
+  transition: all .2s cubic-bezier(.79,.14,.15,.86);
   border-radius: 8px; 
   z-index: 11000;
 }
@@ -232,7 +240,7 @@ body{
   position: absolute;
   bottom: -655px;
   text-align: center;
-  transition: all 0.2s ease-in; 
+  transition: all .2s cubic-bezier(.79,.14,.15,.86); 
   z-index: 11000;
 }
 
@@ -244,7 +252,7 @@ body{
 .widgetsmenu{
   position: absolute;
   left: -1000px;
-  transition: all 0.2s ease-in; 
+  transition: all .2s cubic-bezier(.79,.14,.15,.86); 
   z-index: 10000;
 }
 

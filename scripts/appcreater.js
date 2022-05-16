@@ -181,7 +181,7 @@ function active(){
 	taskbariconhighlight.style.backgroundColor = "blue"
 	taskbariconhighlight.style.width = "15px"
   app.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
-  taskbaricon.style.backgroundColor = "rgba(255,255,255,.80)"
+  taskbaricon.style.backgroundColor = "white"
   taskbaricon.style.backdropFilter = "backdrop-filter: blur(20px)"
   taskbaricon.style.border = "solid 7px white"
   taskbaricon.style.borderRadius = "5px"

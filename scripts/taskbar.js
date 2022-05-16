@@ -8,7 +8,7 @@ let timeanddate = document.getElementsByClassName("timeanddate")[0]
 let calendar = document.getElementsByClassName("calendar")[0]
 
 function startbuttonhighlight(){
-	startbutton.style.backgroundColor = "rgba(255,255,255,.80)"
+	startbutton.style.backgroundColor = "white"
   	startbutton.style.border = "solid 7px white"
   	startbutton.style.borderRadius = "5px"
   	startbutton.style.margin = "-7px 2.5px"
@@ -22,7 +22,7 @@ function startbuttonnohighlight(){
 }
 
 function searchbuttonhighlight(){
-	searchbutton.style.backgroundColor = "rgba(255,255,255,.80)"
+	searchbutton.style.backgroundColor = "white"
   	searchbutton.style.border = "solid 7px white"
   	searchbutton.style.borderRadius = "5px"
   	searchbutton.style.margin = "-7px 2.5px"
@@ -36,7 +36,7 @@ function searchbuttonnohighlight(){
 }
 
 function widgetsbuttonhighlight(){
-	widgetsbutton.style.backgroundColor = "rgba(255,255,255,.80)"
+	widgetsbutton.style.backgroundColor = "white"
   	widgetsbutton.style.border = "solid 7px white"
   	widgetsbutton.style.borderRadius = "5px"
   	widgetsbutton.style.margin = "-7px 2.5px"
@@ -100,7 +100,7 @@ timeanddate.addEventListener("click", ()=>{
 	}
 	else{
 		calendar.style.right = "3px"
-		timeanddate.style.backgroundColor = "rgba(255,255,255,.80)"
+		timeanddate.style.backgroundColor = "white"
   		timeanddate.style.borderRadius = "3px"
 	}
 })

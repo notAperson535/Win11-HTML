@@ -324,20 +324,6 @@ body{
     min-height: calc(100% - 69px);
 }
 
-.loadingimg{
-  width: 100%;
-  height: calc(100% - 29px);
-  background-color: white;
-}
-
-.loadinggif{
-  position: absolute;
-  left: 40%;
-  top: 60%;
-  width: 20%;
-  margin: auto;
-}
-
 .headerrightside {
   display: flex;
   align-items: center;

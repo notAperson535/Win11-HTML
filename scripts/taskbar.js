@@ -105,9 +105,6 @@ timeanddate.addEventListener("click", ()=>{
 	}
 })
 
-document.getElementById("date").innerText = new Date().toLocaleDateString("en-US", { year: "numeric", month: "2-digit", day: "numeric" })
-document.getElementById("clock").innerText = new Date().toLocaleTimeString("en-US", { hour: "numeric", minute: "numeric" })
-
 window.addEventListener('mouseup', function(e) {
     if (!event.target.closest(".startmenu") && !event.target.closest(".startbutton")){
         startmenu.style.bottom = "-675px";

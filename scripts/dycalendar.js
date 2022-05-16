@@ -13,8 +13,6 @@
  */
 /*! dyCalendarJS | (c) 2016 Yusuf Shakeel | https://github.com/yusufshakeel/dyCalendarJS */
 
-document.getElementById("calendarheadertext").innerText = new Date().toLocaleDateString("en-US", { weekday: 'long', month: 'long', day: 'numeric' })
-
 (function(global) {
 
   "use strict";

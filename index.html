@@ -6,6 +6,8 @@
     <link rel="icon" href="img/favicon.ico">
     <script src="https://codegena.com/assets/js/async-iframe.js"></script>
     <title>Windows 11 in HTML</title>
+    <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+    <script type="module" src="iframe-bypass.js"></script>
   </head>
   <body class="body">
 
@@ -180,7 +182,7 @@
         <img class="edgeurlareaicon edgeprofilepicture" src="img/profilepicture.png">
         <img class="edgeurlareaicon" src="img/more.png">
       </div>
-      <iframe class="edgeappIframe appIframe" name="edgeIframe" id="edgeIframe"> </iframe>
+      <iframe is="x-frame-bypass" class="edgeappIframe appIframe" name="edgeIframe" id="edgeIframe"> </iframe>
     
     </div>
     

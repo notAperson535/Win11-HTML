@@ -180,20 +180,30 @@ function roundedcorners(){
 function active(){
 	taskbariconhighlight.style.backgroundColor = "blue"
 	taskbariconhighlight.style.width = "15px"
+  app.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
+  taskbaricon.style.backgroundColor = "rgba(255,255,255,.80)"
+  taskbaricon.style.backdropFilter = "backdrop-filter: blur(20px)"
+  taskbaricon.style.border = "solid 7px white"
+  taskbaricon.style.borderRadius = "5px"
+  taskbaricon.style.margin = "-7px 2.5px"
 }
 
 function notactive(){
 	taskbariconhighlight.style.backgroundColor = "grey"
 	taskbariconhighlight.style.width = "7.5px"
+  app.style.boxShadow = "none"
+  taskbaricon.style.backgroundColor = ""
+  taskbaricon.style.backdropFilter = ""
+  taskbaricon.style.border = ""
+  taskbaricon.style.borderRadius = ""
+  taskbaricon.style.margin = ""
 }
 
 window.addEventListener('mousedown', function(e) {
     if (!event.target.closest("." + appname + "app")) {
-        app.style.boxShadow = "none"
 		    notactive();
     }else{
 		    active();
-		    app.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
 		    bringtofront();
 	}
 });
@@ -243,9 +253,9 @@ function recoverpropertiesmaxmin(){
 
 startmenuicon.addEventListener("click", ()=>{
 
-  app.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
 	active();
 	startmenu.style.bottom = "-675px"
+  startbuttonnohighlight();
 
 	if(app.style.opacity == "1"){
 		bringtofront();
@@ -268,7 +278,6 @@ startmenuicon.addEventListener("click", ()=>{
 
 taskbaricon.addEventListener("click", ()=>{
 
-  app.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
   active();
   taskbariconhighlight.style.opacity = "1"
 	startmenu.style.bottom = "-675px"

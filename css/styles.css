@@ -13,6 +13,7 @@ body{
 }
 
 .taskbar{
+  -webkit-backdrop-filter: saturate(3) blur(20px);
   backdrop-filter: saturate(3) blur(20px);
   background-color: rgba(255,255,255,.80);
   width: 100%;
@@ -30,10 +31,8 @@ body{
 
 .taskbariconsleft{
   position: absolute;
+  display: flex;
   left: 10;
-  z-index: 11001;
-  bottom: 11.5;
-  float: left;
 }
 
 .taskbariconscenter{
@@ -43,7 +42,6 @@ body{
 .taskbariconsright{
   display: flex;
   align-items: center;
-  z-index: 11001;
   position: absolute;
   bottom: 3;
   right: 10;
@@ -79,7 +77,7 @@ body{
 }
 
 .timeanddate:hover{
-  background-color: white;
+  background-color: rgba(255,255,255,.80);
   border-radius: 3px;
 }
 
@@ -113,10 +111,27 @@ body{
   bottom: 51;
   border-radius: 5px;
   overflow: hidden;
+  -webkit-backdrop-filter: saturate(3) blur(20px);
   backdrop-filter: saturate(3) blur(20px);
-  background-color: rgba(255,255,255,.80);
   z-index: 13000;
   transition: all .2s cubic-bezier(.79,.14,.15,.86);
+}
+
+.dycalendar-container{
+  background-color: #e6edf8;
+}
+
+.calendarheader{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #dae2f2;
+}
+
+#calendarheadertext{
+  display: flex;
+  margin-left: 13px;
+  font-size: 14px;
 }
 
 .center{
@@ -126,24 +141,24 @@ body{
 
 .taskbariconsimg {
   width: 25px;
-  transition: all .2s ease;
-  vertical-align: middle;
+  transition: all .1s;
 }
 
 .taskbaricons{
   margin: 0px 9.5px;
-  text-align: center;
   width: 25px;
+  height: 25px;
+  text-align: center;
 }
 
 .taskbariconsimg:active{
-  width: 18px;
-  margin-top: 3px;
+  margin-top: 3.125px;
+  width: 18.75px;
 }
 
 .taskbariconhighlight{
   position: absolute;
-  margin-top: 4px;
+  bottom: 5px;
   height: 3px;
   border-radius: 5px;
   width: 7.5px;
@@ -155,7 +170,6 @@ body{
 .taskbaricons:hover{
   margin: -7px 2.5px;
   border: solid 7px white;
-  backdrop-filter: blur(20px);
   background-color: rgba(255,255,255,.80);
   border-radius:5px;
 }
@@ -204,14 +218,6 @@ body{
   grid-template-columns: auto auto auto auto auto auto;
   align-items: center;
   justify-items: center;
-}
-
-.startrow{
-  display: flex;
-  justify-content: center;
-  margin-left: 15px;
-  width: 595px;
-  max-width: 595px;
 }
 
 .starticons img{

@@ -1,4 +1,4 @@
-createedgeapp("edge", "https://bing.com", "img/edge.png", "Edge");
+createedgeapp("edge", "https://google.com/?igu=1", "img/edge.png", "Edge");
 
 window.onload = function() {
     goToPage(document.getElementById("URL").value)

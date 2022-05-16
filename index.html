@@ -50,8 +50,8 @@
     <div class="taskbar">
 
       <div class="taskbariconsleft">
-        <div class="taskbaricons">
-          <img class="taskbariconsimg widgetsbutton" src="img/widgets.png">
+        <div class="taskbaricons widgetsbutton">
+          <img class="taskbariconsimg" src="img/widgets.png">
         </div>
       </div>
 
@@ -119,6 +119,9 @@
     
 
   <div class="calendar">
+    <div class="calendarheader">
+      <p id="calendarheadertext"></p>
+    </div>
     <div id="dycalendar" class="dycalendar-container">
         <div class="dycalendar-header" data-option="{&quot;target&quot;:&quot;#dycalendar&quot;,&quot;type&quot;:&quot;month&quot;,&quot;dayformat&quot;:&quot;ddd&quot;,&quot;monthformat&quot;:&quot;full&quot;,&quot;prevnextbutton&quot;:&quot;show&quot;,&quot;highlighttoday&quot;:true,&quot;month&quot;:4,&quot;year&quot;:2022,&quot;date&quot;:5,&quot;highlighttargetdate&quot;:false}"><span class="dycalendar-span-month-year">May 2022</span><span class="dycalendar-prev-next-btn prev-btn" data-date="5" data-month="4" data-year="2022" data-action="CALNPREV" data-btn="prev">▲</span><span class="dycalendar-prev-next-btn next-btn" data-date="5" data-month="4" data-year="2022" data-action="CALNNEXT" data-btn="next">▼</span></div>
     </div>
@@ -172,7 +175,7 @@
 	      <img class="edgeurlareaicon" src="img/backarrow.svg" onclick="goBack()"> 
 	      <img class="edgeurlareaicon" src="img/forwardarrow.svg" onclick="goForward()"> 
         <img class="edgeurlareaicon" src="img/reload.png" onclick="edgereload()">
-        <input type="text" value="https://bing.com" class="edgeurlbar edgeURL" ID="URL">
+        <input type="text" value="https://google.com/?igu=1" class="edgeurlbar edgeURL" ID="URL">
         <img class="edgeurlareaicon" src="img/favorites.png">
         <img class="edgeurlareaicon edgeprofilepicture" src="img/profilepicture.png">
         <img class="edgeurlareaicon" src="img/more.png">
@@ -186,10 +189,10 @@
       zIndex = zIndex - 2
       zIndex = zIndex + 2
     </script>
+    <script src="scripts/taskbar.js"></script>
     <script src="scripts/appcreater.js"></script>
     <script src="scripts/edgescript.js"></script>
     <script src="scripts/applist.js"></script>
-    <script src="scripts/taskbar.js"></script>
     <script src="scripts/clock.js"></script>
     <script src="scripts/dycalendar.js"></script>
     <script>
@@ -199,10 +202,7 @@
         "dayformat":"ddd",
         "monthformat":"full",
         "prevnextbutton":"show",
-        "highlighttoday":true,
-        "month":4,"year":2022,
-        "date":5,
-        "highlighttargetdate":false});
+        "highlighttoday":true,});
     </script>
 
   </body>

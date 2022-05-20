@@ -3,12 +3,13 @@ let startmenu = document.getElementsByClassName("startmenu")[0]
 let searchbutton = document.getElementsByClassName("searchbutton")[0]
 let searchmenu = document.getElementsByClassName("searchmenu")[0]
 let widgetsbutton = document.getElementsByClassName("widgetsbutton")[0]
+let taskbariconsleft = document.getElementsByClassName("taskbariconsleft")[0]
 let widgetsmenu = document.getElementsByClassName("widgetsmenu")[0]
 let timeanddate = document.getElementsByClassName("timeanddate")[0]
 let calendar = document.getElementsByClassName("calendar")[0]
 
 function startbuttonhighlight(){
-	startbutton.style.backgroundColor = "white"
+	startbutton.style.backgroundColor = "rgba(255,255,255,.80)"
   	startbutton.style.border = "solid 7px white"
   	startbutton.style.borderRadius = "5px"
   	startbutton.style.margin = "-7px 2.5px"
@@ -22,7 +23,7 @@ function startbuttonnohighlight(){
 }
 
 function searchbuttonhighlight(){
-	searchbutton.style.backgroundColor = "white"
+	searchbutton.style.backgroundColor = "rgba(255,255,255,.80)"
   	searchbutton.style.border = "solid 7px white"
   	searchbutton.style.borderRadius = "5px"
   	searchbutton.style.margin = "-7px 2.5px"
@@ -36,7 +37,7 @@ function searchbuttonnohighlight(){
 }
 
 function widgetsbuttonhighlight(){
-	widgetsbutton.style.backgroundColor = "white"
+	widgetsbutton.style.backgroundColor = "rgba(255,255,255,.80)"
   	widgetsbutton.style.border = "solid 7px white"
   	widgetsbutton.style.borderRadius = "5px"
   	widgetsbutton.style.margin = "-7px 2.5px"
@@ -57,24 +58,24 @@ function sleep(seconds){
 
 startbutton.addEventListener("click", ()=>{
 
-	if(startmenu.style.bottom == "50px"){
+	if(startmenu.style.bottom == "55px"){
 		startmenu.style.bottom = "-675px"
 		startbuttonnohighlight();
 	}
 	else{
-		startmenu.style.bottom = "50px"
+		startmenu.style.bottom = "55px"
 		startbuttonhighlight();
 	}
 })
 
 searchbutton.addEventListener("click", ()=>{
 
-	if(searchmenu.style.bottom == "50px"){
+	if(searchmenu.style.bottom == "55px"){
 		searchmenu.style.bottom = "-655px"
 		searchbuttonnohighlight();
 	}
 	else{
-		searchmenu.style.bottom = "50px"
+		searchmenu.style.bottom = "55px"
 		searchbuttonhighlight();
 	}
 })
@@ -100,7 +101,7 @@ timeanddate.addEventListener("click", ()=>{
 	}
 	else{
 		calendar.style.right = "3px"
-		timeanddate.style.backgroundColor = "white"
+		timeanddate.style.backgroundColor = "rgba(255,255,255,.80)"
   		timeanddate.style.borderRadius = "3px"
 	}
 })

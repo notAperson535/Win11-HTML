@@ -10,6 +10,12 @@ function createedgeapp(appname, website, icon, visualappname){
   makeappusable(appname,website);
 }
 
+function createpremadeapp(appname, website, icon, visualappname){
+  createstartmenuicon(appname, icon, visualappname);
+  createtaskbaricon(appname, icon);
+  makeappusable(appname,website);
+}
+
 function createstartmenuicon(appname , icon, visualappname){
 
   var startmenuicondiv = document.createElement("div");
@@ -170,6 +176,9 @@ function bringtofront(){
 
 function goToPage(pageUrl)
 {
+  if(appname == "edge" || appname == "notepad"){
+    return;
+  }
   document.getElementById(appname + 'Iframe').src = pageUrl;
 }
 
@@ -330,6 +339,7 @@ maximize.addEventListener("click", ()=>{
 	app.style.width = "100%"
 	app.style.height = "calc(100% - 48px)"
 	app.style.top = "0px"
+  app.style.border = "none"
 	getpropertiesmax();
 	maximizeimage.style.display = "none"
 	maxminimage.style.display = "block"
@@ -342,6 +352,7 @@ function showmaximizehideminmax(){
 
 maxmin.addEventListener("click", ()=>{
 	roundedcorners();
+  app.style.border = "1.5px solid #B4B4B4"
 	app.style.transition = "all 0.2s ease-in"
 	recoverpropertiesmaxmin();
 	showmaximizehideminmax();

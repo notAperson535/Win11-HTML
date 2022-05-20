@@ -201,9 +201,8 @@ body{
 }
 
 .pinnedlabel{
-  margin-left: 45px;
-  margin-bottom: 0px;
   margin-top: -5px;
+  margin-left: 45px;
 }
 
 .sAppscontainer{
@@ -212,12 +211,9 @@ body{
 }
 
 .sApps{
-  margin: 0 auto;
   position: absolute;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
-  align-items: center;
-  justify-items: center;
 }
 
 .starticons img{
@@ -311,6 +307,34 @@ body{
   min-height: 35px;
 }
 
+.notepaddropdownmenus{
+  background: var(--fakeMica);
+  display: flex;
+  height: 35px;
+  align-items: center;
+}
+
+.notepaddropdownmenus p{
+  margin: 5px 10px;
+  display: flex;
+}
+
+.notepadtext{
+  resize: none;
+  font-size: 15px;
+  width: 100%;
+  height: calc(100% - 65px);
+  border: none;
+  font-family: Consolas,monospace;
+  font-weight: 500;
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+.notepadtext:focus{
+  outline: none;
+}
+
 .appIframe{
   height: calc(100% - 29px);
   min-height: calc(100% - 29px);
@@ -322,6 +346,20 @@ body{
 .edgeappIframe{
     height: calc(100% - 69px);
     min-height: calc(100% - 69px);
+}
+
+.loadingimg{
+  width: 100%;
+  height: calc(100% - 29px);
+  background-color: white;
+}
+
+.loadinggif{
+  position: absolute;
+  left: 40%;
+  top: 60%;
+  width: 20%;
+  margin: auto;
 }
 
 .headerrightside {

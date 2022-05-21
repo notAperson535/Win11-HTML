@@ -327,6 +327,18 @@ close.addEventListener("click", ()=>{
   
 });
 
+let edgetabright = document.getElementsByClassName("edgetabright")[0]
+
+edgetabright.addEventListener("click", ()=>{
+
+  if(appname == "edge"){
+    minorclose();
+    taskbariconhighlight.style.opacity = "0"
+    taskbariconhighlight.style.width = "0px"
+  }
+  
+});
+
 minimize.addEventListener("click", ()=>{
 	minorclose();
 	app.style.top = "200%"

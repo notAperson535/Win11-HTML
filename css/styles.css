@@ -1,3 +1,10 @@
+:root{
+  --hover-color: lightgrey;
+  --current-day-highlight-color: #0067c0;
+  --current-day-text-color: white;
+  --up-and-down-color: grey;
+}
+
 body{
   background-image: url("https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/background.jpg");
   overflow: hidden;
@@ -303,8 +310,8 @@ body{
 }
 
 .edgeappheader{
-  height: 35px;
-  min-height: 35px;
+  height: 38px;
+  min-height: 38px;
 }
 
 .notepaddropdownmenus{
@@ -315,7 +322,8 @@ body{
 }
 
 .notepaddropdownmenus p{
-  margin: 5px 10px;
+  font-size: 14px;
+  margin: 5px 13px;
   display: flex;
 }
 
@@ -344,8 +352,8 @@ body{
 }
 
 .edgeappIframe{
-    height: calc(100% - 69px);
-    min-height: calc(100% - 69px);
+    height: calc(100% - 72px);
+    min-height: calc(100% - 72px);
 }
 
 .loadingimg{
@@ -409,12 +417,30 @@ body{
 .edgetab{
   background-color: white;
   box-shadow: 1px 3px 10px lightgrey;
-  width: 185px;
+  width: 200px;
   display:flex;
   align-items: center;
   margin-left: 16px;
-  height: 28px;
+  height: 30px;
   border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edgetableft{
+  display: flex;
+}
+
+.edgetabright{
+  display: flex;
+  margin-right: 10px;
+}
+
+.edgetabright:hover{
+  background-color: var(--hover-color);
+  border-radius: 1px;
+  border: solid 2px var(--hover-color);
+  margin: 8px;
 }
 
 .edgetab img{

@@ -351,11 +351,9 @@ body{
 }
 
 .storeentries{
-  position: relative;
   background: hsla(0,0%,100%,.5);
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   padding: 20px;
   border-radius: 10px 0px 0px 0px;
 }
@@ -368,6 +366,7 @@ body{
   border: solid 1px lightgrey;
   border-radius: 10px;
   padding: 0px 10px;
+  margin: 5px;
 }
 
 .storeentry img{
@@ -394,7 +393,8 @@ body{
 
 .storeentryprice{
   margin-top: 20px;
-  font-size: 13px;
+  font-size: 10px;
+  margin-bottom: 15px;
 }
 
 .notepaddropdownmenus{

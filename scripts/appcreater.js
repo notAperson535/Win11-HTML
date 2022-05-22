@@ -176,7 +176,7 @@ function bringtofront(){
 
 function goToPage(pageUrl)
 {
-  if(appname == "edge" || appname == "notepad"){
+  if(appname == "edge" || appname == "notepad" || appname == "store"){
     return;
   }
   document.getElementById(appname + 'Iframe').src = pageUrl;

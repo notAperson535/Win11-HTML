@@ -3,6 +3,11 @@
   --current-day-highlight-color: #0067c0;
   --current-day-text-color: white;
   --up-and-down-color: grey;
+  --fakeMica: #f3f3f3 radial-gradient(#eff4f9 75%,#f3f3f3 100%) no-repeat fixed;
+}
+
+*{
+  font-family: 'Segoe UI Variable', sans-serif;
 }
 
 body{
@@ -14,9 +19,7 @@ body{
   transition: all .2s ease;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI Variable', sans-serif;
   user-select: none;
-  --fakeMica: #f3f3f3 radial-gradient(#eff4f9 75%,#f3f3f3 100%) no-repeat fixed;
 }
 
 .taskbar{
@@ -204,7 +207,6 @@ body{
   width: 625px;
   transition: all .2s cubic-bezier(.79,.14,.15,.86);
   border-radius: 8px; 
-  border: 1.5px solid #B4B4B4;
   z-index: 11000;
 }
 
@@ -276,6 +278,7 @@ body{
   box-shadow: 1px 10px 50px #969696;
   border-radius: 10px;
   border: 1.5px solid #B4B4B4;
+  background: var(--fakeMica);
   overflow: hidden;
   width: 0%;
   height: 0%;
@@ -302,7 +305,6 @@ body{
 
 .appheader{
   display:flex;
-  background: var(--fakeMica);
   justify-content: space-between;
   max-height: 30px;
   height: 30px;
@@ -315,8 +317,87 @@ body{
   min-height: 38px;
 }
 
+.storecontents{
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.storesidebar{
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.storesidebarimages{
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0px 5px;
+}
+
+.storesidebarimages:hover{
+  background-color: white;
+  border-radius: 3px;
+}
+
+.storesidebarimages svg{
+  width: 20px;
+  height: 20px;
+}
+
+.storeentries{
+  position: relative;
+  background: hsla(0,0%,100%,.5);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 10px 0px 0px 0px;
+}
+
+.storeentry{
+  height: fit-content;
+  width: auto;
+  background: #fff;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 25%);
+  border: solid 1px lightgrey;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+
+.storeentry img{
+  display: flex;
+  justify-self: center;
+  margin-top: 10px;
+  width: 75px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.storeentryname{
+  margin: 0;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.storeentrytype{
+  margin: 1px;
+  color: rgba(113,128,150);
+  font-size: 10px;
+}
+
+.storeentryprice{
+  margin-top: 20px;
+  font-size: 13px;
+}
+
 .notepaddropdownmenus{
-  background: var(--fakeMica);
   display: flex;
   height: 35px;
   align-items: center;

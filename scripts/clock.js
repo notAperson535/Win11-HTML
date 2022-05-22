@@ -27,7 +27,7 @@ function clock(){
     year += 1900
     }
     var monthArray = new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12")
-    document.getElementById("date").innerText = monthArray[date.getMonth()] + "/" + date.getDay() + "/" + year
+    document.getElementById("date").innerText = monthArray[date.getMonth()] + "/" + date.getDate() + "/" + year
     document.getElementById("calendarheadertext").innerText = new Date().toLocaleDateString("en-US", { weekday: 'long', month: 'long', day: 'numeric' })
     }
     

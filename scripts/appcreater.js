@@ -5,7 +5,7 @@ function createapp(appname, website, icon, visualappname){
   makeappusable(appname, website);
 }
 
-function createedgeapp(appname, website, icon, visualappname){
+function createpremadeappwithtaskbaricon(appname, website, icon, visualappname){
   createstartmenuicon(appname, icon, visualappname);
   makeappusable(appname,website);
 }
@@ -422,8 +422,8 @@ function removetransition(){
 // resizable
 
   let divs = Array.from(document.getElementsByClassName(appname + "app")),
-  minWidth = 400,
-  minHeight = 65,
+  minWidth = 420,
+  minHeight = 73,
   maxWidth = 100000,
   maxHeight = 100000,
   isResizing = false;

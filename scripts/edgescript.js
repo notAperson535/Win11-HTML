@@ -1,4 +1,4 @@
-createedgeapp("edge", "https://google.com/?igu=1", "img/edge.png", "Edge");
+createpremadeappwithtaskbaricon("edge", "https://google.com/?igu=1", "img/edge.png", "Edge");
 
 window.onload = function() {
     goToPage(document.getElementById("URL").value)

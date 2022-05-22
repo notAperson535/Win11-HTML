@@ -204,6 +204,7 @@ body{
   width: 625px;
   transition: all .2s cubic-bezier(.79,.14,.15,.86);
   border-radius: 8px; 
+  border: 1.5px solid #B4B4B4;
   z-index: 11000;
 }
 

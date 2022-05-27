@@ -7,4 +7,4 @@ createpremadeapp("notepad", "", "img/notepad.ico", "Notepad");
 createapp("calculator", "https://calculator.notaperson535.is-a.dev", "img/calculator.ico", "Calculator");
 createpremadeappwithtaskbaricon("store", "", "img/store.ico", "Store");
 createapp("vscode", "https://vscode.dev", "img/vscode.ico", "VS Code");
-createapp("solitaire", "https://www.squidbyte.com/games/spidersolitairewindowsxp/", "img/solitaire.ico", "Solitaire");
+createapp("solitaire", "https://player.zone.msn.com/?hostingEnvironment=EdgeCasualGamesHub&gamepath=mssolitairecollection", "img/solitaire.ico", "Solitaire");

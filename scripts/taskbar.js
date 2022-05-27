@@ -59,7 +59,7 @@ startbutton.addEventListener("click", ()=>{
 searchbutton.addEventListener("click", ()=>{
 
 	if(searchmenu.style.bottom == "55px"){
-		searchmenu.style.bottom = "-655px"
+		searchmenu.style.bottom = "-95%"
 		searchbuttonnohighlight();
 	}
 	else{
@@ -83,7 +83,7 @@ widgetsbutton.addEventListener("click", ()=>{
 timeanddate.addEventListener("click", ()=>{
 
 	if(calendar.style.right == "3px"){
-		calendar.style.right = "-655px"
+		calendar.style.right = "-95%"
 		timeanddate.style.backgroundColor = ""
   		timeanddate.style.borderRadius = ""
 	}
@@ -103,7 +103,7 @@ window.addEventListener('mouseup', function(e) {
 
 window.addEventListener('mouseup', function(e) {
     if (!event.target.closest(".searchmenu") && !event.target.closest(".searchbutton")){
-        searchmenu.style.bottom = "-655px";
+        searchmenu.style.bottom = "-95%";
 		searchbuttonnohighlight();
     }
 });
@@ -117,7 +117,7 @@ window.addEventListener('mouseup', function(e) {
 
 window.addEventListener('mouseup', function(e) {
     if (!event.target.closest(".calendar") && !event.target.closest(".timeanddate")){
-        calendar.style.right = "-655px";
+        calendar.style.right = "-95%";
 		timeanddate.style.backgroundColor = ""
   		timeanddate.style.borderRadius = ""
     }

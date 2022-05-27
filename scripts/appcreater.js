@@ -195,7 +195,7 @@ function goToPage(pageUrl)
     pos = urlList.length - 1;
     document.getElementById('edgeIframe').src = pageUrl;
   }
-  if(appname == "notepad" || appname == "store" || appname == "calculator"){
+  if(appname == "notepad" || appname == "store"){
     return;
   }
   document.getElementById(appname + 'Iframe').src = pageUrl;

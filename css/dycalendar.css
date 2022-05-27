@@ -76,7 +76,7 @@
   position: absolute;
   top: 0;
   cursor: pointer;
-  color: var(--up-and-down-color);
+  color: var(--calendar-up-and-down-color);
   padding: 10px;
   font-size: 10px;
   border-radius: 4px;
@@ -118,7 +118,7 @@
 }
 
 .dycalendar-today-date {
-  background: var(--current-day-highlight-color);
+  background: var(--accent-color);
   color: var(--current-day-text-color);
 }
 

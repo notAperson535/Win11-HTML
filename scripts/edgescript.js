@@ -45,3 +45,4 @@ function edgereload() {
     var ifr = document.getElementsByName('edgeIframe')[0];
     ifr.src = ifr.src;
 }
+  

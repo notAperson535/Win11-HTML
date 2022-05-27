@@ -24,10 +24,10 @@ function createstartmenuicon(appname , icon, visualappname){
 
   var startmenuicondivimage = document.createElement("img")
   startmenuicondivimage.src = icon
-  document.getElementsByClassName(appname + "startmenuicon")[0].appendChild(startmenuicondivimage)
+  startmenuicondiv.appendChild(startmenuicondivimage)
 
   var startmenuicondivtext = document.createElement("p")
-  document.getElementsByClassName(appname + "startmenuicon")[0].appendChild(startmenuicondivtext)
+  startmenuicondiv.appendChild(startmenuicondivtext)
   startmenuicondivtext.classList.add("startlabels")
   startmenuicondivtext.setAttribute("align", "center")
   startmenuicondivtext.innerHTML = visualappname
@@ -42,15 +42,15 @@ function createtaskbaricon(appname, icon){
 
   var taskbaricondivimage = document.createElement("img")
   taskbaricondivimage.src = icon
-  document.getElementsByClassName(appname + "taskbaricon")[0].appendChild(taskbaricondivimage)
+  taskbaricondiv.appendChild(taskbaricondivimage)
   taskbaricondivimage.classList.add("taskbariconsimg")
 
   var centerdiv = document.createElement("div");
-  centerdiv.classList.add(appname + "center", "center");
-  document.getElementsByClassName(appname + "taskbaricon")[0].appendChild(centerdiv);
+  centerdiv.classList.add("center");
+  taskbaricondiv.appendChild(centerdiv);
 
   var taskbariconhighlightdiv = document.createElement("div");
-  document.getElementsByClassName(appname + 'center')[0].appendChild(taskbariconhighlightdiv);
+  centerdiv.appendChild(taskbariconhighlightdiv);
   taskbariconhighlightdiv.classList.add("taskbariconhighlight");
 
 }
@@ -58,78 +58,91 @@ function createtaskbaricon(appname, icon){
 function buildapp(appname, icon, visualappname) {
 
   var appdiv = document.createElement("div");
-  document.getElementsByClassName('body')[0].appendChild(appdiv);
+  document.body.appendChild(appdiv);
   appdiv.classList.add(appname + "app", "app");
 
   var resizertopleft = document.createElement("div");
   resizertopleft.classList.add(appname + "resizer", "resizer", "top-left");
-  document.getElementsByClassName(appname + "app")[0].appendChild(resizertopleft);
+  appdiv.appendChild(resizertopleft);
   var resizertopright = document.createElement("div");
   resizertopright.classList.add(appname + "resizer", "resizer", "top-right");
-  document.getElementsByClassName(appname + "app")[0].appendChild(resizertopright);
+  appdiv.appendChild(resizertopright);
   var resizerbottomleft = document.createElement("div");
   resizerbottomleft.classList.add(appname + "resizer", "resizer", "bottom-left");
-  document.getElementsByClassName(appname + "app")[0].appendChild(resizerbottomleft);
+  appdiv.appendChild(resizerbottomleft);
   var resizerbottomright = document.createElement("div");
   resizerbottomright.classList.add(appname + "resizer", "resizer", "bottom-right");
-  document.getElementsByClassName(appname + "app")[0].appendChild(resizerbottomright);
+  appdiv.appendChild(resizerbottomright);
+
+  var resizertop = document.createElement("div");
+  resizertop.classList.add(appname + "resizer", "resizer", "resizertopbottom", "top");
+  appdiv.appendChild(resizertop);
+  var resizerleft = document.createElement("div");
+  resizerleft.classList.add(appname + "resizer", "resizer", "resizerleftright", "left");
+  appdiv.appendChild(resizerleft);
+  var resizerbottom = document.createElement("div");
+  resizerbottom.classList.add(appname + "resizer", "resizer", "resizertopbottom", "bottom");
+  appdiv.appendChild(resizerbottom);
+  var resizerright = document.createElement("div");
+  resizerright.classList.add(appname + "resizer", "resizer", "resizerleftright", "right");
+  appdiv.appendChild(resizerright);
 
   var appheader = document.createElement("div");
   appheader.id = appname + "appheader";
   appheader.classList.add(appname + "appheader", "appheader");
-  document.getElementsByClassName(appname + "app")[0].appendChild(appheader)
+  appdiv.appendChild(appheader)
 
   var headerleftside = document.createElement("div");
   headerleftside.classList.add(appname + "headerleftside", "headerleftside");
-  document.getElementsByClassName(appname + "appheader")[0].appendChild(headerleftside);
+  appheader.appendChild(headerleftside);
   
   var appicon = document.createElement("img");
   appicon.src = icon;
-  document.getElementsByClassName(appname + "headerleftside")[0].appendChild(appicon);
+  headerleftside.appendChild(appicon);
   headerleftside.appendChild(document.createTextNode(visualappname));
 
   var headerrightside = document.createElement("div");
   headerrightside.classList.add(appname + "headerrightside", "headerrightside");
-  document.getElementsByClassName(appname + "appheader")[0].appendChild(headerrightside);
+  appheader.appendChild(headerrightside);
 
   var minimizediv = document.createElement("div");
   minimizediv.classList.add(appname + "minimize", "minimize");
-  document.getElementsByClassName(appname + "headerrightside")[0].appendChild(minimizediv);
+  headerrightside.appendChild(minimizediv);
   var minimizedivimage = document.createElement("img");
   minimizedivimage.src = "img/minimize.png";
-  document.getElementsByClassName(appname + "minimize")[0].appendChild(minimizedivimage);
+  minimizediv.appendChild(minimizedivimage);
 
-  var maximizeandminimize = document.createElement("div");
-  maximizeandminimize.classList.add(appname + "maximizeandmaxmin", "maximizeandmaxmin");
-  document.getElementsByClassName(appname + "headerrightside")[0].appendChild(maximizeandminimize);
+  var maximizeandmaxmin = document.createElement("div");
+  maximizeandmaxmin.classList.add(appname + "maximizeandmaxmin", "maximizeandmaxmin");
+  headerrightside.appendChild(maximizeandmaxmin);
 
   var maximizediv = document.createElement("div");
   maximizediv.classList.add(appname + "maximize", "maximize")
-  document.getElementsByClassName(appname + "maximizeandmaxmin")[0].appendChild(maximizediv);
+  maximizeandmaxmin.appendChild(maximizediv);
   var maximizedivimage = document.createElement("img");
   maximizedivimage.src = "img/maximize.png";
   maximizedivimage.id = appname + "maximize"
-  document.getElementsByClassName(appname + "maximize")[0].appendChild(maximizedivimage);
+  maximizediv.appendChild(maximizedivimage);
 
   var maxmindiv = document.createElement("div");
   maxmindiv.classList.add(appname + "maxmin", "maxmin")
-  document.getElementsByClassName(appname + "maximizeandmaxmin")[0].appendChild(maxmindiv);
+  maximizeandmaxmin.appendChild(maxmindiv);
   var maxmindivimage = document.createElement("img");
   maxmindivimage.src = "img/maxmin.png";
   maxmindivimage.classList.add("maxminimage")
   maxmindivimage.id = appname + "maxmin"
-  document.getElementsByClassName(appname + "maxmin")[0].appendChild(maxmindivimage);
+  maxmindiv.appendChild(maxmindivimage);
 
   var closediv = document.createElement("div");
   closediv.classList.add(appname + "close", "close");
-  document.getElementsByClassName(appname + "headerrightside")[0].appendChild(closediv);
+  headerrightside.appendChild(closediv);
   var closedivimage = document.createElement("img");
   closedivimage.src = "img/close.png";
-  document.getElementsByClassName(appname + "close")[0].appendChild(closedivimage);
+  closediv.appendChild(closedivimage);
 
   //var loadingimgcontainer = document.createElement("div");
   //loadingimgcontainer.classList.add(appname + "loadingimg", "loadingimg");
-  //document.getElementsByClassName(appname + "app")[0].appendChild(loadingimgcontainer);
+  //appdiv.appendChild(loadingimgcontainer);
   //var loadingimg = document.createElement("img");
   //loadingimg.classList.add("loadinggif");
   //loadingimg.src = "img/loading.gif";
@@ -138,7 +151,7 @@ function buildapp(appname, icon, visualappname) {
   var appiframe = document.createElement("iframe");
   appiframe.classList.add(appname + "Iframe", "appIframe")
   appiframe.id = appname + "Iframe"
-  document.getElementsByClassName(appname + "app")[0].appendChild(appiframe)
+  appdiv.appendChild(appiframe)
   appiframe.setAttribute("data-responsive", "true");
 
 }
@@ -148,6 +161,7 @@ let startmenuicon = document.getElementsByClassName(appname + "startmenuicon")[0
 let app = document.getElementsByClassName(appname + "app")[0]
 let appheader = document.getElementsByClassName(appname + "appheader")[0]
 let close = document.getElementsByClassName(appname + "close")[0]
+let edgetabright = document.getElementsByClassName("edgetabright")[0]
 let maximize = document.getElementsByClassName(appname + "maximize")[0]
 let minimize = document.getElementsByClassName(appname + "minimize")[0]
 let maxmin = document.getElementsByClassName(appname + "maxmin")[0]
@@ -176,7 +190,12 @@ function bringtofront(){
 
 function goToPage(pageUrl)
 {
-  if(appname == "edge" || appname == "notepad" || appname == "store"){
+  if(appname == "edge"){
+    urlList[urlList.length] = pageUrl;
+    pos = urlList.length - 1;
+    document.getElementById('edgeIframe').src = pageUrl;
+  }
+  if(appname == "notepad" || appname == "store" || appname == "calculator"){
     return;
   }
   document.getElementById(appname + 'Iframe').src = pageUrl;
@@ -187,14 +206,12 @@ function roundedcorners(){
 }
 
 function active(){
-	taskbariconhighlight.style.backgroundColor = "blue"
+	taskbariconhighlight.style.backgroundColor = "var(--accent-color)"
 	taskbariconhighlight.style.width = "15px"
   app.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
   taskbaricon.style.backgroundColor = "white"
-  taskbaricon.style.backdropFilter = "backdrop-filter: blur(20px)"
-  taskbaricon.style.border = "solid 7px white"
   taskbaricon.style.borderRadius = "5px"
-  taskbaricon.style.margin = "-7px 2.5px"
+  bringtofront();
 }
 
 function notactive(){
@@ -202,10 +219,7 @@ function notactive(){
 	taskbariconhighlight.style.width = "7.5px"
   app.style.boxShadow = "none"
   taskbaricon.style.backgroundColor = ""
-  taskbaricon.style.backdropFilter = ""
-  taskbaricon.style.border = ""
   taskbaricon.style.borderRadius = ""
-  taskbaricon.style.margin = ""
 }
 
 window.addEventListener('mousedown', function(e) {
@@ -213,7 +227,6 @@ window.addEventListener('mousedown', function(e) {
 		    notactive();
     }else{
 		    active();
-		    bringtofront();
 	}
 });
 
@@ -267,19 +280,19 @@ startmenuicon.addEventListener("click", ()=>{
   startbuttonnohighlight();
 
 	if(app.style.opacity == "1"){
-		bringtofront();
+		active();
 	}
   if(app.style.width = "0%"){
     goToPage(website);
     recoverproperties();
 		taskbaricon.style.display = "block"
-		bringtofront();
+		active();
 		taskbariconhighlight.style.opacity = "1"
   }
 	else{
 		recoverproperties();
 		taskbaricon.style.display = "block"
-		bringtofront();
+		active();
 		taskbariconhighlight.style.opacity = "1"
 	}
 
@@ -292,7 +305,7 @@ taskbaricon.addEventListener("click", ()=>{
 	startmenu.style.bottom = "-675px"
 
   if(app.style.zIndex != zIndex){
-    bringtofront();
+    active();
     recoverproperties();
     app.style.opacity = "1"
     return;
@@ -300,12 +313,11 @@ taskbaricon.addEventListener("click", ()=>{
 	if(app.style.opacity == "1"){
     minorclose();
 		app.style.top = "200%"
-		bringtofront();
+		active();
 	}
 	else{
 		active();
 		recoverproperties();
-		bringtofront();
 		taskbaricon.style.display = "block"
 	}
 
@@ -316,7 +328,7 @@ close.addEventListener("click", ()=>{
   minorclose();
 	taskbariconhighlight.style.opacity = "0"
 	taskbariconhighlight.style.width = "0px"
-  if(appname == "edge"){
+  if(appname == "edge" || appname == "store"){
     void 0;
   }else{
     taskbaricon.style.display = "none"
@@ -326,8 +338,6 @@ close.addEventListener("click", ()=>{
   }
   
 });
-
-let edgetabright = document.getElementsByClassName("edgetabright")[0]
 
 edgetabright.addEventListener("click", ()=>{
 
@@ -373,6 +383,44 @@ maxmin.addEventListener("click", ()=>{
 function removetransition(){
 	app.style.transition = "opacity 200ms linear"
 }
+
+// quick searches
+
+let thisdayinhistory = document.getElementsByClassName("thisdayinhistory")[0]
+let marketstoday = document.getElementsByClassName("marketstoday")[0]
+let newmovies = document.getElementsByClassName("newmovies")[0]
+let topnews = document.getElementsByClassName("topnews")[0]
+
+thisdayinhistory.addEventListener("click", ()=>{
+  openedgewithcustomsearch("This Day In History");
+})
+
+marketstoday.addEventListener("click", ()=>{
+  openedgewithcustomsearch("Markets Today");
+})
+
+newmovies.addEventListener("click", ()=>{
+  openedgewithcustomsearch("New Movies");
+})
+
+topnews.addEventListener("click", ()=>{
+  openedgewithcustomsearch("Top News");
+})
+
+function openedgewithcustomsearch(searchterm){
+  if(appname == "edge"){
+    if(app.style.width == "0%" || app.style.width == "0px"){
+      getproperties();
+    }
+      searchbuttonnohighlight();
+      searchmenu.style.bottom = "-675px"
+      document.getElementsByClassName("edgeurlbar")[0].value = "https://www.bing.com/search?q=" + searchterm
+      goToPage(document.getElementById("URL").value);
+      recoverproperties();
+		  active();
+  }
+}
+
 
 // draggable
 
@@ -424,8 +472,6 @@ function removetransition(){
   let divs = Array.from(document.getElementsByClassName(appname + "app")),
   minWidth = 420,
   minHeight = 73,
-  maxWidth = 100000,
-  maxHeight = 100000,
   isResizing = false;
 
 divs.forEach(div => {
@@ -462,10 +508,10 @@ function mousedownOnresizer(e) {
       if (currentresizer.classList.contains('bottom-right')) {
         newWidth = rect.width - newX;
         newHeight = rect.height - newY;
-        if (newWidth > minWidth && newWidth < maxWidth) {
+        if (newWidth > minWidth) {
           div.style.width = newWidth + 'px';
         }
-        if (newHeight > minHeight && newHeight < maxHeight) {
+        if (newHeight > minHeight) {
           div.style.height = newHeight + 'px';
         }
 
@@ -474,11 +520,11 @@ function mousedownOnresizer(e) {
         newWidth = rect.width + newX;
         newHeight = rect.height - newY;
 
-        if (newWidth > minWidth && newWidth < maxWidth) {
+        if (newWidth > minWidth) {
           div.style.left = prevLeft - newX + 'px';
           div.style.width = newWidth + 'px';
         } 
-        if (newHeight > minHeight && newHeight < maxHeight) {
+        if (newHeight > minHeight) {
           div.style.height = newHeight + 'px';
         }
 
@@ -487,10 +533,10 @@ function mousedownOnresizer(e) {
         newWidth = rect.width - newX;
         newHeight = rect.height + newY;
 
-        if (newWidth > minWidth && newWidth < maxWidth) {
+        if (newWidth > minWidth) {
           div.style.width = newWidth + 'px';
         }
-        if (newHeight > minHeight && newHeight < maxHeight) {
+        if (newHeight > minHeight) {
           div.style.top = prevTop - newY + 'px';
           div.style.height = newHeight + 'px';
         }
@@ -500,16 +546,47 @@ function mousedownOnresizer(e) {
         newWidth = rect.width + newX;
         newHeight = rect.height + newY;
 
-        if (newWidth > minWidth && newWidth < maxWidth) {
+        if (newWidth > minWidth) {
           div.style.left = prevLeft - newX + 'px';
           div.style.width = newWidth + 'px';
         }
-        if (newHeight > minHeight && newHeight < maxHeight) {
+        if (newHeight > minHeight) {
           div.style.top = prevTop - newY + 'px';
           div.style.height = newHeight + 'px';
         }
       }
+      else if (currentresizer.classList.contains('top')) {
+        newHeight = rect.height + newY;
+
+        if (newHeight > minHeight) {
+          div.style.top = prevTop - newY + 'px';
+          div.style.height = newHeight + 'px';
+        }
+      }
+      else if (currentresizer.classList.contains('left')) {
+        newWidth = rect.width + newX;
+  
+        if (newWidth > minWidth) {
+          div.style.left = prevLeft - newX + 'px';
+          div.style.width = newWidth + 'px';
+        }
+      }
+      else if (currentresizer.classList.contains('bottom')) {
+        newHeight = rect.height - newY;
+
+        if (newHeight > minHeight) {
+          div.style.height = newHeight + 'px';
+        }
+      }
+      else if (currentresizer.classList.contains('right')) {
+        newWidth = rect.width - newX;
+
+        if (newWidth > minWidth) {
+          div.style.width = newWidth + 'px';
+        }
+      }
     }
+    
 
     function mouseup() {
       getproperties();

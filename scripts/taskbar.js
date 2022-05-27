@@ -10,44 +10,32 @@ let calendar = document.getElementsByClassName("calendar")[0]
 
 function startbuttonhighlight(){
 	startbutton.style.backgroundColor = "rgba(255,255,255,.80)"
-  	startbutton.style.border = "solid 7px white"
   	startbutton.style.borderRadius = "5px"
-  	startbutton.style.margin = "-7px 2.5px"
 }
 
 function startbuttonnohighlight(){
 	startbutton.style.backgroundColor = ""
-  	startbutton.style.border = ""
   	startbutton.style.borderRadius = ""
-  	startbutton.style.margin = ""
 }
 
 function searchbuttonhighlight(){
 	searchbutton.style.backgroundColor = "rgba(255,255,255,.80)"
-  	searchbutton.style.border = "solid 7px white"
   	searchbutton.style.borderRadius = "5px"
-  	searchbutton.style.margin = "-7px 2.5px"
 }
 
 function searchbuttonnohighlight(){
 	searchbutton.style.backgroundColor = ""
-  	searchbutton.style.border = ""
   	searchbutton.style.borderRadius = ""
-  	searchbutton.style.margin = ""
 }
 
 function widgetsbuttonhighlight(){
 	widgetsbutton.style.backgroundColor = "rgba(255,255,255,.80)"
-  	widgetsbutton.style.border = "solid 7px white"
   	widgetsbutton.style.borderRadius = "5px"
-  	widgetsbutton.style.margin = "-7px 2.5px"
 }
 
 function widgetsbuttonnohighlight(){
 	widgetsbutton.style.backgroundColor = ""
-  	widgetsbutton.style.border = ""
   	widgetsbutton.style.borderRadius = ""
-  	widgetsbutton.style.margin = ""
 }
 
 function sleep(seconds){

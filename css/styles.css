@@ -1,8 +1,8 @@
 :root{
-  --hover-color: lightgrey;
-  --current-day-highlight-color: #0067c0;
+  --hover-color: lightgray;
+  --accent-color: #0067c0;
   --current-day-text-color: white;
-  --up-and-down-color: grey;
+  --calendar-up-and-down-color: gray;
   --fakeMica: #f3f3f3 radial-gradient(#eff4f9 75%,#f3f3f3 100%) no-repeat fixed;
 }
 
@@ -155,7 +155,8 @@ body{
 }
 
 .taskbaricons{
-  margin: 0px 9.5px;
+  margin: 0px 2.5px;
+  padding: 7px;
   width: 25px;
   height: 25px;
   text-align: center;
@@ -172,14 +173,12 @@ body{
   height: 3px;
   border-radius: 5px;
   width: 7.5px;
-  background-color: blue;
+  background-color: var(--accent-color);
   opacity: 0;
   transition: all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear;
 }
 
 .taskbaricons:hover{
-  margin: -7px 2.5px;
-  border: solid 7px white;
   background-color: white;
   border-radius:5px;
 }
@@ -203,7 +202,7 @@ body{
   backdrop-filter: blur(20px);
   background-color: rgba(255,255,255,.80);
   bottom: -675px;
-  height: 650px;
+  height: 90%;
   width: 625px;
   transition: all .2s cubic-bezier(.79,.14,.15,.86);
   border-radius: 8px; 
@@ -230,7 +229,7 @@ body{
   display: block;
   margin: 0 auto;
   margin-top: 12px;
-  width:30px;
+  width: 30px;
 }
 
 .starticons{
@@ -250,15 +249,116 @@ body{
 
 .searchmenu{
   position: absolute;
-  bottom: -655px;
-  text-align: center;
-  transition: all .2s cubic-bezier(.79,.14,.15,.86); 
+  backdrop-filter: blur(20px);
+  background-color: rgba(255,255,255,.80);
+  bottom: -675px;
+  height: 90%;
+  width: 625px;
+  transition: all .2s cubic-bezier(.79,.14,.15,.86);
+  border-radius: 8px; 
   z-index: 11000;
 }
 
-.searchmenu img{
-  height: 600;
-  border-radius: 8px;
+.searchbar {
+  margin: 25px 20px 0px 20px;
+  height: 38px;
+  width: 580px;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+  border-bottom: 2px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.searchbar img{
+  width: 23px;
+  margin: 0px 15px;
+}
+
+.searchbar input{
+  outline: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 15px;
+}
+
+.searchtabs{
+  display: flex;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.searchtabstext{
+  width: fit-content;
+  margin: 0px 15px 0px 0px;
+  font-size: 14px;
+}
+
+.searchtabhighlight{
+  position: absolute;
+  margin-top: 3px;
+  height: 3px;
+  border-radius: 5px;
+  width: 15px;
+  background-color: var(--accent-color);
+}
+
+.searchtopapps{
+  margin: 0 20px;
+  display: flex;
+}
+
+.searchheader{
+  font-weight: 600;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.searchtopapp img{
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+}
+
+.searchtopapp{
+  font-size: 13px;
+  background: white;
+  border: solid 1px lightgray;
+  width: 100px;
+  margin-right: 5px;
+  margin-top: 12px;
+  padding: 18px 10px;
+  border-radius: 5px;
+}
+
+.searchtopappslabel{
+  margin: 0px;
+  margin-top: 5px;
+}
+
+.quicksearches{
+  margin: 15px 15px;
+  width: 580px;
+}
+
+.quicksearch{
+  padding: 15px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.quicksearch:hover{
+  background-color: white;
+  border-radius: 3px;
+}
+
+.quicksearch svg{
+  width: 20px;
+  margin: 0px 15px;
 }
 
 .widgetsmenu{
@@ -350,7 +450,7 @@ body{
   height: 20px;
 }
 
-.storeentries{
+.storeentriesbackground{
   background: hsla(0,0%,100%,.5);
   width: 100%;
   display: flex;
@@ -358,12 +458,18 @@ body{
   border-radius: 10px 0px 0px 0px;
 }
 
+.storeentries{
+  display: flex; 
+  flex-wrap: wrap; 
+  height: fit-content;
+}
+
 .storeentry{
   height: fit-content;
   width: auto;
   background: #fff;
   box-shadow: 0 1px 1px rgb(0 0 0 / 25%);
-  border: solid 1px lightgrey;
+  border: solid 1px lightgray;
   border-radius: 10px;
   padding: 0px 10px;
   margin: 5px;
@@ -425,12 +531,78 @@ body{
   outline: none;
 }
 
+.calculator-grid {
+  position: absolute;
+  bottom: 0;
+  grid-gap: 2px;
+  box-sizing: border-box;
+  display: grid;
+  flex-grow: 1;
+  gap: 2px;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  grid-template-rows: repeat(6,minmax(0,1fr));
+  height: calc(90%);
+  width: 100%;
+  
+}
+
+.calculator-grid > button {
+  font-size: 100%;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 4px;
+}
+
+.operation{
+  background-color: #f9f9f9;
+}
+
+.number{
+  background-color: #fff;
+}
+
+.number:hover {
+  background-color: #f9f9f9;
+}
+
+.operation:hover{
+  background-color: #fff;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.operation.blue{
+  background-color: #0067c0;
+  color: white;
+}
+
+.output{
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-end;
+  
+  flex-direction: column;
+  padding: 0px 10px;
+  margin: -15px 0px;word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand{
+  color: #777;
+  font-size: 1.5rem;
+height: 1.7rem;}
+
+.output .current-operand{
+  color: black;
+  font-size: 2.5rem;
+}
+
 .appIframe{
   height: calc(100% - 29px);
   min-height: calc(100% - 29px);
   width: 100%;
   border-width: 0px;
-  background-color: white;
 }
 
 .edgeappIframe{
@@ -498,7 +670,7 @@ body{
 
 .edgetab{
   background-color: white;
-  box-shadow: 1px 3px 10px lightgrey;
+  box-shadow: 1px 3px 10px lightgray;
   width: 200px;
   display:flex;
   align-items: center;
@@ -520,7 +692,7 @@ body{
 
 .edgetabright:hover{
   background-color: var(--hover-color);
-  border-radius: 1px;
+  border-radius: 2px;
   border: solid 2px var(--hover-color);
   margin: 8px;
 }
@@ -562,22 +734,49 @@ body{
   top: -1px;
   left: -1px;
   cursor: nw-resize;
+  z-index: 2;
 }
 .resizer.top-right {
   top: -1px;
   right: -1px;
   cursor: ne-resize;
+  z-index: 2;
 }
-
 .resizer.bottom-left {
   bottom: -1px;
   left: -1px;
   cursor: sw-resize;
+  z-index: 2;
 }
 .resizer.bottom-right {
   bottom: -1px;
   right: -1px;
   cursor: se-resize;
+  z-index: 2;
+}
+.resizer.top{
+  top: -1px;
+  cursor: n-resize;
+}
+.resizer.left{
+  left: -1px;
+  cursor: e-resize;
+}
+.resizer.bottom{
+  bottom: -1px;
+  cursor: s-resize;
+}
+.resizer.right{
+  right: -1px;
+  cursor: e-resize;
+}
+.resizertopbottom{
+  width: 100%;
+  z-index: 1;
+}
+.resizerleftright{
+  height: 100%;
+  z-index: 1;
 }
 
 .hidden{

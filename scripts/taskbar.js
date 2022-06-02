@@ -10,32 +10,26 @@ let calendar = document.getElementsByClassName("calendar")[0]
 
 function startbuttonhighlight(){
 	startbutton.style.backgroundColor = "rgba(255,255,255,.80)"
-  	startbutton.style.borderRadius = "5px"
 }
 
 function startbuttonnohighlight(){
 	startbutton.style.backgroundColor = ""
-  	startbutton.style.borderRadius = ""
 }
 
 function searchbuttonhighlight(){
 	searchbutton.style.backgroundColor = "rgba(255,255,255,.80)"
-  	searchbutton.style.borderRadius = "5px"
 }
 
 function searchbuttonnohighlight(){
 	searchbutton.style.backgroundColor = ""
-  	searchbutton.style.borderRadius = ""
 }
 
 function widgetsbuttonhighlight(){
 	widgetsbutton.style.backgroundColor = "rgba(255,255,255,.80)"
-  	widgetsbutton.style.borderRadius = "5px"
 }
 
 function widgetsbuttonnohighlight(){
 	widgetsbutton.style.backgroundColor = ""
-  	widgetsbutton.style.borderRadius = ""
 }
 
 function sleep(seconds){

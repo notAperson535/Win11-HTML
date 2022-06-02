@@ -73,7 +73,7 @@ body{
 .taskbariconsleft{
   position: absolute;
   display: flex;
-  left: 10;
+  left: 10px;
 }
 
 .taskbariconscenter{
@@ -84,8 +84,8 @@ body{
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 3;
-  right: 10;
+  bottom: 3px;
+  right: 10px;
   float: right;
 }
 
@@ -191,6 +191,7 @@ body{
   width: 25px;
   height: 25px;
   text-align: center;
+  border-radius: 5px;
 }
 
 .taskbariconsimg:active{
@@ -211,7 +212,6 @@ body{
 
 .taskbaricons:hover{
   background-color: white;
-  border-radius:5px;
 }
 
 .sTop{
@@ -469,7 +469,8 @@ body{
   align-items: center;
   overflow: hidden;
   margin: 0px 5px;
-}
+  color: #888;
+  border-radius: 3px;}
 
 .storesidebarimages:hover{
   background-color: white;
@@ -484,8 +485,11 @@ body{
 .storeentriesbackground{
   background: hsla(0,0%,100%,.5);
   width: 100%;
+  height: calc(100% - 69px);
+  min-height: calc(100% - 69px);
   display: flex;
   padding: 20px;
+  overflow: auto;
   border-radius: 10px 0px 0px 0px;
 }
 
@@ -503,7 +507,8 @@ body{
   border: solid 1px lightgray;
   border-radius: 10px;
   padding: 0px 10px;
-  margin: 5px;
+  margin: 15px 10px;
+  transition: all ease-in-out .2s;
 }
 
 .storeentry img{
@@ -513,6 +518,10 @@ body{
   width: 75px;
   margin: 15px;
   border-radius: 5px;
+}
+
+.storeentry:hover{
+  transform: translateY(-4px)
 }
 
 .storeentryname{

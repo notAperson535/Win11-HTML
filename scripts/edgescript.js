@@ -1,4 +1,7 @@
 createpremadeappwithtaskbaricon("edge", "https://google.com/?igu=1", "img/edge.png", "Edge");
+var edgeIframe = document.getElementsByClassName('edgeappIframe')[0];
+var urlList = new Array();
+var pos = 0;
 
 window.onload = function() {
     goToPage(document.getElementById("URL").value)
@@ -11,8 +14,6 @@ edgetext.addEventListener("keyup", ({key}) => {
     }
 })
 
-var urlList = new Array();
-var pos = 0;
 function goToPage(pageUrl)
 {
     urlList[urlList.length] = pageUrl;
@@ -25,6 +26,7 @@ function goBack()
     {
         pos--;
         document.getElementById('edgeIframe').src = urlList[pos];
+        document.getElementById("URL").value = edgeIframe.src;
     }
     else
         void 0;
@@ -36,13 +38,13 @@ function goForward()
     {
         pos++;
         document.getElementById('edgeIframe').src = urlList[pos];
+        document.getElementById("URL").value = edgeIframe.src;
     }
     else
         void 0;
 }
 
 function edgereload() {
-    var ifr = document.getElementsByClassName('edgeappIframe')[0];
-    ifr.src = ifr.src;
+    edgeIframe.src = edgeIframe.src;
 }
   

@@ -211,7 +211,6 @@ function active(){
   app.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
   taskbaricon.style.backgroundColor = "white"
   taskbaricon.style.borderRadius = "5px"
-  bringtofront();
 }
 
 function notactive(){
@@ -227,6 +226,7 @@ window.addEventListener('mousedown', function(e) {
 		    notactive();
     }else{
 		    active();
+        bringtofront();
 	}
 });
 
@@ -281,18 +281,22 @@ startmenuicon.addEventListener("click", ()=>{
 
 	if(app.style.opacity == "1"){
 		active();
+    bringtofront();
+    return;
 	}
   if(app.style.width = "0%"){
     goToPage(website);
     recoverproperties();
 		taskbaricon.style.display = "block"
 		active();
+    bringtofront();
 		taskbariconhighlight.style.opacity = "1"
   }
 	else{
 		recoverproperties();
 		taskbaricon.style.display = "block"
 		active();
+    bringtofront();
 		taskbariconhighlight.style.opacity = "1"
 	}
 
@@ -306,6 +310,7 @@ taskbaricon.addEventListener("click", ()=>{
 
   if(app.style.zIndex != zIndex){
     active();
+    bringtofront();
     recoverproperties();
     app.style.opacity = "1"
     return;

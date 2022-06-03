@@ -7,7 +7,7 @@
 }
 
 *{
-  font-family: 'Segoe UI Variable', sans-serif;
+  font-family: Segoe UI Variable, Segoe UI;
 }
 
 ::-webkit-scrollbar {
@@ -115,11 +115,11 @@ body{
   text-align: right;
   padding: 4px;
   padding-left: 10px;
+  border-radius: 3px;
 }
 
 .timeanddate:hover{
   background-color: white;
-  border-radius: 3px;
 }
 
 .moreapps{
@@ -146,16 +146,19 @@ body{
   margin: 0px;
 }
 
-.calendar{
+.calendarandnotifications{
   position: absolute;
   right: -655px;
   bottom: 51;
+  transition: all .17s cubic-bezier(.79,.14,.15,.86);
+}
+
+.calendar{
   border-radius: 5px;
   overflow: hidden;
   -webkit-backdrop-filter: saturate(3) blur(20px);
   backdrop-filter: saturate(3) blur(20px);
   z-index: 13000;
-  transition: all .2s cubic-bezier(.79,.14,.15,.86);
 }
 
 .dycalendar-container{
@@ -207,7 +210,7 @@ body{
   width: 7.5px;
   background-color: var(--accent-color);
   opacity: 0;
-  transition: all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear;
+  transition: all .17s cubic-bezier(.85,.14,.14,.85), opacity 85ms linear;
 }
 
 .taskbaricons:hover{
@@ -233,9 +236,9 @@ body{
   backdrop-filter: blur(20px);
   background-color: rgba(255,255,255,.80);
   bottom: -675px;
-  height: 90%;
+  height: calc(100% - 62px);
   width: 625px;
-  transition: all .2s cubic-bezier(.79,.14,.15,.86);
+  transition: all .17s cubic-bezier(.79,.14,.15,.86);
   border-radius: 8px; 
   z-index: 11000;
 }
@@ -283,10 +286,10 @@ body{
   backdrop-filter: blur(20px);
   background-color: rgba(255,255,255,.80);
   bottom: -675px;
-  height: 90%;
+  height: calc(100% - 62px);
   width: 625px;
-  transition: all .2s cubic-bezier(.79,.14,.15,.86);
-  border-radius: 8px; 
+  transition: all .17s cubic-bezier(.79,.14,.15,.86);
+  border-radius: 8px;
   z-index: 11000;
 }
 
@@ -395,7 +398,7 @@ body{
 .widgetsmenu{
   position: absolute;
   left: -1000px;
-  transition: all .2s cubic-bezier(.79,.14,.15,.86); 
+  transition: all .17s cubic-bezier(.79,.14,.15,.86); 
   z-index: 10000;
 }
 
@@ -417,7 +420,7 @@ body{
   top: 50%;
   left: 50%;
   opacity: 0;
-  transition: all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear;
+  transition: all .17s cubic-bezier(.85,.14,.14,.85), opacity 85ms linear;
   z-index: 1;
 }
 
@@ -609,6 +612,7 @@ body{
 
 .close:hover{
   background: red;
+  color: white;
 }
 
 .maximize:hover{

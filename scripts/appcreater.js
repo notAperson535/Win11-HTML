@@ -245,7 +245,7 @@ function getpropertiesmax(){
 function minorclose(){
 	notactive();
 	getproperties();
-	app.style.transition = "all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear"
+	app.style.transition = "all .17s cubic-bezier(.85,.14,.14,.85), opacity 80ms linear"
 	app.style.left = "50%"
 	app.style.top = "50%"
 	app.style.width = "0%"
@@ -254,7 +254,7 @@ function minorclose(){
 }
 
 function recoverproperties(){
-	app.style.transition = "all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear"
+	app.style.transition = "all .17s cubic-bezier(.85,.14,.14,.85), opacity 80ms linear"
 	app.style.top = topminclose
 	app.style.left = leftminclose
 	app.style.width = widthminclose
@@ -263,7 +263,7 @@ function recoverproperties(){
 }
 
 function recoverpropertiesmaxmin(){
-	app.style.transition = "all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear"
+	app.style.transition = "all .17s cubic-bezier(.85,.14,.14,.85), opacity 80ms linear"
 	app.style.top = topminmax
 	app.style.left = leftminmax
 	app.style.width = widthminmax
@@ -314,12 +314,14 @@ taskbaricon.addEventListener("click", ()=>{
     return;
   }
 	if(app.style.opacity == "1"){
+		active();
+    bringtofront();
     minorclose();
 		app.style.top = "200%"
-		active();
 	}
 	else{
 		active();
+    bringtofront();
 		recoverproperties();
 		taskbaricon.style.display = "block"
 	}
@@ -353,6 +355,8 @@ edgetabright.addEventListener("click", ()=>{
 });
 
 minimize.addEventListener("click", ()=>{
+  active();
+  bringtofront();
 	minorclose();
 	app.style.top = "200%"
 });
@@ -384,7 +388,7 @@ maxmin.addEventListener("click", ()=>{
 });
 
 function removetransition(){
-	app.style.transition = "opacity 200ms linear"
+	app.style.transition = "opacity 80ms linear"
 }
 
 // quick searches

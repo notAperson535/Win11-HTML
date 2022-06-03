@@ -6,30 +6,14 @@ let widgetsbutton = document.getElementsByClassName("widgetsbutton")[0]
 let taskbariconsleft = document.getElementsByClassName("taskbariconsleft")[0]
 let widgetsmenu = document.getElementsByClassName("widgetsmenu")[0]
 let timeanddate = document.getElementsByClassName("timeanddate")[0]
-let calendar = document.getElementsByClassName("calendar")[0]
+let calendarandnotifications = document.getElementsByClassName("calendarandnotifications")[0]
 
-function startbuttonhighlight(){
-	startbutton.style.backgroundColor = "rgba(255,255,255,.80)"
+function highlight(buttonname){
+	buttonname.style.backgroundColor = "rgba(255,255,255,.80)"
 }
 
-function startbuttonnohighlight(){
-	startbutton.style.backgroundColor = ""
-}
-
-function searchbuttonhighlight(){
-	searchbutton.style.backgroundColor = "rgba(255,255,255,.80)"
-}
-
-function searchbuttonnohighlight(){
-	searchbutton.style.backgroundColor = ""
-}
-
-function widgetsbuttonhighlight(){
-	widgetsbutton.style.backgroundColor = "rgba(255,255,255,.80)"
-}
-
-function widgetsbuttonnohighlight(){
-	widgetsbutton.style.backgroundColor = ""
+function nohighlight(buttonname){
+	buttonname.style.backgroundColor = ""
 }
 
 function sleep(seconds){
@@ -42,11 +26,11 @@ startbutton.addEventListener("click", ()=>{
 
 	if(startmenu.style.bottom == "55px"){
 		startmenu.style.bottom = "-675px"
-		startbuttonnohighlight();
+		nohighlight(startbutton);
 	}
 	else{
 		startmenu.style.bottom = "55px"
-		startbuttonhighlight();
+		highlight(startbutton);
 	}
 })
 
@@ -54,11 +38,11 @@ searchbutton.addEventListener("click", ()=>{
 
 	if(searchmenu.style.bottom == "55px"){
 		searchmenu.style.bottom = "-95%"
-		searchbuttonnohighlight();
+		nohighlight(searchbutton);
 	}
 	else{
 		searchmenu.style.bottom = "55px"
-		searchbuttonhighlight();
+		highlight(searchbutton);
 	}
 })
 
@@ -66,53 +50,50 @@ widgetsbutton.addEventListener("click", ()=>{
 
 	if(widgetsmenu.style.left == "10px"){
 		widgetsmenu.style.left = "-1000px"
-		widgetsbuttonnohighlight();
+		nohighlight(widgetsbutton);
 	}
 	else{
 		widgetsmenu.style.left = "10px"
-		widgetsbuttonhighlight
+		highlight(widgetsbutton);
 	}
 })
 
 timeanddate.addEventListener("click", ()=>{
 
-	if(calendar.style.right == "3px"){
-		calendar.style.right = "-95%"
-		timeanddate.style.backgroundColor = ""
-  		timeanddate.style.borderRadius = ""
+	if(calendarandnotifications.style.right == "3px"){
+		calendarandnotifications.style.right = "-95%"
+		nohighlight(timeanddate);
 	}
 	else{
-		calendar.style.right = "3px"
-		timeanddate.style.backgroundColor = "rgba(255,255,255,.80)"
-  		timeanddate.style.borderRadius = "3px"
+		calendarandnotifications.style.right = "3px"
+		highlight(timeanddate);
 	}
 })
 
 window.addEventListener('mouseup', function(e) {
     if (!event.target.closest(".startmenu") && !event.target.closest(".startbutton")){
         startmenu.style.bottom = "-675px";
-		startbuttonnohighlight();
+		nohighlight(startbutton);
     }
 });
 
 window.addEventListener('mouseup', function(e) {
     if (!event.target.closest(".searchmenu") && !event.target.closest(".searchbutton")){
         searchmenu.style.bottom = "-95%";
-		searchbuttonnohighlight();
+		nohighlight(searchbutton);
     }
 });
 
 window.addEventListener('mouseup', function(e) {
     if (!event.target.closest(".widgetsmenu") && !event.target.closest(".widgetsbutton")){
         widgetsmenu.style.left = "-1000px";
-		widgetsbuttonnohighlight();
+		nohighlight(widgetsbutton);
     }
 });
 
 window.addEventListener('mouseup', function(e) {
-    if (!event.target.closest(".calendar") && !event.target.closest(".timeanddate")){
-        calendar.style.right = "-95%";
-		timeanddate.style.backgroundColor = ""
-  		timeanddate.style.borderRadius = ""
+    if (!event.target.closest(".calendarandnotifications") && !event.target.closest(".timeanddate")){
+        calendarandnotifications.style.right = "-95%";
+		nohighlight(timeanddate);
     }
 });

@@ -10,9 +10,10 @@
       document.onreadystatechange = function () {
     var state = document.readyState
     if (state == 'complete') {
-           document.getElementsByClassName('loading')[0].style.display="none";
+           document.getElementsByClassName('loading')[0].style.display = "none";
            const startupsound = new Audio('audio/startup.mp3');
            startupsound.play();
+           document.getElementsByClassName('taskbar')[0].style.display = "flex";
     }
   }
     </script>

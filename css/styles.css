@@ -88,8 +88,7 @@ body{
   margin:0;
   padding:0;
   height: 48px;
-  display:
-  flex;
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 11000;

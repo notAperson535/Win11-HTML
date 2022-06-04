@@ -40,7 +40,7 @@ function setCookie(cname,cvalue,exdays) {
     if(lightOrDarkMode == "dark"){
       darkMode()
     }
-    if(lightOrDarkMode == "light"){
+    else if(lightOrDarkMode == "light"){
       lightMode()
     }
     else{

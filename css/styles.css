@@ -1,9 +1,14 @@
 :root{
-  --hover-color: lightgray;
+  --calendar-icon-hover-color: lightgray;
   --accent-color: #0067c0;
   --current-day-text-color: white;
   --calendar-up-and-down-color: gray;
-  --fakeMica: #f3f3f3 radial-gradient(#eff4f9 75%,#f3f3f3 100%) no-repeat fixed;
+  /* theme variables */
+  --icon-hover-color: rgba(249, 249, 249, .67);
+  --explorer-shell-bg-color: rgba(255,255,255,.80);
+  --invert: invert(0);
+  --text-color: black;
+  --background-color-opaque: white;
 }
 
 *{
@@ -56,7 +61,7 @@ body{
 .taskbar{
   -webkit-backdrop-filter: saturate(3) blur(20px);
   backdrop-filter: saturate(3) blur(20px);
-  background-color: rgba(255,255,255,.80);
+  background-color: var(--explorer-shell-bg-color);
   width: 100%;
   min-width: 100%;
   position: absolute;
@@ -64,7 +69,8 @@ body{
   margin:0;
   padding:0;
   height: 48px;
-  display:flex;
+  display:
+  flex;
   align-items: center;
   justify-content: center;
   z-index: 11000;
@@ -80,6 +86,10 @@ body{
   display: flex;
 }
 
+.searchbuttonimg{
+  filter: var(--invert);
+}
+
 .taskbariconsright{
   display: flex;
   align-items: center;
@@ -90,7 +100,7 @@ body{
 }
 
 .actioncenter:hover{
-  background-color: white;
+  background-color: var(--icon-hover-color);
   border-radius: 3px;
 }
 
@@ -108,6 +118,7 @@ body{
 
 .taskbariconsright img{
   height: 20px;
+  filter: var(--invert);
 }
 
 .timeanddate{
@@ -116,10 +127,11 @@ body{
   padding: 4px;
   padding-left: 10px;
   border-radius: 3px;
+  color: var(--text-color);
 }
 
 .timeanddate:hover{
-  background-color: white;
+  background-color: var(--icon-hover-color);
 }
 
 .moreapps{
@@ -214,7 +226,7 @@ body{
 }
 
 .taskbaricons:hover{
-  background-color: white;
+  background-color: var(--icon-hover-color);
 }
 
 .sTop{
@@ -234,13 +246,14 @@ body{
 .startmenu{
   position: absolute;
   backdrop-filter: blur(20px);
-  background-color: rgba(255,255,255,.80);
-  bottom: -675px;
+  background-color: var(--explorer-shell-bg-color);
+  bottom: -100%;
   height: calc(100% - 62px);
   width: 625px;
   transition: all .17s cubic-bezier(.79,.14,.15,.86);
-  border-radius: 8px; 
+  border-radius: 8px;
   z-index: 11000;
+  color: var(--text-color);
 }
 
 .pinnedlabel{
@@ -272,32 +285,33 @@ body{
 }
 
 .starticons:hover{
-  background: white;
+  background: var(--icon-hover-color);
   width: 100px;
   border-radius: 5px;
 }
 
 .startlabels{
-  margin-top: 3px
+  margin-top: 3px;
 }
 
 .searchmenu{
   position: absolute;
   backdrop-filter: blur(20px);
-  background-color: rgba(255,255,255,.80);
-  bottom: -675px;
+  background-color: var(--explorer-shell-bg-color);
+  bottom: -100%;
   height: calc(100% - 62px);
   width: 625px;
   transition: all .17s cubic-bezier(.79,.14,.15,.86);
   border-radius: 8px;
   z-index: 11000;
+  color: var(--text-color);
 }
 
 .searchbar {
   margin: 25px 20px 0px 20px;
   height: 38px;
   width: 580px;
-  background-color: white;
+  background-color: var(--background-color-opaque);
   border-radius: 5px;
   border: 2px solid lightgray;
   border-bottom: 2px solid var(--accent-color);
@@ -309,6 +323,7 @@ body{
 .searchbar img{
   width: 23px;
   margin: 0px 15px;
+  filter: var(--invert);
 }
 
 .searchbar input{
@@ -317,6 +332,8 @@ body{
   height: 100%;
   width: 100%;
   font-size: 15px;
+  background: none;
+  color: var(--text-color);
 }
 
 .searchtabs{
@@ -360,7 +377,7 @@ body{
 
 .searchtopapp{
   font-size: 13px;
-  background: white;
+  background-color: var(--background-color-opaque);
   border: solid 1px lightgray;
   width: 100px;
   margin-right: 5px;
@@ -386,13 +403,14 @@ body{
 }
 
 .quicksearch:hover{
-  background-color: white;
+  background-color: var(--icon-hover-color);
   border-radius: 3px;
 }
 
 .quicksearch svg{
   width: 20px;
   margin: 0px 15px;
+  filter: var(--invert);
 }
 
 .widgetsmenu{
@@ -411,7 +429,7 @@ body{
   position: fixed;
   box-shadow: 1px 10px 50px #969696;
   border-radius: 10px;
-  border: 1.5px solid #B4B4B4;
+  border: 1px solid #B4B4B4;
   background: var(--fakeMica);
   overflow: hidden;
   width: 0%;
@@ -428,6 +446,7 @@ body{
   font-size: 13px;
   display: flex;
   align-items: center;
+  color: var(--text-color);
 }
 
 .headerleftside img{
@@ -438,7 +457,8 @@ body{
 }
 
 .appheader{
-  display:flex;
+  display:
+  flex;
   justify-content: space-between;
   max-height: 30px;
   height: 30px;
@@ -494,6 +514,7 @@ body{
   padding: 20px;
   overflow: auto;
   border-radius: 10px 0px 0px 0px;
+  /* filter: var(--invert); */
 }
 
 .storeentries{
@@ -512,6 +533,8 @@ body{
   padding: 0px 10px;
   margin: 15px 10px;
   transition: all ease-in-out .2s;
+  background: var(--background-color-opaque);
+  color: var(--text-color);
 }
 
 .storeentry img{
@@ -550,6 +573,7 @@ body{
   display: flex;
   height: 35px;
   align-items: center;
+  filter: var(--invert);
 }
 
 .notepaddropdownmenus p{
@@ -586,6 +610,10 @@ body{
     min-height: calc(100% - 72px);
 }
 
+.calculatorIframe{
+  filter: var(--invert);
+}
+
 .loadingimg{
   width: 100%;
   height: calc(100% - 29px);
@@ -603,6 +631,7 @@ body{
 .headerrightside {
   display: flex;
   align-items: center;
+  filter: var(--invert);
 }
 
 .headerrightside img{
@@ -610,9 +639,13 @@ body{
   margin: 15px;
 }
 
-.close:hover{
-  background: red;
-  color: white;
+.closelightmode:hover{
+  background: #00ffff;
+  filter: invert(1)
+}
+
+.closedarkmode:hover{
+  background: #00ffff;
 }
 
 .maximize:hover{
@@ -643,13 +676,14 @@ body{
 .edgeurlarea img{
   width: 20px;
   margin: 10px;
+  filter: var(--invert);
 }
 
 .edgetab{
-  background-color: white;
   box-shadow: 1px 3px 10px lightgray;
   width: 200px;
-  display:flex;
+  display:
+  flex;
   align-items: center;
   margin-left: 16px;
   height: 30px;
@@ -667,10 +701,17 @@ body{
   margin-right: 10px;
 }
 
-.edgetabright:hover{
-  background-color: var(--hover-color);
+.edgetabrightlightmode:hover{
+  background-color: lightgray;
   border-radius: 2px;
-  border: solid 2px var(--hover-color);
+  border: solid 2px lightgray;
+  margin: 8px;
+}
+
+.edgetabrightdarkmode:hover{
+  background-color: var(--icon-hover-color);
+  border-radius: 2px;
+  border: solid 2px var(--icon-hover-color);
   margin: 8px;
 }
 
@@ -678,16 +719,19 @@ body{
   width: 17px;
   height: 17px;
   margin-left: 10px;
+  filter: var(--invert);
 }
 
 .edgeurlbar{
   border: none;
   height: 30px;
-  box-shadow: .1px .1px 5px rgb(230, 230, 230);
+  box-shadow: 0.1px 0.1px 5px rgb(230 230 230);
   border-radius: 3px;
   margin: 15px;
   width: 100%;
   overflow: hidden;
+  color: var(--text-color);
+  background-color: var(--background-color-opaque);
 }
 
 .edgeurlbar:focus{
@@ -700,6 +744,7 @@ body{
 
 .edgeprofilepicture{
   border-radius: 15px;
+  filter: invert(0);
 }
 
 .resizer {

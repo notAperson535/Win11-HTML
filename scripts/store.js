@@ -12,6 +12,7 @@ function buildstoreentry(appname, icon, visualappname, type){
 
     storeentryicon = document.createElement("img");
     storeentryicon.src = icon;
+    storeentryicon.classList.add("storeentryicon");
     storeentrydiv.appendChild(storeentryicon);
 
     storeentryname = document.createElement("p");

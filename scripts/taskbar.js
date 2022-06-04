@@ -9,7 +9,7 @@ let timeanddate = document.getElementsByClassName("timeanddate")[0]
 let calendarandnotifications = document.getElementsByClassName("calendarandnotifications")[0]
 
 function highlight(buttonname){
-	buttonname.style.backgroundColor = "rgba(255,255,255,.80)"
+	buttonname.style.backgroundColor = "var(--icon-hover-color)"
 }
 
 function nohighlight(buttonname){
@@ -37,7 +37,7 @@ startbutton.addEventListener("click", ()=>{
 searchbutton.addEventListener("click", ()=>{
 
 	if(searchmenu.style.bottom == "55px"){
-		searchmenu.style.bottom = "-95%"
+		searchmenu.style.bottom = "-100%"
 		nohighlight(searchbutton);
 	}
 	else{
@@ -61,7 +61,7 @@ widgetsbutton.addEventListener("click", ()=>{
 timeanddate.addEventListener("click", ()=>{
 
 	if(calendarandnotifications.style.right == "3px"){
-		calendarandnotifications.style.right = "-95%"
+		calendarandnotifications.style.right = "-100%"
 		nohighlight(timeanddate);
 	}
 	else{
@@ -72,14 +72,14 @@ timeanddate.addEventListener("click", ()=>{
 
 window.addEventListener('mouseup', function(e) {
     if (!event.target.closest(".startmenu") && !event.target.closest(".startbutton")){
-        startmenu.style.bottom = "-675px";
+        startmenu.style.bottom = "-100%";
 		nohighlight(startbutton);
     }
 });
 
 window.addEventListener('mouseup', function(e) {
     if (!event.target.closest(".searchmenu") && !event.target.closest(".searchbutton")){
-        searchmenu.style.bottom = "-95%";
+        searchmenu.style.bottom = "-100%";
 		nohighlight(searchbutton);
     }
 });
@@ -93,7 +93,7 @@ window.addEventListener('mouseup', function(e) {
 
 window.addEventListener('mouseup', function(e) {
     if (!event.target.closest(".calendarandnotifications") && !event.target.closest(".timeanddate")){
-        calendarandnotifications.style.right = "-95%";
+        calendarandnotifications.style.right = "-100%";
 		nohighlight(timeanddate);
     }
 });

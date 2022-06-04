@@ -99,6 +99,7 @@ function buildapp(appname, icon, visualappname) {
   var appicon = document.createElement("img");
   appicon.src = icon;
   headerleftside.appendChild(appicon);
+  appicon.classList.add("appheadericon")
   headerleftside.appendChild(document.createTextNode(visualappname));
 
   var headerrightside = document.createElement("div");
@@ -209,7 +210,7 @@ function active(){
 	taskbariconhighlight.style.backgroundColor = "var(--accent-color)"
 	taskbariconhighlight.style.width = "15px"
   app.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
-  taskbaricon.style.backgroundColor = "white"
+  taskbaricon.style.backgroundColor = "var(--taskbar-icon-hover-color)"
 }
 
 function notactive(){
@@ -274,8 +275,8 @@ function recoverpropertiesmaxmin(){
 startmenuicon.addEventListener("click", ()=>{
 
 	active();
-	startmenu.style.bottom = "-675px"
-  startbuttonnohighlight();
+	startmenu.style.bottom = "-100%"
+  nohighlight(startbutton);
 
 	if(app.style.opacity == "1"){
 		active();
@@ -304,7 +305,7 @@ taskbaricon.addEventListener("click", ()=>{
 
   active();
   taskbariconhighlight.style.opacity = "1"
-	startmenu.style.bottom = "-675px"
+	startmenu.style.bottom = "-100%"
 
   if(app.style.zIndex != zIndex){
     active();
@@ -419,8 +420,8 @@ function openedgewithcustomsearch(searchterm){
     if(app.style.width == "0%" || app.style.width == "0px"){
       getproperties();
     }
-      searchbuttonnohighlight();
-      searchmenu.style.bottom = "-675px"
+      nohighlight(searchbutton);
+      searchmenu.style.bottom = "-100%"
       document.getElementsByClassName("edgeurlbar")[0].value = "https://www.bing.com/search?q=" + searchterm
       goToPage(document.getElementById("URL").value);
       recoverproperties();

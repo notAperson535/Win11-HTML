@@ -103,7 +103,7 @@ function buildapp(appname, icon, visualappname) {
   headerleftside.appendChild(document.createTextNode(visualappname));
 
   var headerrightside = document.createElement("div");
-  headerrightside.classList.add(appname + "headerrightside", "headerrightside");
+  headerrightside.classList.add(appname + "headerrightside", "headerrightside", "invert");
   appheader.appendChild(headerrightside);
 
   var minimizediv = document.createElement("div");
@@ -154,6 +154,9 @@ function buildapp(appname, icon, visualappname) {
   appiframe.id = appname + "Iframe"
   appdiv.appendChild(appiframe)
   appiframe.setAttribute("data-responsive", "true");
+  if(appname == "calculator"){
+    appiframe.classList.add("invert")
+  }
 
 }
 

@@ -77,6 +77,10 @@ body{
   width: 10%;
 }
 
+.invert{
+  filter: var(--invert)
+}
+
 .taskbar{
   -webkit-backdrop-filter: saturate(3) blur(20px);
   backdrop-filter: saturate(3) blur(20px);
@@ -102,10 +106,6 @@ body{
 
 .taskbariconscenter{
   display: flex;
-}
-
-.searchbuttonimg{
-  filter: var(--invert);
 }
 
 .taskbariconsright{
@@ -136,7 +136,6 @@ body{
 
 .taskbariconsright img{
   height: 20px;
-  filter: var(--invert);
 }
 
 .timeanddate{
@@ -346,7 +345,6 @@ body{
 .searchbar img{
   width: 23px;
   margin: 0px 15px;
-  filter: var(--invert);
 }
 
 .searchbar input{
@@ -433,7 +431,6 @@ body{
 .quicksearch svg{
   width: 20px;
   margin: 0px 15px;
-  filter: var(--invert);
 }
 
 .widgetsmenu{
@@ -537,7 +534,6 @@ body{
   padding: 20px;
   overflow: auto;
   border-radius: 10px 0px 0px 0px;
-  /* filter: var(--invert); */
 }
 
 .storeentries{
@@ -596,7 +592,7 @@ body{
   display: flex;
   height: 35px;
   align-items: center;
-  filter: var(--invert);
+  color: var(--text-color)
 }
 
 .notepaddropdownmenus p{
@@ -633,14 +629,9 @@ body{
     min-height: calc(100% - 72px);
 }
 
-.calculatorIframe{
-  filter: var(--invert);
-}
-
 .headerrightside {
   display: flex;
   align-items: center;
-  filter: var(--invert);
 }
 
 .headerrightside img{
@@ -685,7 +676,6 @@ body{
 .edgeurlarea img{
   width: 20px;
   margin: 10px;
-  filter: var(--invert);
 }
 
 .edgetab{
@@ -728,7 +718,6 @@ body{
   width: 17px;
   height: 17px;
   margin-left: 10px;
-  filter: var(--invert);
 }
 
 .edgeurlbar{

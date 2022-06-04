@@ -50,7 +50,7 @@ function setCookie(cname,cvalue,exdays) {
     // lightmode and darkmode functions
 
     function lightMode(){
-      setCookie("lightOrDarkMode", "light");
+      setCookie("lightOrDarkMode", "light", "365");
 
       root.style.setProperty("--explorer-shell-bg-color","rgba(255,255,255,.80)")
       root.style.setProperty("--icon-hover-color", "rgba(249, 249, 249, .67)")
@@ -90,7 +90,7 @@ function setCookie(cname,cvalue,exdays) {
     }
 
     function darkMode(){
-      setCookie("lightOrDarkMode", "dark");
+      setCookie("lightOrDarkMode", "dark","365");
 
       root.style.setProperty("--explorer-shell-bg-color","rgba(32, 32, 32, .75)")
       root.style.setProperty("--icon-hover-color", "rgba(45, 45, 45,.67)")

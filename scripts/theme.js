@@ -72,6 +72,9 @@ function setCookie(cname,cvalue,exdays) {
         elmnt.style.backgroundColor = "white"
       });
 
+      document.querySelector(".dycalendar-container").style.backgroundColor = "#e6edf8"
+      document.querySelector(".calendarheader").style.backgroundColor = "#dae2f2"
+
       document.querySelector(".edgetab").style.boxShadow = "1px 3px 10px lightgrey"
       document.querySelector(".edgeurlbar").style.boxShadow = "0.1px 0.1px 5px rgb(230 230 230)"
       document.querySelectorAll(".edgetabright").forEach(elmnt =>{
@@ -93,7 +96,7 @@ function setCookie(cname,cvalue,exdays) {
       setCookie("lightOrDarkMode", "dark","365");
 
       root.style.setProperty("--explorer-shell-bg-color","rgba(32, 32, 32, .75)")
-      root.style.setProperty("--icon-hover-color", "rgba(45, 45, 45,.67)")
+      root.style.setProperty("--icon-hover-color", "rgba(55,55,55,.67)")
       root.style.setProperty("--invert", "invert(1)")
       root.style.setProperty("--text-color", "white")
       root.style.setProperty("--background-color-opaque", "black")
@@ -111,6 +114,9 @@ function setCookie(cname,cvalue,exdays) {
         elmnt.style.border = "solid 1px rgb(255 255 255 / 5%)"
         elmnt.style.backgroundColor = "rgb(255 255 255 / 5%)"
       });
+
+      document.querySelector(".dycalendar-container").style.backgroundColor = "#242424"
+      document.querySelector(".calendarheader").style.backgroundColor = "#1c1c1c"
 
       document.querySelector(".edgetab").style.boxShadow = "1px 3px 10px black"
       document.querySelector(".edgeurlbar").style.boxShadow = "0.1px 0.1px 5px black"

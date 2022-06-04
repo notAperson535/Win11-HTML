@@ -181,6 +181,8 @@ body{
   right: -655px;
   bottom: 51;
   transition: all .17s cubic-bezier(.79,.14,.15,.86);
+  z-index: 11000;
+  color: var(--text-color);
 }
 
 .calendar{
@@ -188,11 +190,14 @@ body{
   overflow: hidden;
   -webkit-backdrop-filter: saturate(3) blur(20px);
   backdrop-filter: saturate(3) blur(20px);
-  z-index: 13000;
 }
 
 .dycalendar-container{
   background-color: #e6edf8;
+}
+
+.dycalendar-day-container{
+  color: var(--text-color);
 }
 
 .calendarheader{

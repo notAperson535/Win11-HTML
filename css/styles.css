@@ -163,7 +163,7 @@ body{
 }
 
 .moreapps:hover{
-  background-color: white;
+  background-color: var(--icon-hover-color);
   border-radius: 3px;
 }
 

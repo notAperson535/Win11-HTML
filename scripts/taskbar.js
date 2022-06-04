@@ -25,7 +25,7 @@ function sleep(seconds){
 startbutton.addEventListener("click", ()=>{
 
 	if(startmenu.style.bottom == "55px"){
-		startmenu.style.bottom = "-675px"
+		startmenu.style.bottom = "-100%"
 		nohighlight(startbutton);
 	}
 	else{

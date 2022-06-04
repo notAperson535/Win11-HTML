@@ -210,7 +210,7 @@ function active(){
 	taskbariconhighlight.style.backgroundColor = "var(--accent-color)"
 	taskbariconhighlight.style.width = "15px"
   app.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
-  taskbaricon.style.backgroundColor = "var(--taskbar-icon-hover-color)"
+  taskbaricon.style.backgroundColor = "var(--icon-hover-color)"
 }
 
 function notactive(){

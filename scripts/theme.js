@@ -89,7 +89,6 @@ function setCookie(cname,cvalue,exdays) {
       });
 
       document.querySelector(".notepadtext").style.backgroundColor = "#f9f9f9"
-
     }
 
     function darkMode(){

@@ -6,12 +6,24 @@
     <link rel="icon" href="img/favicon.ico">
     <script src="https://codegena.com/assets/js/async-iframe.js"></script>
     <title>Windows 11 in HTML</title>
+    <script>
+      document.onreadystatechange = function () {
+    var state = document.readyState
+    if (state == 'complete') {
+           document.getElementsByClassName('loading')[0].style.display="none";
+           const startupsound = new Audio('audio/startup.mp3');
+           startupsound.play();
+    }
+  }
+    </script>
   </head>
   <body>
 
-    <audio autoplay>
-      <source src="audio/startup.mp3" type="audio/mpeg">
-    </audio>
+<div id="loading" class="loading">
+  <img class="loadingimg" src="img/favicon.ico">
+  <br>
+  <img class="loadinggif" src="img/loading.gif">
+</div>
 
 <div class="center">
 

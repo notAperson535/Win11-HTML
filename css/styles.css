@@ -58,6 +58,24 @@ body{
   user-select: none;
 }
 
+.loading{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  background-color: #020202;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loadinggif{
+  width: 10%
+}
+
+.loadingimg{
+  width: 10%;
+}
+
 .taskbar{
   -webkit-backdrop-filter: saturate(3) blur(20px);
   backdrop-filter: saturate(3) blur(20px);
@@ -612,20 +630,6 @@ body{
 
 .calculatorIframe{
   filter: var(--invert);
-}
-
-.loadingimg{
-  width: 100%;
-  height: calc(100% - 29px);
-  background-color: white;
-}
-
-.loadinggif{
-  position: absolute;
-  left: 40%;
-  top: 60%;
-  width: 20%;
-  margin: auto;
 }
 
 .headerrightside {

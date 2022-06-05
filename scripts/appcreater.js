@@ -99,11 +99,10 @@ function buildapp(appname, icon, visualappname) {
   var appicon = document.createElement("img");
   appicon.src = icon;
   headerleftside.appendChild(appicon);
-  appicon.classList.add("appheadericon")
   headerleftside.appendChild(document.createTextNode(visualappname));
 
   var headerrightside = document.createElement("div");
-  headerrightside.classList.add(appname + "headerrightside", "headerrightside", "invert");
+  headerrightside.classList.add(appname + "headerrightside", "headerrightside");
   appheader.appendChild(headerrightside);
 
   var minimizediv = document.createElement("div");
@@ -154,9 +153,6 @@ function buildapp(appname, icon, visualappname) {
   appiframe.id = appname + "Iframe"
   appdiv.appendChild(appiframe)
   appiframe.setAttribute("data-responsive", "true");
-  if(appname == "calculator"){
-    appiframe.classList.add("invert")
-  }
 
 }
 
@@ -213,7 +209,9 @@ function active(){
 	taskbariconhighlight.style.backgroundColor = "var(--accent-color)"
 	taskbariconhighlight.style.width = "15px"
   app.style.boxShadow = "0 10px 20px rgb(0 0 0 / 25%)"
-  taskbaricon.style.backgroundColor = "var(--icon-hover-color)"
+  taskbaricon.style.backgroundColor = "white"
+  taskbaricon.style.borderRadius = "5px"
+  bringtofront();
 }
 
 function notactive(){
@@ -221,6 +219,7 @@ function notactive(){
 	taskbariconhighlight.style.width = "7.5px"
   app.style.boxShadow = "none"
   taskbaricon.style.backgroundColor = ""
+  taskbaricon.style.borderRadius = ""
 }
 
 window.addEventListener('mousedown', function(e) {
@@ -228,7 +227,6 @@ window.addEventListener('mousedown', function(e) {
 		    notactive();
     }else{
 		    active();
-        bringtofront();
 	}
 });
 
@@ -249,7 +247,7 @@ function getpropertiesmax(){
 function minorclose(){
 	notactive();
 	getproperties();
-	app.style.transition = "all .17s cubic-bezier(.85,.14,.14,.85), opacity 80ms linear"
+	app.style.transition = "all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear"
 	app.style.left = "50%"
 	app.style.top = "50%"
 	app.style.width = "0%"
@@ -258,7 +256,7 @@ function minorclose(){
 }
 
 function recoverproperties(){
-	app.style.transition = "all .17s cubic-bezier(.85,.14,.14,.85), opacity 80ms linear"
+	app.style.transition = "all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear"
 	app.style.top = topminclose
 	app.style.left = leftminclose
 	app.style.width = widthminclose
@@ -267,7 +265,7 @@ function recoverproperties(){
 }
 
 function recoverpropertiesmaxmin(){
-	app.style.transition = "all .17s cubic-bezier(.85,.14,.14,.85), opacity 80ms linear"
+	app.style.transition = "all .25s cubic-bezier(.85,.14,.14,.85), opacity 200ms linear"
 	app.style.top = topminmax
 	app.style.left = leftminmax
 	app.style.width = widthminmax
@@ -278,27 +276,23 @@ function recoverpropertiesmaxmin(){
 startmenuicon.addEventListener("click", ()=>{
 
 	active();
-	startmenu.style.bottom = "-100%"
-  nohighlight(startbutton);
+	startmenu.style.bottom = "-675px"
+  startbuttonnohighlight();
 
 	if(app.style.opacity == "1"){
 		active();
-    bringtofront();
-    return;
 	}
   if(app.style.width = "0%"){
     goToPage(website);
     recoverproperties();
 		taskbaricon.style.display = "block"
 		active();
-    bringtofront();
 		taskbariconhighlight.style.opacity = "1"
   }
 	else{
 		recoverproperties();
 		taskbaricon.style.display = "block"
 		active();
-    bringtofront();
 		taskbariconhighlight.style.opacity = "1"
 	}
 
@@ -308,24 +302,21 @@ taskbaricon.addEventListener("click", ()=>{
 
   active();
   taskbariconhighlight.style.opacity = "1"
-	startmenu.style.bottom = "-100%"
+	startmenu.style.bottom = "-675px"
 
   if(app.style.zIndex != zIndex){
     active();
-    bringtofront();
     recoverproperties();
     app.style.opacity = "1"
     return;
   }
 	if(app.style.opacity == "1"){
-		active();
-    bringtofront();
     minorclose();
 		app.style.top = "200%"
+		active();
 	}
 	else{
 		active();
-    bringtofront();
 		recoverproperties();
 		taskbaricon.style.display = "block"
 	}
@@ -359,8 +350,6 @@ edgetabright.addEventListener("click", ()=>{
 });
 
 minimize.addEventListener("click", ()=>{
-  active();
-  bringtofront();
 	minorclose();
 	app.style.top = "200%"
 });
@@ -392,7 +381,7 @@ maxmin.addEventListener("click", ()=>{
 });
 
 function removetransition(){
-	app.style.transition = "opacity 80ms linear"
+	app.style.transition = "opacity 200ms linear"
 }
 
 // quick searches
@@ -423,8 +412,8 @@ function openedgewithcustomsearch(searchterm){
     if(app.style.width == "0%" || app.style.width == "0px"){
       getproperties();
     }
-      nohighlight(searchbutton);
-      searchmenu.style.bottom = "-100%"
+      searchbuttonnohighlight();
+      searchmenu.style.bottom = "-675px"
       document.getElementsByClassName("edgeurlbar")[0].value = "https://www.bing.com/search?q=" + searchterm
       goToPage(document.getElementById("URL").value);
       recoverproperties();

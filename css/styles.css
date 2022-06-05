@@ -1,10 +1,10 @@
 :root{
-  --calendar-icon-hover-color: lightgray;
+  --calendar-hover-color: rgba(55,55,55,0.67);
   --accent-color: #0067c0;
   --current-day-text-color: white;
   --calendar-up-and-down-color: gray;
   /* theme variables */
-  --icon-hover-color: rgba(249, 249, 249, .67);
+  --hover-color: rgba(249, 249, 249, .67);
   --explorer-shell-bg-color: rgba(255,255,255,.80);
   --invert: invert(0);
   --text-color: black;
@@ -47,7 +47,8 @@
 }
 
 body{
-  background-image: url("https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/background.jpg");
+  /* background-image: url("https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/background.jpg"); */
+  background-image: url("/users/reida/downloads/win11-html/img/backgroundlight.jpg");
   overflow: hidden;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -117,19 +118,19 @@ body{
   float: right;
 }
 
-.actioncenter:hover{
-  background-color: var(--icon-hover-color);
+.actioncentericons:hover{
+  background-color: var(--hover-color);
   border-radius: 3px;
 }
 
-.actioncenter{
+.actioncentericons{
   display: flex;
   margin: 0px 5px;
   padding-top: 10px;
   padding-bottom: 10px;;
 }
 
-.actioncenter img{
+.actioncentericons img{
   margin-right: 5px;
   margin-left: 5px;
 }
@@ -148,7 +149,7 @@ body{
 }
 
 .timeanddate:hover{
-  background-color: var(--icon-hover-color);
+  background-color: var(--hover-color);
 }
 
 .moreapps{
@@ -163,7 +164,7 @@ body{
 }
 
 .moreapps:hover{
-  background-color: var(--icon-hover-color);
+  background-color: var(--hover-color);
   border-radius: 3px;
 }
 
@@ -192,7 +193,7 @@ body{
 }
 
 .dycalendar-container{
-  background-color: #e6edf8;
+  background-color: var(--explorer-shell-bg-color);
 }
 
 .dycalendar-day-container{
@@ -212,6 +213,75 @@ body{
   font-size: 14px;
 }
 
+.actioncenter{
+  position: absolute;
+  bottom: 51;
+  right: 3px;
+  border-radius: 5px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  background-color: var(--explorer-shell-bg-color);
+  transition: all .17s cubic-bezier(.79,.14,.15,.86);
+  z-index: 11000;
+  color: var(--text-color);
+}
+
+.actioncenter img{
+  width: 20px;
+}
+
+.quicksettings{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.quicksetting{
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.quicksettingimg{
+  background: var(--background-color-opaque);
+  border-radius: 5px;
+  width: 90px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quicksetting p{
+  margin: 3px 0px;
+  font-size: 13px;
+}
+
+.actioncentervolume{
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.actioncentervolume img{
+  margin: 0px 10px;
+}
+
+.actioncentervolumeslider{
+  background-color: var(--accent-color);
+  height: 3px;
+  border-radius: 5px;
+  width: calc(100% - 65px);
+}
+
+.actioncentervolumeslider .dragger{
+  position: absolute;
+  border: 3px solid white;
+  margin-top: -8px;
+  border-radius: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--accent-color);
+}
+
 .center{
   display: flex;
   justify-content: center;
@@ -223,8 +293,8 @@ body{
 }
 
 .taskbaricons{
-  margin: 0px 2.5px;
-  padding: 7px;
+  margin: 0px 1.5px;
+  padding: 8px;
   width: 25px;
   height: 25px;
   text-align: center;
@@ -248,7 +318,7 @@ body{
 }
 
 .taskbaricons:hover{
-  background-color: var(--icon-hover-color);
+  background-color: var(--hover-color);
 }
 
 .sTop{
@@ -307,7 +377,7 @@ body{
 }
 
 .starticons:hover{
-  background: var(--icon-hover-color);
+  background: var(--hover-color);
   width: 100px;
   border-radius: 5px;
 }
@@ -424,7 +494,7 @@ body{
 }
 
 .quicksearch:hover{
-  background-color: var(--icon-hover-color);
+  background-color: var(--hover-color);
   border-radius: 3px;
 }
 
@@ -708,9 +778,9 @@ body{
 }
 
 .edgetabrightdarkmode:hover{
-  background-color: var(--icon-hover-color);
+  background-color: var(--hover-color);
   border-radius: 2px;
-  border: solid 2px var(--icon-hover-color);
+  border: solid 2px var(--hover-color);
   margin: 8px;
 }
 

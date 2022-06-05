@@ -47,7 +47,8 @@
 }
 
 body{
-  background-image: url("https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/background.jpg");
+  /* background-image: url("https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/background.jpg"); */
+  background-image: url("/users/reida/downloads/win11-html/img/backgroundlight.jpg");
   overflow: hidden;
   background-position: 50%;
   background-repeat: no-repeat;

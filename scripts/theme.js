@@ -53,12 +53,14 @@ function setCookie(cname,cvalue,exdays) {
       setCookie("lightOrDarkMode", "light", "365");
 
       root.style.setProperty("--explorer-shell-bg-color","rgba(255,255,255,.80)")
-      root.style.setProperty("--icon-hover-color", "rgba(249, 249, 249, .67)")
+      root.style.setProperty("--fakeMica", "#f3f3f3 radial-gradient(#eff4f9 75%,#f3f3f3 100%) no-repeat fixed");
+      root.style.setProperty("--hover-color", "rgba(249, 249, 249, .67)")
       root.style.setProperty("--invert", "invert(0)")
       root.style.setProperty("--text-color", "black")
+      root.style.setProperty("--calendar-hover-color", "lightgray")
       root.style.setProperty("--background-color-opaque", "white")
 
-      root.style.setProperty("--fakeMica", "#f3f3f3 radial-gradient(#eff4f9 75%,#f3f3f3 100%) no-repeat fixed");
+      document.querySelector("body").style.backgroundImage = "url(https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/backgroundlight.jpg)"
 
       document.querySelectorAll(".app").forEach(elmnt => elmnt.style.border = "solid 1px #B4B4B4");
 
@@ -72,7 +74,6 @@ function setCookie(cname,cvalue,exdays) {
         elmnt.style.backgroundColor = "white"
       });
 
-      document.querySelector(".dycalendar-container").style.backgroundColor = "#e6edf8"
       document.querySelector(".calendarheader").style.backgroundColor = "#dae2f2"
 
       document.querySelector(".edgetab").style.boxShadow = "1px 3px 10px lightgrey"
@@ -95,12 +96,14 @@ function setCookie(cname,cvalue,exdays) {
       setCookie("lightOrDarkMode", "dark","365");
 
       root.style.setProperty("--explorer-shell-bg-color","rgba(32, 32, 32, .75)")
-      root.style.setProperty("--icon-hover-color", "rgba(55,55,55,.67)")
+      root.style.setProperty("--fakeMica", "#202020 radial-gradient(#1a1f35 25%, #202020 100%) no-repeat fixed");
+      root.style.setProperty("--hover-color", "rgba(55,55,55,.67)")
       root.style.setProperty("--invert", "invert(1)")
       root.style.setProperty("--text-color", "white")
+      root.style.setProperty("--calendar-hover-color", "rgba(55,55,55,.67)")
       root.style.setProperty("--background-color-opaque", "black")
 
-      root.style.setProperty("--fakeMica", "#202020 radial-gradient(#1a1f35 25%, #202020 100%) no-repeat fixed");
+      document.querySelector("body").style.backgroundImage = "url(https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/backgrounddark.jpg)"
 
       document.querySelectorAll(".app").forEach(elmnt => elmnt.style.border = "solid 1px #8d8d8d");
 
@@ -114,7 +117,6 @@ function setCookie(cname,cvalue,exdays) {
         elmnt.style.backgroundColor = "rgb(255 255 255 / 5%)"
       });
 
-      document.querySelector(".dycalendar-container").style.backgroundColor = "#242424"
       document.querySelector(".calendarheader").style.backgroundColor = "#1c1c1c"
 
       document.querySelector(".edgetab").style.boxShadow = "1px 3px 10px black"

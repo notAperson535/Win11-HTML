@@ -83,7 +83,7 @@
 }
 
 .dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn:hover {
-  background: var(--calendar-icon-hover-color);
+  background: var(--calendar-hover-color);
 }
 
 .dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn {
@@ -109,7 +109,7 @@
 }
 
 .dycalendar-month-container .dycalendar-body table tr:not(:first-child) td:not(.dycalendar-today-date):hover {
-  background: var(--calendar-icon-hover-color);
+  background: var(--calendar-hover-color);
 }
 
 .dycalendar-month-container .dycalendar-body table tr:first-child td {

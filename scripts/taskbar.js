@@ -9,7 +9,7 @@ let timeanddate = document.getElementsByClassName("timeanddate")[0]
 let calendarandnotifications = document.getElementsByClassName("calendarandnotifications")[0]
 
 function highlight(buttonname){
-	buttonname.style.backgroundColor = "var(--icon-hover-color)"
+	buttonname.style.backgroundColor = "var(--hover-color)"
 }
 
 function nohighlight(buttonname){

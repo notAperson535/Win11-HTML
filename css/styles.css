@@ -8,7 +8,8 @@
   --explorer-shell-bg-color: rgba(255,255,255,.80);
   --invert: invert(0);
   --text-color: black;
-  --background-color-opaque: white;
+  --background-color: white;
+  --border-color: lightgray;
 }
 
 *{
@@ -47,7 +48,7 @@
 }
 
 body{
-  background-image: url("https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/background.jpg");
+  background-image: url("https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/backgroundlight.jpg");
   overflow: hidden;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -56,6 +57,10 @@ body{
   margin: 0;
   padding: 0;
   user-select: none;
+}
+
+img {
+  pointer-events: none
 }
 
 .loading{
@@ -215,7 +220,7 @@ body{
 .actioncenter{
   position: absolute;
   bottom: 51;
-  right: 3px;
+  right: -100%;
   border-radius: 5px;
   overflow: hidden;
   backdrop-filter: blur(20px);
@@ -240,7 +245,7 @@ body{
 }
 
 .quicksettingimg{
-  background: var(--background-color-opaque);
+  background: var(--background-color);
   border-radius: 5px;
   width: 90px;
   height: 50px;
@@ -269,12 +274,13 @@ body{
   height: 3px;
   border-radius: 5px;
   width: calc(100% - 65px);
+  display: flex;
+  align-items: center;
 }
 
 .actioncentervolumeslider .dragger{
   position: absolute;
   border: 3px solid white;
-  margin-top: -8px;
   border-radius: 10px;
   width: 15px;
   height: 15px;
@@ -300,9 +306,8 @@ body{
   border-radius: 5px;
 }
 
-.taskbariconsimg:active{
-  margin-top: 3.125px;
-  width: 18.75px;
+.startbutton img{
+  border-radius: 5px;
 }
 
 .taskbariconhighlight{
@@ -368,11 +373,16 @@ body{
   margin: 0 auto;
   margin-top: 12px;
   width: 30px;
+  transition: all .1s;
 }
 
 .starticons{
   width: 100px;
+  padding: 4px 0px;
   font-size: 13px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .starticons:hover{
@@ -382,7 +392,8 @@ body{
 }
 
 .startlabels{
-  margin-top: 3px;
+  margin: 0px;
+  margin-bottom: 12px;
 }
 
 .searchmenu{
@@ -402,7 +413,7 @@ body{
   margin: 25px 20px 0px 20px;
   height: 38px;
   width: 580px;
-  background-color: var(--background-color-opaque);
+  background-color: var(--background-color);
   border-radius: 5px;
   border: 2px solid lightgray;
   border-bottom: 2px solid var(--accent-color);
@@ -467,8 +478,8 @@ body{
 
 .searchtopapp{
   font-size: 13px;
-  background-color: var(--background-color-opaque);
-  border: solid 1px lightgray;
+  background-color: var(--background-color);
+  border: solid 1px var(--border-color);
   width: 100px;
   margin-right: 5px;
   margin-top: 12px;
@@ -616,12 +627,12 @@ body{
   width: auto;
   background: #fff;
   box-shadow: 0 1px 1px rgb(0 0 0 / 25%);
-  border: solid 1px lightgray;
+  border: solid 1px var(--border-color);
   border-radius: 10px;
   padding: 0px 10px;
   margin: 15px 10px;
   transition: all ease-in-out .2s;
-  background: var(--background-color-opaque);
+  background: var(--background-color);
   color: var(--text-color);
 }
 
@@ -748,6 +759,7 @@ body{
 }
 
 .edgetab{
+  background-color: var(--background-color);
   box-shadow: 1px 3px 10px lightgray;
   width: 200px;
   display:
@@ -798,7 +810,7 @@ body{
   width: 100%;
   overflow: hidden;
   color: var(--text-color);
-  background-color: var(--background-color-opaque);
+  background-color: var(--background-color);
 }
 
 .edgeurlbar:focus{

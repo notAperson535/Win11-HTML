@@ -7,6 +7,8 @@ let taskbariconsleft = document.getElementsByClassName("taskbariconsleft")[0]
 let widgetsmenu = document.getElementsByClassName("widgetsmenu")[0]
 let timeanddate = document.getElementsByClassName("timeanddate")[0]
 let calendarandnotifications = document.getElementsByClassName("calendarandnotifications")[0]
+let actioncentericons = document.getElementsByClassName("actioncentericons")[0]
+let actioncenter = document.getElementsByClassName("actioncenter")[0]
 
 function highlight(buttonname){
 	buttonname.style.backgroundColor = "var(--hover-color)"
@@ -21,6 +23,41 @@ function sleep(seconds){
     while(new Date().getTime() < waitUntil) 
         true;
 }
+
+//taskbar icons and start menu icons active
+
+document.querySelectorAll(".taskbaricons").forEach(elmnt => {
+	elmnt.addEventListener("mousedown", ()=>{
+		elmnt.querySelector(".taskbariconsimg").style.margin = "3.125px"
+		elmnt.querySelector(".taskbariconsimg").style.width = "18.75px"
+	});
+});
+
+document.querySelectorAll(".taskbaricons").forEach(elmnt => {
+	window.addEventListener('mouseup', function(event){
+		elmnt.querySelector(".taskbariconsimg").style.width = "25px"
+		elmnt.querySelector(".taskbariconsimg").style.margin = "0px"
+	});
+});
+
+document.querySelectorAll(".starticons").forEach(elmnt => {
+	elmnt.addEventListener("mousedown", ()=>{
+		elmnt.querySelector("img").style.marginTop = "15.75px"
+		elmnt.querySelector("img").style.margin = "3.75px"
+		elmnt.querySelector("img").style.width = "22.5px"
+	});
+});
+
+document.querySelectorAll(".starticons").forEach(elmnt => {
+	window.addEventListener('mouseup', function(event){
+		elmnt.querySelector("img").style.width = "30px"
+		elmnt.querySelector("img").style.marginTop = "12px"
+		elmnt.querySelector("img").style.margin = "0px"
+	});
+});
+
+
+// everything else
 
 startbutton.addEventListener("click", ()=>{
 
@@ -70,6 +107,18 @@ timeanddate.addEventListener("click", ()=>{
 	}
 })
 
+actioncentericons.addEventListener("click", ()=>{
+
+	if(actioncenter.style.right == "3px"){
+		actioncenter.style.right = "-100%"
+		nohighlight(actioncentericons);
+	}
+	else{
+		actioncenter.style.right = "3px"
+		highlight(actioncentericons);
+	}
+})
+
 window.addEventListener('mouseup', function(e) {
     if (!event.target.closest(".startmenu") && !event.target.closest(".startbutton")){
         startmenu.style.bottom = "-100%";
@@ -95,5 +144,12 @@ window.addEventListener('mouseup', function(e) {
     if (!event.target.closest(".calendarandnotifications") && !event.target.closest(".timeanddate")){
         calendarandnotifications.style.right = "-100%";
 		nohighlight(timeanddate);
+    }
+});
+
+window.addEventListener('mouseup', function(e) {
+    if (!event.target.closest(".actioncenter") && !event.target.closest(".actioncentericons")){
+        actioncenter.style.right = "-100%";
+		nohighlight(actioncentericons);
     }
 });

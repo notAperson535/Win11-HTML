@@ -58,7 +58,8 @@ function setCookie(cname,cvalue,exdays) {
       root.style.setProperty("--invert", "invert(0)")
       root.style.setProperty("--text-color", "black")
       root.style.setProperty("--calendar-hover-color", "lightgray")
-      root.style.setProperty("--background-color-opaque", "white")
+      root.style.setProperty("--background-color", "white")
+      root.style.setProperty("--border-color", "lightgray")
 
       document.querySelector("body").style.backgroundImage = "url(https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/backgroundlight.jpg)"
 
@@ -67,11 +68,6 @@ function setCookie(cname,cvalue,exdays) {
       document.querySelectorAll(".close").forEach(elmnt =>{
         elmnt.classList.remove("closedarkmode");
         elmnt.classList.add("closelightmode");
-      });
-
-      document.querySelectorAll(".searchtopapp").forEach(elmnt => {
-        elmnt.style.border = "solid 1px lightgray"
-        elmnt.style.backgroundColor = "white"
       });
 
       document.querySelector(".calendarheader").style.backgroundColor = "#dae2f2"
@@ -84,10 +80,6 @@ function setCookie(cname,cvalue,exdays) {
       });
 
       document.querySelector(".storeentriesbackground").style.backgroundColor = "hsla(0,0%,100%,.5)"
-      document.querySelectorAll(".storeentry").forEach(elmnt => {
-        elmnt.style.border = "solid 1px lightgray"
-        elmnt.style.backgroundColor = "white"
-      });
 
       document.querySelector(".notepadtext").style.backgroundColor = "#f9f9f9"
     }
@@ -97,11 +89,12 @@ function setCookie(cname,cvalue,exdays) {
 
       root.style.setProperty("--explorer-shell-bg-color","rgba(32, 32, 32, .75)")
       root.style.setProperty("--fakeMica", "#202020 radial-gradient(#1a1f35 25%, #202020 100%) no-repeat fixed");
-      root.style.setProperty("--hover-color", "rgba(55,55,55,.67)")
+      root.style.setProperty("--hover-color", "rgb(255 255 255 / 5%)")
       root.style.setProperty("--invert", "invert(1)")
       root.style.setProperty("--text-color", "white")
       root.style.setProperty("--calendar-hover-color", "rgba(55,55,55,.67)")
-      root.style.setProperty("--background-color-opaque", "black")
+      root.style.setProperty("--background-color", "rgb(255 255 255 / 5%)")
+      root.style.setProperty("--border-color", "rgb(255 255 255 / 5%)")
 
       document.querySelector("body").style.backgroundImage = "url(https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/backgrounddark.jpg)"
 
@@ -110,11 +103,6 @@ function setCookie(cname,cvalue,exdays) {
       document.querySelectorAll(".close").forEach(elmnt => {
         elmnt.classList.remove("closelightmode");
         elmnt.classList.add("closedarkmode");
-      });
-
-      document.querySelectorAll(".searchtopapp").forEach(elmnt => {
-        elmnt.style.border = "solid 1px rgb(255 255 255 / 5%)"
-        elmnt.style.backgroundColor = "rgb(255 255 255 / 5%)"
       });
 
       document.querySelector(".calendarheader").style.backgroundColor = "#1c1c1c"
@@ -127,10 +115,6 @@ function setCookie(cname,cvalue,exdays) {
       });
       
       document.querySelector(".storeentriesbackground").style.backgroundColor = "rgb(255 255 255 / 3.33%)"
-      document.querySelectorAll(".storeentry").forEach(elmnt => {
-        elmnt.style.border = "solid 1px rgb(255 255 255 / 5%)"
-        elmnt.style.backgroundColor = "rgb(255 255 255 / 5%)"
-      });
 
       document.querySelector(".notepadtext").style.backgroundColor = "#282828"
     }

@@ -5,35 +5,23 @@ function setCookie(cname,cvalue,exdays) {
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     let expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-  }
+}
   
-  function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
     }
-    return "";
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
   }
-  
-    let fakemica = getCookie("fakemica");
-    if (fakemica != "") {
-      root.style.setProperty("--fakeMica", fakemica)
-    } else {
-      root.style.setProperty("--fakeMica", "#f3f3f3 radial-gradient(#eff4f9 75%,#f3f3f3 100%) no-repeat fixed")
-    }
-
-    function setCookieCSSProperties(){
-      root.style.setProperty("--fakeMica", fakemica)
-    }
-
+  return "";
+}
 
 
     let lightOrDarkMode = getCookie("lightOrDarkMode")
@@ -54,7 +42,7 @@ function setCookie(cname,cvalue,exdays) {
 
       root.style.setProperty("--explorer-shell-bg-color","rgba(255,255,255,.80)")
       root.style.setProperty("--fakeMica", "#f3f3f3 radial-gradient(#eff4f9 75%,#f3f3f3 100%) no-repeat fixed");
-      root.style.setProperty("--hover-color", "rgba(249, 249, 249, .67)")
+      root.style.setProperty("--hover-color", "rgba(255,255,255,.8)")
       root.style.setProperty("--invert", "invert(0)")
       root.style.setProperty("--text-color", "black")
       root.style.setProperty("--calendar-hover-color", "lightgray")

@@ -183,6 +183,36 @@ var widthminmax = "60%"
 var heightminmax = "75%"
 app.style.zIndex = zIndex
 
+document.querySelectorAll(".taskbaricons").forEach(elmnt => {
+	elmnt.addEventListener("mousedown", ()=>{
+		elmnt.querySelector(".taskbariconsimg").style.margin = "3.125px"
+		elmnt.querySelector(".taskbariconsimg").style.width = "18.75px"
+	});
+});
+
+document.querySelectorAll(".taskbaricons").forEach(elmnt => {
+	window.addEventListener('mouseup', function(event){
+		elmnt.querySelector(".taskbariconsimg").style.width = "25px"
+		elmnt.querySelector(".taskbariconsimg").style.margin = "0px"
+	});
+});
+
+document.querySelectorAll(".starticons").forEach(elmnt => {
+	elmnt.addEventListener("mousedown", ()=>{
+		elmnt.querySelector("img").style.margin = "3.75px"
+        elmnt.querySelector("img").style.marginTop = "15.75px"
+		elmnt.querySelector("img").style.width = "22.5px"
+	});
+});
+
+document.querySelectorAll(".starticons").forEach(elmnt => {
+	window.addEventListener('mouseup', function(event){
+		elmnt.querySelector("img").style.width = "30px"
+		elmnt.querySelector("img").style.margin = "0px"
+        elmnt.querySelector("img").style.marginTop = "12px"
+	});
+});
+
 function sleep(ms){
   return new Promise( resolver => setTimeout(resolver, ms));
  };
@@ -280,7 +310,7 @@ startmenuicon.addEventListener("click", ()=>{
 	active();
 	startmenu.style.bottom = "-100%"
   nohighlight(startbutton);
-
+  
 	if(app.style.opacity == "1"){
 		active();
     bringtofront();
@@ -314,10 +344,8 @@ taskbaricon.addEventListener("click", ()=>{
     active();
     bringtofront();
     recoverproperties();
-    app.style.opacity = "1"
-    return;
   }
-	if(app.style.opacity == "1"){
+	else if(app.style.opacity == "1"){
 		active();
     bringtofront();
     minorclose();
@@ -374,6 +402,7 @@ maximize.addEventListener("click", ()=>{
 	app.style.top = "0px"
   app.style.border = "none"
 	getpropertiesmax();
+  getproperties();
 	maximizeimage.style.display = "none"
 	maxminimage.style.display = "block"
 });
@@ -452,6 +481,7 @@ function openedgewithcustomsearch(searchterm){
           document.onmouseup = closeDragElement;
           // call a function whenever the cursor moves:
           document.onmousemove = elementDrag;
+          getproperties();
         }
       
         function elementDrag(e) {

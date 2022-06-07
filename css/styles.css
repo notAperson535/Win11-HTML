@@ -4,7 +4,7 @@
   --current-day-text-color: white;
   --calendar-up-and-down-color: gray;
   /* theme variables */
-  --hover-color: rgba(249, 249, 249, .67);
+  --hover-color: rgba(255, 255, 255, .8);
   --explorer-shell-bg-color: rgba(255,255,255,.80);
   --invert: invert(0);
   --text-color: black;
@@ -874,10 +874,12 @@ img {
 .resizertopbottom{
   width: 100%;
   z-index: 1;
+  height: 5px;
 }
 .resizerleftright{
   height: 100%;
   z-index: 1;
+  width: 5px;
 }
 
 .hidden{

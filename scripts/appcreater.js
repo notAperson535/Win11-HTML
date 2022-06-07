@@ -183,6 +183,8 @@ var widthminmax = "60%"
 var heightminmax = "75%"
 app.style.zIndex = zIndex
 
+app.style.width = "0%"
+
 document.querySelectorAll(".taskbaricons").forEach(elmnt => {
 	elmnt.addEventListener("mousedown", ()=>{
 		elmnt.querySelector(".taskbariconsimg").style.margin = "3.125px"
@@ -340,22 +342,21 @@ taskbaricon.addEventListener("click", ()=>{
   taskbariconhighlight.style.opacity = "1"
 	startmenu.style.bottom = "-100%"
 
-  if(app.style.zIndex != zIndex){
+  if(app.style.width == "0%"){
     active();
     bringtofront();
-    recoverproperties();
+		recoverproperties();
+		taskbaricon.style.display = "block"
+  }
+  else if(app.style.zIndex != zIndex){
+    active();
+    bringtofront();
   }
 	else if(app.style.opacity == "1"){
 		active();
     bringtofront();
     minorclose();
 		app.style.top = "200%"
-	}
-	else{
-		active();
-    bringtofront();
-		recoverproperties();
-		taskbaricon.style.display = "block"
 	}
 
 })

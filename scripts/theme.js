@@ -58,7 +58,8 @@ function getCookie(cname) {
         elmnt.classList.add("closelightmode");
       });
 
-      document.querySelector(".calendarheader").style.backgroundColor = "#dae2f2"
+      document.querySelector(".calendarheader").style.backgroundColor = "rgba(218, 226, 242,.95)"
+      document.querySelector(".actioncenterbottom").style.backgroundColor = "rgba(218, 226, 242,.95)"
 
       document.querySelector(".edgetab").style.boxShadow = "1px 3px 10px lightgrey"
       document.querySelector(".edgeurlbar").style.boxShadow = "0.1px 0.1px 5px rgb(230 230 230)"
@@ -93,7 +94,8 @@ function getCookie(cname) {
         elmnt.classList.add("closedarkmode");
       });
 
-      document.querySelector(".calendarheader").style.backgroundColor = "#1c1c1c"
+      document.querySelector(".calendarheader").style.backgroundColor = "rgba(28,28,28,.95)"
+      document.querySelector(".actioncenterbottom").style.backgroundColor = "rgba(28,28,28,.95)"
 
       document.querySelector(".edgetab").style.boxShadow = "1px 3px 10px black"
       document.querySelector(".edgeurlbar").style.boxShadow = "0.1px 0.1px 5px black"

@@ -190,7 +190,7 @@ img {
 }
 
 .calendar{
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   -webkit-backdrop-filter: saturate(3) blur(20px);
   backdrop-filter: saturate(3) blur(20px);
@@ -205,6 +205,7 @@ img {
 }
 
 .calendarheader{
+  border-bottom: 1.5px solid var(--border-color);
   display: flex;
   align-items: center;
   height: 50px;
@@ -221,7 +222,7 @@ img {
   position: absolute;
   bottom: 51;
   right: -100%;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   backdrop-filter: blur(20px);
   background-color: var(--explorer-shell-bg-color);
@@ -232,6 +233,38 @@ img {
 
 .actioncenter img{
   width: 20px;
+}
+
+.actioncenterbottom{
+  padding: 0px 5px;
+  display: flex;
+  align-items: center;
+  border-top: 1.5px solid var(--border-color);
+  height: 45px;
+}
+
+.actioncenterbattery{
+  padding: 0px 10px;
+  border-radius: 3px;
+  margin-top: -1px;
+  width: min-content;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.actioncenterbattery p{
+  margin-top: 11px;
+  font-size: 13px;
+}
+
+.actioncenterbattery img{
+  height: min-content;
+  margin-right: 5px;
+}
+
+.actioncenterbattery:hover{
+  background: var(--hover-color)
 }
 
 .quicksettings{
@@ -529,7 +562,7 @@ img {
   position: fixed;
   box-shadow: 1px 10px 50px #969696;
   border-radius: 10px;
-  border: 1px solid #B4B4B4;
+  border: 1px solid var(--border-color);
   background: var(--fakeMica);
   overflow: hidden;
   width: 0%;

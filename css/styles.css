@@ -190,7 +190,7 @@ img {
 }
 
 .calendar{
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
   -webkit-backdrop-filter: saturate(3) blur(20px);
   backdrop-filter: saturate(3) blur(20px);
@@ -222,7 +222,7 @@ img {
   position: absolute;
   bottom: 51;
   right: -100%;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
   backdrop-filter: blur(20px);
   background-color: var(--explorer-shell-bg-color);

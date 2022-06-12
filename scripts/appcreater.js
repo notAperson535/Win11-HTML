@@ -450,15 +450,24 @@ topnews.addEventListener("click", ()=>{
 
 function openedgewithcustomsearch(searchterm){
   if(appname == "edge"){
-    if(app.style.width == "0%" || app.style.width == "0px"){
-      getproperties();
-    }
       nohighlight(searchbutton);
       searchmenu.style.bottom = "-100%"
       document.getElementsByClassName("edgeurlbar")[0].value = "https://www.bing.com/search?q=" + searchterm
       goToPage(document.getElementById("URL").value);
-      recoverproperties();
-		  active();
+      active();
+      taskbariconhighlight.style.opacity = "1"
+      startmenu.style.bottom = "-100%"
+    
+      if(app.style.width == "0%"){
+        active();
+        bringtofront();
+        recoverproperties();
+        taskbaricon.style.display = "block"
+      }
+      else if(app.style.zIndex != zIndex){
+        active();
+        bringtofront();
+      }
   }
 }
 

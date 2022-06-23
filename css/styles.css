@@ -573,7 +573,6 @@ img {
   opacity: 0;
   top: 50%;
   left: 50%;
-  opacity: 0;
   transition: all .17s cubic-bezier(.85,.14,.14,.85), opacity 85ms linear;
   z-index: 1;
 }

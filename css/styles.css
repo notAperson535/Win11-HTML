@@ -87,8 +87,8 @@ img {
 }
 
 .taskbar{
-  -webkit-backdrop-filter: saturate(3) blur(20px);
   backdrop-filter: saturate(3) blur(20px);
+  -webkit-backdrop-filter: saturate(3) blur(20px);
   background-color: var(--explorer-shell-bg-color);
   width: 100%;
   min-width: 100%;
@@ -192,8 +192,8 @@ img {
 .calendar{
   border-radius: 8px;
   overflow: hidden;
+    backdrop-filter: saturate(3) blur(20px);
   -webkit-backdrop-filter: saturate(3) blur(20px);
-  backdrop-filter: saturate(3) blur(20px);
 }
 
 .dycalendar-container{
@@ -225,6 +225,7 @@ img {
   border-radius: 8px;
   overflow: hidden;
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   background-color: var(--explorer-shell-bg-color);
   transition: all .17s cubic-bezier(.79,.14,.15,.86);
   z-index: 11000;
@@ -375,6 +376,7 @@ img {
 .startmenu{
   position: absolute;
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   background-color: var(--explorer-shell-bg-color);
   bottom: -100%;
   height: calc(100% - 62px);
@@ -432,6 +434,7 @@ img {
 .searchmenu{
   position: absolute;
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   background-color: var(--explorer-shell-bg-color);
   bottom: -100%;
   height: calc(100% - 62px);

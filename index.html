@@ -495,6 +495,13 @@
       zIndex = zIndex - 2
       zIndex = zIndex + 2
     </script>
+      <script>
+        document.querySelectorAll("img").forEach(elmnt =>{
+        elmnt.ondragstart = () => {
+            return false;
+        };
+    });
+    </script>
     <script src="scripts/taskbar.js"></script>
     <script src="scripts/appcreater.js"></script>
     <script src="scripts/edgescript.js"></script>

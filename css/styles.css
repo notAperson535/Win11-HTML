@@ -12,6 +12,13 @@
   --border-color: lightgray;
 }
 
+@font-face {
+  font-family: 'Segoe UI Variable';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Segoe UI Variable'), url('https://fonts.cdnfonts.com/s/63254/SegoeUIVF.woff') format('woff');
+}
+
 *{
   font-family: Segoe UI Variable, Segoe UI;
 }

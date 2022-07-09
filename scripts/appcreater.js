@@ -290,7 +290,7 @@ function minorclose(){
 }
 
 function recoverproperties(){
-	app.style.transition = "all .17s cubic-bezier(.85,.14,.14,.85), opacity 80ms linear"
+  app.style.transition = "all .17s cubic-bezier(.85,.14,.14,.85), opacity 80ms linear"
 	app.style.top = topminclose
 	app.style.left = leftminclose
 	app.style.width = widthminclose
@@ -396,7 +396,7 @@ minimize.addEventListener("click", ()=>{
 
 maximize.addEventListener("click", ()=>{
 	app.style.borderRadius = "0px"
-	app.style.transition = "all 0.2s ease-in"
+	app.style.transition = "all .17s cubic-bezier(.85,.14,.14,.85)"
 	app.style.left = "0px"
 	app.style.width = "100%"
 	app.style.height = "calc(100% - 48px)"
@@ -416,7 +416,7 @@ function showmaximizehideminmax(){
 maxmin.addEventListener("click", ()=>{
 	roundedcorners();
   app.style.border = "1.5px solid #B4B4B4"
-	app.style.transition = "all 0.2s ease-in"
+	app.style.transition = "all .17s cubic-bezier(.85,.14,.14,.85)"
 	recoverpropertiesmaxmin();
 	showmaximizehideminmax();
 });

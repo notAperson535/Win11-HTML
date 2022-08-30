@@ -231,7 +231,7 @@ function goToPage(pageUrl)
     pos = urlList.length - 1;
     document.getElementById('edgeIframe').src = pageUrl;
   }
-  if(appname == "notepad" || appname == "store"){
+  if(appname == "notepad" || appname == "store" || appname == "explorer"){
     return;
   }
   document.getElementById(appname + 'Iframe').src = pageUrl;
@@ -366,7 +366,7 @@ close.addEventListener("click", ()=>{
   minorclose();
 	taskbariconhighlight.style.opacity = "0"
 	taskbariconhighlight.style.width = "0px"
-  if(appname == "edge" || appname == "store"){
+  if(appname == "edge" || appname == "store" || appname == "explorer"){
     void 0;
   }else{
     taskbaricon.style.display = "none"

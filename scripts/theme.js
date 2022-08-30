@@ -47,9 +47,13 @@ function getCookie(cname) {
       root.style.setProperty("--text-color", "black")
       root.style.setProperty("--calendar-hover-color", "lightgray")
       root.style.setProperty("--background-color", "white")
+      root.style.setProperty("--solid-background-color", "white")
       root.style.setProperty("--border-color", "lightgray")
 
       document.querySelector("body").style.backgroundImage = "url(https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/backgroundlight.jpg)"
+
+      document.querySelectorAll(".explorerarrow").forEach(elmnt => elmnt.style.color = "#555")
+      document.querySelectorAll(".explorermainsectionheader").forEach(elmnt => elmnt.style.color = "#393C5C")
 
       document.querySelectorAll(".app").forEach(elmnt => elmnt.style.border = "solid 1px #B4B4B4");
 
@@ -83,9 +87,13 @@ function getCookie(cname) {
       root.style.setProperty("--text-color", "white")
       root.style.setProperty("--calendar-hover-color", "rgba(55,55,55,.67)")
       root.style.setProperty("--background-color", "rgb(255 255 255 / 5%)")
+      root.style.setProperty("--solid-background-color", "black")
       root.style.setProperty("--border-color", "rgb(255 255 255 / 5%)")
 
       document.querySelector("body").style.backgroundImage = "url(https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/backgrounddark.jpg)"
+
+      document.querySelectorAll(".explorerarrow").forEach(elmnt => elmnt.style.color = "#aaa")
+      document.querySelectorAll(".explorermainsectionheader").forEach(elmnt => elmnt.style.color = "#B2B4B2")
 
       document.querySelectorAll(".app").forEach(elmnt => elmnt.style.border = "solid 1px #8d8d8d");
 

@@ -22,7 +22,7 @@
 <div id="loading" class="loading">
   <img class="loadingimg" src="img/favicon.ico">
   <br>
-  <img class="loadinggif" src="img/loading.gif">
+  <svg class="progressRing" height="48" width="48" viewBox="0 0 16 16"><circle cx="8px" cy="8px" r="7px"></circle></svg>
 </div>
 
 <div class="center">
@@ -145,7 +145,7 @@
           <img class="taskbariconsimg" src="img/chat.png">
         </div>
 
-        <div class="taskbaricons">
+        <div class="taskbaricons explorertaskbaricon">
           <img class="taskbariconsimg" src="img/explorer.png">
           <div class="center"><div class="taskbariconhighlight"></div></div>
         </div>
@@ -282,6 +282,213 @@
             <div class="dycalendar-header" data-option="{&quot;target&quot;:&quot;#dycalendar&quot;,&quot;type&quot;:&quot;month&quot;,&quot;dayformat&quot;:&quot;ddd&quot;,&quot;monthformat&quot;:&quot;full&quot;,&quot;prevnextbutton&quot;:&quot;show&quot;,&quot;highlighttoday&quot;:true,&quot;month&quot;:4,&quot;year&quot;:2022,&quot;date&quot;:5,&quot;highlighttargetdate&quot;:false}"><span class="dycalendar-span-month-year">May 2022</span><span class="dycalendar-prev-next-btn prev-btn" data-date="5" data-month="4" data-year="2022" data-action="CALNPREV" data-btn="prev">▲</span><span class="dycalendar-prev-next-btn next-btn" data-date="5" data-month="4" data-year="2022" data-action="CALNNEXT" data-btn="next">▼</span></div>
         </div>
       </div>
+    </div>
+
+    <div class="explorerapp app">
+
+      <div class="explorerresizer resizer top-left"></div>
+      <div class="explorerresizer resizer top-right"></div>
+      <div class="explorerresizer resizer bottom-left"></div>
+      <div class="explorerresizer resizer bottom-right"></div>
+      <div class="explorerresizer resizer resizertopbottom top"></div>
+      <div class="explorerresizer resizer resizerleftright left"></div>
+      <div class="explorerresizer resizer resizertopbottom bottom"></div>
+      <div class="explorerresizer resizer resizerleftright right"></div>
+
+      <div class="explorerappheader appheader">
+
+        <div class="headerleftside">
+          <img class="appheadericon" src="img/explorer.png">
+          File Explorer
+        </div>
+
+        <div class="headerrightside invert">
+
+          <div class="explorerminimize minimize">
+            <img id="explorerminimize" src="img/minimize.png">
+          </div>
+        
+        <div class="maximizeandmaxmin">
+
+          <div class="explorermaximize maximize">
+            <img id="explorermaximize" src="img/maximize.png">
+          </div>
+
+          <div class="explorermaxmin maxmin">
+            <img id="explorermaxmin" class="maxminimage" src="img/maxmin.png">
+          </div>
+        </div>
+
+          <div class="explorerclose close">
+            <img id="explorerclose" src="img/close.png">
+          </div>
+        
+
+        </div>
+      </div>
+
+      <div class="explorertopbar">
+
+        <div class="explorertopbarsection">
+          <img src="img/explorer/new.png">
+          <p>New</p>
+        </div>
+
+        <div class="explorertopbarsection">
+          <img src="img/explorer/cut.png">
+          <img src="img/explorer/copy.png">
+          <img src="img/explorer/paste.png">
+          <img src="img/explorer/rename.png">
+        </div>
+
+        <div class="explorertopbarsection">
+          <img src="img/explorer/sort.png">
+          <p>Sort</p>
+          
+          <img src="img/explorer/view.png">
+          <p>View</p>
+        </div>
+
+      </div>
+
+      <div class="explorerbottomsection">
+
+        <div class="explorernavsection">
+
+          <div class="explorerarrow">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 14px; height: 14px;"><path fill="currentColor" d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z"></path></svg>
+          </div>
+
+          <div class="explorerarrow">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 14px; height: 14px;"><path fill="currentColor" d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"></path></svg>
+          </div>
+
+          <div class="explorerarrow">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 14px; height: 14px;"><path fill="currentColor" d="M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z"></path></svg>
+          </div>
+
+          <div class="explorernavbox">
+
+            <img src="img/thispc.png">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 8px; height: 8px;"><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
+            <p>This PC</p>
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 8px; height: 8px;"><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
+          </div>
+
+          <div class="explorernavbox explorersearchbox">
+            <img class="invert" src="img/search.png">
+            <input type="text" placeholder="Search This PC">
+          </div>
+
+        </div>
+
+        <div class="explorersidebarandmainsection">
+
+          <div class="explorersidebar">
+
+            <div class="explorersidebarsection">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 10px; height: 10px;"><path fill="currentColor" d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
+              <img src="img/explorer/quickaccess.png">
+              <p>Quick Access</p>
+            </div>
+  
+            <div class="explorersidebarsection content">
+              <img src="img/explorer/desktop-sm.png">
+              <p>Desktop</p>
+              <img style="position: absolute;left:135px;" src="img/explorer/pinned.png">
+            </div>
+  
+            <div class="explorersidebarsection content">
+              <img src="img/explorer/downloads-sm.png">
+              <p>Downloads</p>
+              <img style="position: absolute;left:135px;" src="img/explorer/pinned.png">
+            </div>
+  
+            <div class="explorersidebarsection content">
+              <img src="img/explorer/documents-sm.png">
+              <p>Documents</p>
+              <img style="position: absolute;left:135px;" src="img/explorer/pinned.png">
+            </div>
+  
+            <div class="explorersidebarsection content">
+              <img src="img/explorer/recyclebinempty.png">
+              <p>Recycle Bin</p>
+              <img style="position: absolute;left:135px;" src="img/explorer/pinned.png">
+            </div>
+  
+            <div class="explorersidebarsection">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 10px; height: 10px;"><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
+              <img src="img/explorer/onedrive-sm.png">
+              <p>OneDrive</p>
+            </div>
+  
+            <div class="explorersidebarsection">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 10px; height: 10px;"><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
+              <img src="img/thispc.png">
+              <p>This PC</p>
+            </div>
+  
+          </div>
+
+            <div class="explorermainsection">
+
+              <h4 class="explorermainsectionheader">
+                Folders (6)
+              </h4>
+              
+              <div class="explorermainsectionentries">
+
+              <div class="explorermainsectionentry">
+                <img src="img/explorer/desktop.png">
+                <p>Desktop</p>
+              </div>
+
+              <div class="explorermainsectionentry">
+                <img src="img/explorer/documents.png">
+                <p>Documents</p>
+              </div>
+
+              <div class="explorermainsectionentry">
+                <img src="img/explorer/downloads.png">
+                <p>Downloads</p>
+              </div>
+
+              <div class="explorermainsectionentry">
+                <img src="img/explorer/music.png">
+                <p>Music</p>
+              </div>
+
+              <div class="explorermainsectionentry">
+                <img src="img/explorer/pictures.png">
+                <p>Pictures</p>
+              </div>
+
+              <div class="explorermainsectionentry">
+                <img src="img/explorer/videos.png">
+                <p>Videos</p>
+              </div>
+
+              </div>
+
+              <h4 class="explorermainsectionheader">
+                Devices and Drives (1)
+              </h4>
+
+              <div class="explorermainsectionentries">
+
+                <div class="explorermainsectionentry">
+                  <img src="img/explorer/disk-sm.png">
+                  <p>Local Disk</p>
+                </div>
+
+              </div>
+
+          </div>
+
+        </div>
+         
+      </div>
+
     </div>
 
     <div class="edgeapp app" id="edgeapp">

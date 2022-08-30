@@ -1,4 +1,6 @@
-// Syntax = createapp("app name", "url", "icon (can be png or other)", "visual app name (friendly name)")
+// Syntax = createapp("app name (lowercase no spaces)", "url", "icon (can be png or other)", "visual app name (friendly name)")
+
+createpremadeappwithtaskbaricon("explorer", "", "img/explorer.png", "File Exporer");
 
 createapp("word", "apps/word.html", "img/word.ico", "Word");
 createapp("excel", "apps/excel.html", "img/excel.ico", "Excel");

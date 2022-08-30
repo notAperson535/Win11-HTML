@@ -755,7 +755,6 @@ body{
   width: min-content;
   display: flex;
   flex-direction: column;
-  overflow: auto;
 }
 
 .explorersidebarsection{

@@ -99,7 +99,7 @@
 }
 
 .internetexplorerurlbar input{
-    width: calc(100% - 122.5px);
+    width: calc(100% - 110.5px);
     outline: 0;
     border: 0;
     box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;

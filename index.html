@@ -2,6 +2,7 @@
   <head>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dycalendar.css">
+    <link rel="stylesheet" href="css/ie.css">
     <link rel="icon" href="img/favicon.ico">
     <script src="https://codegena.com/assets/js/async-iframe.js"></script>
     <title>Windows 11 in HTML</title>
@@ -547,12 +548,69 @@
         <img class="edgeurlareaicon invert" src="img/backarrow.svg" onclick="goBack()">
         <img class="edgeurlareaicon invert" src="img/forwardarrow.svg" onclick="goForward()">
         <img class="edgeurlareaicon invert" src="img/reload.png" onclick="edgereload()">
-        <input type="text" value="https://google.com/?igu=1" class="edgeurlbar edgeURL" ID="URL">
+        <input type="text" value="https://google.com/?igu=1" class="edgeurlbar edgeURL">
         <img class="edgeurlareaicon invert" src="img/favorites.png">
         <img class="edgeurlareaicon edgeprofilepicture" src="img/profilepicture.png">
         <img class="edgeurlareaicon invert" src="img/more.png">
       </div>
       <iframe class="edgeappIframe appIframe" id="edgeIframe"> </iframe>
+    
+    </div>
+
+    <div class="internetexplorerapp app" id="internetexplorerapp">
+
+      <div class="internetexplorerresizer resizer top-left"></div>
+      <div class="internetexplorerresizer resizer top-right"></div>
+      <div class="internetexplorerresizer resizer bottom-left"></div>
+      <div class="internetexplorerresizer resizer bottom-right"></div>
+      <div class="internetexplorerresizer resizer resizertopbottom top"></div>
+      <div class="internetexplorerresizer resizer resizerleftright left"></div>
+      <div class="internetexplorerresizer resizer resizertopbottom bottom"></div>
+      <div class="internetexplorerresizer resizer resizerleftright right"></div>
+
+      <div class="internetexplorerappheader appheader">
+
+        <div class="headerleftside">
+          <img class="appheadericon" src="img/ie.png">
+          Internet Explorer
+        </div>
+
+        <div class="headerrightside invert">
+
+          <div class="internetexplorerminimize minimize">
+            <button id="internetexplorerminimize"></button>
+          </div>
+        
+        <div class="maximizeandmaxmin">
+
+          <div class="internetexplorermaximize maximize">
+            <button id="internetexplorermaximize"></button>
+          </div>
+
+          <div class="internetexplorermaxmin maxmin">
+            <button id="internetexplorermaxmin" class="maxminimage"></button>
+          </div>
+
+        </div>
+
+          <div class="internetexplorerclose close">
+            <button id="internetexplorerclose"></button>
+          </div>
+        
+
+        </div>
+      </div>
+
+      <div class="internetexplorertitlebar">
+        <img src="img/ie/newtitlebar.png">
+        <img id="windows95icon" src="img/ie/windows95.png">
+      </div>
+      <div class="internetexplorerurlbar">
+        <p>Address:</p>
+        <input value="https://google.com/?igu=1" class="internetexplorerURL" type="text">
+      </div>
+
+      <iframe class="internetexplorerappIframe appIframe" id="internetexplorerIframe"> </iframe>
     
     </div>
 
@@ -717,6 +775,7 @@
     <script src="scripts/clock.js"></script>
     <script src="scripts/dycalendar.js"></script>
     <script src="scripts/theme.js"></script>
+    <script src="scripts/iescript.js"></script>
     <script>
       dycalendar.draw({
         "target":"#dycalendar",

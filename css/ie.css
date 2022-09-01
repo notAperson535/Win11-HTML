@@ -1,0 +1,106 @@
+.internetexplorerapp{
+    background: #C3C3C3;
+}
+
+.internetexplorerapp .headerleftside{
+    color: white;
+}
+
+.internetexplorerappheader{
+    background-color: #000082;
+    height: 20px;
+    max-height: 20px;
+    min-height: 20px;
+}
+
+.internetexplorerappheader .headerrightside button{
+    min-height: 14px;
+    min-width: 16px;
+    background-color: silver;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+    border: none;
+}
+
+.internetexplorerappheader .headerrightside .maximizeandmaxmin button{
+    min-height: 14px;
+    min-width: 16px;
+    background-color: silver;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+    border: none;
+}
+
+.internetexplorerappheader .headerrightside button:active{
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+}
+
+.internetexplorerappheader .headerrightside .maximizeandmaxmin button:active{
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+}
+
+#internetexplorerminimize {
+    background-image: url("../img/ie/minimize.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 3px left 4px;
+}
+  
+#internetexplorermaximize {
+    background-image: url("../img/ie/maximize.svg");
+    background-repeat: no-repeat;
+    background-position: top 2px left 3px;
+}
+
+#internetexplorermaxmin {
+    background-image: url("../img/ie/restore.svg");
+    background-repeat: no-repeat;
+    background-position: top 2px left 3px;
+}
+
+#internetexplorerclose {
+    margin-left: 2px;
+    background-image: url("../img/ie/close.svg");
+    background-repeat: no-repeat;
+    background-position: top 3px left 4px;
+}
+
+.internetexplorerclose:hover{
+    background-color: rgba(255, 255, 255, 0);
+    filter: invert(0);
+}
+
+.internetexplorerminimze:hover{
+    background-color: rgba(255, 255, 255, 0);
+    filter: invert(0);
+}
+
+.internetexplorermaximize:hover{
+    background-color: rgba(255, 255, 255, 0);
+    filter: invert(0);
+}
+
+.internetexplorertitlebar{
+    display: flex;
+    justify-content: space-between;
+}
+
+#windows95icon{
+    position: absolute;
+    width: 45px;
+    top: 42px;
+    right: 0;
+}
+
+.internetexplorerurlbar{
+    display: flex;
+}
+
+.internetexplorerurlbar p{
+    margin: 0px 5px;
+    font-size: 13px;
+}
+
+.internetexplorerurlbar input{
+    width: calc(100% - 122.5px);
+    outline: 0;
+    border: 0;
+    box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
+}

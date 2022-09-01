@@ -4,17 +4,17 @@ var urlList = new Array();
 var pos = 0;
 
 window.onload = function() {
-    goToPage(document.getElementById("URL").value)
+    goToEdgePage(document.getElementsByClassName("edgeURL")[0].value)
 };
 
 const edgetext = document.getElementsByClassName("edgeURL")[0];
 edgetext.addEventListener("keyup", ({key}) => {
     if (key === "Enter") {
-     goToPage(document.getElementById("URL").value);
+     goToEdgePage(document.getElementsByClassName("edgeURL")[0].value);
     }
 })
 
-function goToPage(pageUrl)
+function goToEdgePage(pageUrl)
 {
     urlList[urlList.length] = pageUrl;
     pos = urlList.length - 1;
@@ -26,7 +26,7 @@ function goBack()
     {
         pos--;
         document.getElementById('edgeIframe').src = urlList[pos];
-        document.getElementById("URL").value = edgeIframe.src;
+        document.getElementsByClassName("edgeURL")[0].value = edgeIframe.src;
     }
     else
         void 0;
@@ -38,7 +38,7 @@ function goForward()
     {
         pos++;
         document.getElementById('edgeIframe').src = urlList[pos];
-        document.getElementById("URL").value = edgeIframe.src;
+        document.getElementsByClassName("edgeURL")[0].value = edgeIframe.src;
     }
     else
         void 0;

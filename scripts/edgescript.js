@@ -3,9 +3,7 @@ var edgeIframe = document.getElementsByClassName('edgeappIframe')[0];
 var urlList = new Array();
 var pos = 0;
 
-window.onload = function() {
-    goToEdgePage(document.getElementsByClassName("edgeURL")[0].value)
-};
+window.onload =  goToEdgePage(document.getElementsByClassName("edgeURL")[0].value);
 
 const edgetext = document.getElementsByClassName("edgeURL")[0];
 edgetext.addEventListener("keyup", ({key}) => {

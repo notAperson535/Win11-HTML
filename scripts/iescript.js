@@ -43,9 +43,7 @@ var internetexplorerIframe = document.getElementsByClassName('internetexplorerap
 var urlList = new Array();
 var pos = 0;
 
-window.onload = function() {
-    goToIEPage(document.getElementsByClassName("internetexplorerURL")[0].value)
-};
+window.onload = goToIEPage(document.getElementsByClassName("internetexplorerURL")[0].value)
 
 const internetexplorertext = document.getElementsByClassName("internetexplorerURL")[0];
 internetexplorertext.addEventListener("keyup", ({key}) => {

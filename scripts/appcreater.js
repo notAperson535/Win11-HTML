@@ -226,12 +226,7 @@ function bringtofront(){
 
 function goToPage(pageUrl)
 {
-  if(appname == "edge"){
-    urlList[urlList.length] = pageUrl;
-    pos = urlList.length - 1;
-    document.getElementById('edgeIframe').src = pageUrl;
-  }
-  if(appname == "notepad" || appname == "store" || appname == "explorer"){
+  if(appname == "edge" || appname == "notepad" || appname == "store" || appname == "explorer" || appname == "internetexplorer"){
     return;
   }
   document.getElementById(appname + 'Iframe').src = pageUrl;
@@ -453,7 +448,7 @@ function openedgewithcustomsearch(searchterm){
       nohighlight(searchbutton);
       searchmenu.style.bottom = "-100%"
       document.getElementsByClassName("edgeurlbar")[0].value = "https://www.bing.com/search?q=" + searchterm
-      goToPage(document.getElementById("URL").value);
+      goToEdgePage(document.getElementsByClassName("edgeURL")[0].value);
       active();
       taskbariconhighlight.style.opacity = "1"
       startmenu.style.bottom = "-100%"

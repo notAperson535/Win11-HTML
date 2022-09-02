@@ -226,7 +226,7 @@ function bringtofront(){
 
 function goToPage(pageUrl)
 {
-  if(appname == "edge" || appname == "notepad" || appname == "store" || appname == "explorer" || appname == "internetexplorer"){
+  if(appname == "edge" || appname == "notepad" || appname == "store" || appname == "explorer" || appname == "internetexplorer" || appname == "terminal"){
     return;
   }
   document.getElementById(appname + 'Iframe').src = pageUrl;

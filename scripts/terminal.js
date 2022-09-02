@@ -1,0 +1,1 @@
+createpremadeapp("terminal", "", "img/terminal.ico", "Terminal")

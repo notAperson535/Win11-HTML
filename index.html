@@ -753,6 +753,52 @@
       <textarea class="notepadtext" id="notepadtext" name="notepadtext"></textarea>
 
     </div>
+
+    <div class="terminalapp app" id="terminalapp">
+      
+
+      <div class="terminalresizer resizer top-left"></div>
+      <div class="terminalresizer resizer top-right"></div>
+      <div class="terminalresizer resizer bottom-left"></div>
+      <div class="terminalresizer resizer bottom-right"></div>
+      <div class="terminalresizer resizer resizertopbottom top"></div>
+      <div class="terminalresizer resizer resizerleftright left"></div>
+      <div class="terminalresizer resizer resizertopbottom bottom"></div>
+      <div class="terminalresizer resizer resizerleftright right"></div>
+
+      <div class="terminalappheader appheader">
+
+        <div class="headerleftside">
+          <img class="appheadericon" src="img/terminal.ico">
+          Terminal
+        </div>
+
+        <div class="headerrightside invert">
+
+          <div class="terminalminimize minimize">
+            <img id="terminalminimize" src="img/minimize.png">
+          </div>
+        
+        <div class="maximizeandrestore">
+
+          <div class="terminalmaximize maximize">
+            <img id="terminalmaximize" src="img/maximize.png">
+          </div>
+
+          <div class="terminalrestore restore">
+            <img id="terminalrestore" class="restoreimage" src="img/restore.png">
+          </div>
+        </div>
+
+          <div class="terminalclose close">
+            <img id="terminalclose" src="img/close.png">
+          </div>
+        
+
+        </div>
+      </div>
+
+    </div>
     
     <script type='text/javascript'>
       var zIndex = "1"
@@ -776,6 +822,7 @@
     <script src="scripts/dycalendar.js"></script>
     <script src="scripts/theme.js"></script>
     <script src="scripts/iescript.js"></script>
+    <script src="scripts/terminal.js"></script>
     <script>
       dycalendar.draw({
         "target":"#dycalendar",

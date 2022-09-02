@@ -1079,6 +1079,18 @@ body{
   filter: invert(0);
 }
 
+.terminalapp{
+  background: black;
+}
+
+.terminalappheader .headerleftside{
+  color: white;
+}
+
+.terminalappheader .headerrightside{
+  filter: invert(1);
+}
+
 .resizer {
   position: absolute;
   width: 10px;

@@ -985,11 +985,11 @@ body{
   background: #c4c4c4;
 }
 
-.maxminimage{
+.restoreimage{
   display: none;
 }
 
-.maxmin:hover{
+.restore:hover{
   background: #c4c4c4;
 }
 
@@ -1070,7 +1070,7 @@ body{
   outline: none;
 }
 
-.maximizeandmaxmin{
+.maximizeandrestore{
   display: flex;
 }
 

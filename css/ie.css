@@ -21,7 +21,7 @@
     border: none;
 }
 
-.internetexplorerappheader .headerrightside .maximizeandmaxmin button{
+.internetexplorerappheader .headerrightside .maximizeandrestore button{
     min-height: 14px;
     min-width: 16px;
     background-color: silver;
@@ -33,7 +33,7 @@
     box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
 }
 
-.internetexplorerappheader .headerrightside .maximizeandmaxmin button:active{
+.internetexplorerappheader .headerrightside .maximizeandrestore button:active{
     box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
 }
 
@@ -49,7 +49,7 @@
     background-position: top 2px left 3px;
 }
 
-#internetexplorermaxmin {
+#internetexplorerrestore {
     background-image: url("../img/ie/restore.svg");
     background-repeat: no-repeat;
     background-position: top 2px left 3px;
@@ -67,12 +67,17 @@
     filter: invert(0);
 }
 
-.internetexplorerminimze:hover{
+.internetexplorerminimize:hover{
     background-color: rgba(255, 255, 255, 0);
     filter: invert(0);
 }
 
 .internetexplorermaximize:hover{
+    background-color: rgba(255, 255, 255, 0);
+    filter: invert(0);
+}
+
+.internetexplorerrestore:hover{
     background-color: rgba(255, 255, 255, 0);
     filter: invert(0);
 }

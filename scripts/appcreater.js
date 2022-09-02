@@ -113,26 +113,26 @@ function buildapp(appname, icon, visualappname) {
   minimizedivimage.src = "img/minimize.png";
   minimizediv.appendChild(minimizedivimage);
 
-  var maximizeandmaxmin = document.createElement("div");
-  maximizeandmaxmin.classList.add(appname + "maximizeandmaxmin", "maximizeandmaxmin");
-  headerrightside.appendChild(maximizeandmaxmin);
+  var maximizeandrestore = document.createElement("div");
+  maximizeandrestore.classList.add(appname + "maximizeandrestore", "maximizeandrestore");
+  headerrightside.appendChild(maximizeandrestore);
 
   var maximizediv = document.createElement("div");
   maximizediv.classList.add(appname + "maximize", "maximize")
-  maximizeandmaxmin.appendChild(maximizediv);
+  maximizeandrestore.appendChild(maximizediv);
   var maximizedivimage = document.createElement("img");
   maximizedivimage.src = "img/maximize.png";
   maximizedivimage.id = appname + "maximize"
   maximizediv.appendChild(maximizedivimage);
 
-  var maxmindiv = document.createElement("div");
-  maxmindiv.classList.add(appname + "maxmin", "maxmin")
-  maximizeandmaxmin.appendChild(maxmindiv);
-  var maxmindivimage = document.createElement("img");
-  maxmindivimage.src = "img/maxmin.png";
-  maxmindivimage.classList.add("maxminimage")
-  maxmindivimage.id = appname + "maxmin"
-  maxmindiv.appendChild(maxmindivimage);
+  var restorediv = document.createElement("div");
+  restorediv.classList.add(appname + "restore", "restore")
+  maximizeandrestore.appendChild(restorediv);
+  var restoredivimage = document.createElement("img");
+  restoredivimage.src = "img/restore.png";
+  restoredivimage.classList.add("restoreimage")
+  restoredivimage.id = appname + "restore"
+  restorediv.appendChild(restoredivimage);
 
   var closediv = document.createElement("div");
   closediv.classList.add(appname + "close", "close");
@@ -168,9 +168,9 @@ let close = document.getElementsByClassName(appname + "close")[0]
 let edgetabright = document.getElementsByClassName("edgetabright")[0]
 let maximize = document.getElementsByClassName(appname + "maximize")[0]
 let minimize = document.getElementsByClassName(appname + "minimize")[0]
-let maxmin = document.getElementsByClassName(appname + "maxmin")[0]
+let restore = document.getElementsByClassName(appname + "restore")[0]
 let maximizeimage = document.getElementById(appname + "maximize")
-let maxminimage = document.getElementById(appname + "maxmin")
+let restoreimage = document.getElementById(appname + "restore")
 let taskbaricon = document.getElementsByClassName(appname + "taskbaricon")[0]
 let taskbariconhighlight = document.querySelector("." + appname + "taskbaricon" + " " + ".taskbariconhighlight")
 var topminclose = "8%"
@@ -293,7 +293,7 @@ function recoverproperties(){
 	app.style.opacity = "1"
 }
 
-function recoverpropertiesmaxmin(){
+function recoverpropertiesrestore(){
 	app.style.transition = "all .17s cubic-bezier(.85,.14,.14,.85), opacity 80ms linear"
 	app.style.top = topminmax
 	app.style.left = leftminmax
@@ -400,19 +400,19 @@ maximize.addEventListener("click", ()=>{
 	getpropertiesmax();
   getproperties();
 	maximizeimage.style.display = "none"
-	maxminimage.style.display = "block"
+	restoreimage.style.display = "block"
 });
 
 function showmaximizehideminmax(){
 	maximizeimage.style.display = "block"
-	maxminimage.style.display = "none"
+	restoreimage.style.display = "none"
 }
 
-maxmin.addEventListener("click", ()=>{
+restore.addEventListener("click", ()=>{
 	roundedcorners();
   app.style.border = "1.5px solid #B4B4B4"
 	app.style.transition = "all .17s cubic-bezier(.85,.14,.14,.85)"
-	recoverpropertiesmaxmin();
+	recoverpropertiesrestore();
 	showmaximizehideminmax();
 });
 

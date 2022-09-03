@@ -974,7 +974,7 @@ body{
 
 .closelightmode:hover{
   background: #00ffff;
-  filter: invert(1)
+  filter: invert(1);
 }
 
 .closedarkmode:hover{
@@ -1079,16 +1079,32 @@ body{
   filter: invert(0);
 }
 
-.terminalapp{
+.terminalmainsection{
+  box-sizing: border-box;
+  padding: 0px 5px;
+  height: calc(100% - 30px);
   background: black;
 }
 
-.terminalappheader .headerleftside{
+.terminalmainsection * p{
   color: white;
+  font-size: 15px;
+  margin: 0;
+  font-family: monospace;
 }
 
-.terminalappheader .headerrightside{
-  filter: invert(1);
+.terminaltypesection{
+  display: flex;
+  align-items: center;
+}
+
+.terminaltypesection input{
+  color: white;
+  background-color: rgba(255,255,255,0);
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-family: monospace;
 }
 
 .resizer {

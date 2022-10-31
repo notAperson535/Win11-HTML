@@ -1082,15 +1082,31 @@ body{
 .terminalmainsection{
   box-sizing: border-box;
   padding: 0px 5px;
-  height: calc(100% - 30px);
+  height: calc(100% - 29px);
   background: black;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .terminalmainsection * p{
   color: white;
   font-size: 15px;
   margin: 0;
-  font-family: monospace;
+  font-family: consolas,monospace;
+}
+
+.terminalmainsection * pre{
+  color: white;
+  font-size: 15px;
+  margin: 0;
+  font-family: consolas,monospace;
+}
+
+.terminalmainsection * code{
+  color: white;
+  font-size: 15px;
+  margin: 0;
+  font-family: consolas,monospace;
 }
 
 .terminaltypesection{
@@ -1105,6 +1121,7 @@ body{
   outline: 0;
   width: 100%;
   font-family: monospace;
+  font-size: 15px;
 }
 
 .resizer {

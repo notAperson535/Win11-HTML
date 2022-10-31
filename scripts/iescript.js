@@ -8,8 +8,14 @@ let searchbar = document.querySelector(".searchbar input");
 searchbar.addEventListener("keyup", ({key}) => {
     if (key === "Enter") {
         if (searchbar.value == "IE is best!"){
-            createpremadeapp("internetexplorer", "https://google.com/?igu=1", "img/ie.png", "Internet Explorer");
-            setCookie("IEonOrOff", "on","365");
+            if(IEonOrOff == "on"){
+                alert("Hey! Stop trying to get browsers!")
+            }
+            else{
+                alert("No it's not, but I'll let you have it anyway :)")
+                createpremadeapp("internetexplorer", "https://google.com/?igu=1", "img/ie.png", "Internet Explorer");
+                setCookie("IEonOrOff", "on","365");
+            }
         }
     }
 })

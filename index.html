@@ -770,7 +770,7 @@
 
         <div class="headerleftside">
           <img class="appheadericon" src="img/terminal.ico">
-          Terminal
+          
         </div>
 
         <div class="headerrightside invert">
@@ -800,17 +800,67 @@
       <div class="terminalmainsection">
 
         <div class="terminaltext">
-          <p>Microsoft Windows [Version 10.0.22621.382]</p>
-          <p>(c) Microsoft Corporation. All rights reserved.</p>
+          <pre>Microsoft Windows [Version 10.0.22621.382]</pre>
         </div>
-        <br>
-        <div class="terminaltypesection">
-          <p>C:\Users\notAperson></p>
+        <div class="terminaltext">
+          <pre>(c) Microsoft Corporation. All rights reserved.</pre>
+        </div>
+        <div class="terminaltext">
+          <pre>‎</pre>
+        </div>
+        
+        <div class="terminaltypesection active">
+          <p>C:\Users\notAperson\></p>
           <input type="text">
         </div>
 
       </div>
 
+    </div>
+
+    <div class="whiteboardapp app" id="whiteboardapp">
+
+      <div class="whiteboardresizer resizer top-left"></div>
+      <div class="whiteboardresizer resizer top-right"></div>
+      <div class="whiteboardresizer resizer bottom-left"></div>
+      <div class="whiteboardresizer resizer bottom-right"></div>
+      <div class="whiteboardresizer resizer resizertopbottom top"></div>
+      <div class="whiteboardresizer resizer resizerleftright left"></div>
+      <div class="whiteboardresizer resizer resizertopbottom bottom"></div>
+      <div class="whiteboardresizer resizer resizerleftright right"></div>
+
+      <div class="whiteboardappheader appheader">
+
+        <div class="headerleftside">
+          <img class="appheadericon" src="img/whiteboard.ico">
+          Whiteboard
+        </div>
+
+        <div class="headerrightside invert">
+
+          <div class="whiteboardminimize minimize">
+            <img id="whiteboardminimize" src="img/minimize.png">
+          </div>
+        
+        <div class="maximizeandrestore">
+
+          <div class="whiteboardmaximize maximize">
+            <img id="whiteboardmaximize" src="img/maximize.png">
+          </div>
+
+          <div class="whiteboardrestore restore">
+            <img id="whiteboardrestore" class="restoreimage" src="img/restore.png">
+          </div>
+        </div>
+
+          <div class="whiteboardclose close">
+            <img id="whiteboardclose" src="img/close.png">
+          </div>
+        
+          <canvas id="whiteboardcanvas"></canvas>
+
+        </div>
+      </div>
     </div>
     
     <script type='text/javascript'>
@@ -836,6 +886,7 @@
     <script src="scripts/theme.js"></script>
     <script src="scripts/iescript.js"></script>
     <script src="scripts/terminal.js"></script>
+    <script src="scripts/whiteboard.js"></script>
     <script>
       dycalendar.draw({
         "target":"#dycalendar",

@@ -49,6 +49,7 @@ function eventListener(){
                 printLine("DATE           Displays or sets the date.")
                 printLine("DIR            Displays a list of files and subdirectories in a directory.")
                 printLine("ECHO           Displays messages, or turns command echoing on or off.")
+                printLine("TIME           Displays or sets the system time.")
             }
             else if (typebox.value.toLowerCase() == "dir"){
                 printLine("Directory of C:\\Users\\notAperson\\");

@@ -1,1 +1,0 @@
-createpremadeapp("whiteboard", "", "img/notepad.ico", "Whiteboard");

@@ -1,13 +1,13 @@
 customElements.define('x-frame-bypass', class extends HTMLIFrameElement {
-	constructor () {
+	constructor() {
 		super()
 	}
-	connectedCallback () {
+	connectedCallback() {
 		this.load(this.src)
 		this.src = ''
 		this.sandbox = '' + this.sandbox || 'allow-forms allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation' // all except allow-top-navigation
 	}
-	load (url, options) {
+	load(url, options) {
 		if (!url || !url.startsWith('http'))
 			throw new Error(`X-Frame-Bypass src ${url} does not start with http(s)://`)
 		console.log('X-Frame-Bypass loading:', url)
@@ -63,7 +63,7 @@ customElements.define('x-frame-bypass', class extends HTMLIFrameElement {
 	</script>`)
 		}).catch(e => console.error('Cannot load X-Frame-Bypass:', e))
 	}
-	fetchProxy (url, options, i) {
+	fetchProxy(url, options, i) {
 		const proxy = [
 			'https://win11react-proxy.herokuapp.com/',
 			'https://cors.io/?',
@@ -80,4 +80,4 @@ customElements.define('x-frame-bypass', class extends HTMLIFrameElement {
 			return this.fetchProxy(url, options, i + 1)
 		})
 	}
-}, {extends: 'iframe'})
+}, { extends: 'iframe' })

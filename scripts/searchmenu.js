@@ -4,7 +4,7 @@ createsearchtopapp("vscode", "img/vscode.ico", "VS Code")
 createsearchtopapp("solitaire", "img/solitaire.ico", "Solitaire")
 createsearchtopapp("store", "img/store.ico", "Microsoft Store")
 
-function createsearchtopapp(appname, icon, visualappname){
+function createsearchtopapp(appname, icon, visualappname) {
     var topapp = document.createElement("div");
     document.getElementsByClassName('searchtopapps')[0].appendChild(topapp);
     topapp.classList.add("searchtopapp");

@@ -10,105 +10,105 @@ let calendarandnotifications = document.getElementsByClassName("calendarandnotif
 let actioncentericons = document.getElementsByClassName("actioncentericons")[0]
 let actioncenter = document.getElementsByClassName("actioncenter")[0]
 
-function highlight(buttonname){
+function highlight(buttonname) {
 	buttonname.style.backgroundColor = "var(--hover-color)"
 }
 
-function nohighlight(buttonname){
+function nohighlight(buttonname) {
 	buttonname.style.backgroundColor = ""
 }
 
-startbutton.addEventListener("click", ()=>{
+startbutton.addEventListener("click", () => {
 
-	if(startmenu.style.bottom == "55px"){
+	if (startmenu.style.bottom == "55px") {
 		startmenu.style.bottom = "-100%"
 		nohighlight(startbutton);
 	}
-	else{
+	else {
 		startmenu.style.bottom = "55px"
 		highlight(startbutton);
 	}
 })
 
-searchbutton.addEventListener("click", ()=>{
+searchbutton.addEventListener("click", () => {
 
-	if(searchmenu.style.bottom == "55px"){
+	if (searchmenu.style.bottom == "55px") {
 		searchmenu.style.bottom = "-100%"
 		nohighlight(searchbutton);
 	}
-	else{
+	else {
 		searchmenu.style.bottom = "55px"
 		highlight(searchbutton);
 	}
 })
 
-widgetsbutton.addEventListener("click", ()=>{
+widgetsbutton.addEventListener("click", () => {
 
-	if(widgetsmenu.style.left == "10px"){
+	if (widgetsmenu.style.left == "10px") {
 		widgetsmenu.style.left = "-1000px"
 		nohighlight(widgetsbutton);
 	}
-	else{
+	else {
 		widgetsmenu.style.left = "10px"
 		highlight(widgetsbutton);
 	}
 })
 
-timeanddate.addEventListener("click", ()=>{
+timeanddate.addEventListener("click", () => {
 
-	if(calendarandnotifications.style.right == "3px"){
+	if (calendarandnotifications.style.right == "3px") {
 		calendarandnotifications.style.right = "-100%"
 		nohighlight(timeanddate);
 	}
-	else{
+	else {
 		calendarandnotifications.style.right = "3px"
 		highlight(timeanddate);
 	}
 })
 
-actioncentericons.addEventListener("click", ()=>{
+actioncentericons.addEventListener("click", () => {
 
-	if(actioncenter.style.right == "3px"){
+	if (actioncenter.style.right == "3px") {
 		actioncenter.style.right = "-100%"
 		nohighlight(actioncentericons);
 	}
-	else{
+	else {
 		actioncenter.style.right = "3px"
 		highlight(actioncentericons);
 	}
 })
 
-window.addEventListener('mouseup', function(e) {
-    if (!event.target.closest(".startmenu") && !event.target.closest(".startbutton")){
-        startmenu.style.bottom = "-100%";
+window.addEventListener('mouseup', function (e) {
+	if (!event.target.closest(".startmenu") && !event.target.closest(".startbutton")) {
+		startmenu.style.bottom = "-100%";
 		nohighlight(startbutton);
-    }
+	}
 });
 
-window.addEventListener('mouseup', function(e) {
-    if (!event.target.closest(".searchmenu") && !event.target.closest(".searchbutton")){
-        searchmenu.style.bottom = "-100%";
+window.addEventListener('mouseup', function (e) {
+	if (!event.target.closest(".searchmenu") && !event.target.closest(".searchbutton")) {
+		searchmenu.style.bottom = "-100%";
 		nohighlight(searchbutton);
-    }
+	}
 });
 
-window.addEventListener('mouseup', function(e) {
-    if (!event.target.closest(".widgetsmenu") && !event.target.closest(".widgetsbutton")){
-        widgetsmenu.style.left = "-1000px";
+window.addEventListener('mouseup', function (e) {
+	if (!event.target.closest(".widgetsmenu") && !event.target.closest(".widgetsbutton")) {
+		widgetsmenu.style.left = "-1000px";
 		nohighlight(widgetsbutton);
-    }
+	}
 });
 
-window.addEventListener('mouseup', function(e) {
-    if (!event.target.closest(".calendarandnotifications") && !event.target.closest(".timeanddate")){
-        calendarandnotifications.style.right = "-100%";
+window.addEventListener('mouseup', function (e) {
+	if (!event.target.closest(".calendarandnotifications") && !event.target.closest(".timeanddate")) {
+		calendarandnotifications.style.right = "-100%";
 		nohighlight(timeanddate);
-    }
+	}
 });
 
-window.addEventListener('mouseup', function(e) {
-    if (!event.target.closest(".actioncenter") && !event.target.closest(".actioncentericons")){
-        actioncenter.style.right = "-100%";
+window.addEventListener('mouseup', function (e) {
+	if (!event.target.closest(".actioncenter") && !event.target.closest(".actioncentericons")) {
+		actioncenter.style.right = "-100%";
 		nohighlight(actioncentericons);
-    }
+	}
 });

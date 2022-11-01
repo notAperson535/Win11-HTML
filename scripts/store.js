@@ -1,11 +1,11 @@
 createstoreentry("calendar", "img/calendar.ico", "Calendar", "App", "An app to manage your calendar")
 
-function createstoreentry(appname, icon, visualappname, type, description){
+function createstoreentry(appname, icon, visualappname, type, description) {
     buildstoreentry(appname, icon, visualappname, type);
     makestoreentryusable();
 }
 
-function buildstoreentry(appname, icon, visualappname, type){
+function buildstoreentry(appname, icon, visualappname, type) {
     storeentrydiv = document.createElement("div");
     storeentrydiv.classList.add("storeentry");
     document.getElementsByClassName("storeentries")[0].appendChild(storeentrydiv);
@@ -31,6 +31,6 @@ function buildstoreentry(appname, icon, visualappname, type){
     storeentrydiv.appendChild(storeentryprice);
 }
 
-function makestoreentryusable(){
+function makestoreentryusable() {
 
 }

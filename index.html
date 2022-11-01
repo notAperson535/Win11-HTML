@@ -1,55 +1,60 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/dycalendar.css">
-    <link rel="stylesheet" href="css/ie.css">
-    <link rel="icon" href="img/favicon.ico">
-    <script src="https://codegena.com/assets/js/async-iframe.js"></script>
-    <title>Windows 11 in HTML</title>
-    <script>
-      document.onreadystatechange = function () {
-    var state = document.readyState
-    if (state == 'complete') {
-           document.getElementsByClassName('loading')[0].style.display = "none";
-           const startupsound = new Audio('audio/startup.mp3');
-           startupsound.play();
-           document.getElementsByClassName('taskbar')[0].style.display = "flex";
+
+<head>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dycalendar.css">
+  <link rel="stylesheet" href="css/ie.css">
+  <link rel="stylesheet" href="css/whiteboard.css">
+  <link rel="icon" href="img/favicon.ico">
+  <script src="https://codegena.com/assets/js/async-iframe.js"></script>
+  <title>Windows 11 in HTML</title>
+  <script>
+    document.onreadystatechange = function () {
+      var state = document.readyState
+      if (state == 'complete') {
+        document.getElementsByClassName('loading')[0].style.display = "none";
+        const startupsound = new Audio('audio/startup.mp3');
+        startupsound.play();
+        document.getElementsByClassName('taskbar')[0].style.display = "flex";
+      }
     }
-  }
-    </script>
-  </head>
-  <body>
+  </script>
+</head>
 
-<div id="loading" class="loading">
-  <img class="loadingimg" src="img/favicon.ico">
-  <br>
-  <svg class="progressRing" height="48" width="48" viewBox="0 0 16 16"><circle cx="8px" cy="8px" r="7px"></circle></svg>
-</div>
+<body>
 
-<div class="center">
-
-  <div class="startmenu">
-
-    <div class="sTop">
-      <div class="pinnedlabel">
-        Pinned
-      </div>
-      <div class="allapps">
-        <img src="img/allapps.png">
-      </div>
-    </div>
-
-<div class="sAppscontainer">
-
-  <div class="sApps">
-
+  <div id="loading" class="loading">
+    <img class="loadingimg" src="img/favicon.ico">
+    <br>
+    <svg class="progressRing" height="48" width="48" viewBox="0 0 16 16">
+      <circle cx="8px" cy="8px" r="7px"></circle>
+    </svg>
   </div>
 
-</div>
+  <div class="center">
 
-</div>
-</div>
-      
+    <div class="startmenu">
+
+      <div class="sTop">
+        <div class="pinnedlabel">
+          Pinned
+        </div>
+        <div class="allapps">
+          <img src="img/allapps.png">
+        </div>
+      </div>
+
+      <div class="sAppscontainer">
+
+        <div class="sApps">
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
   <div class="center">
     <div class="searchmenu">
 
@@ -85,230 +90,250 @@
 
         <div class="thisdayinhistory quicksearch">
           <svg class="invert" role="img" viewBox="0 0 512 512" xmlns="https://www.w3.org/200/svg">
-            <path d="M232 120C232 106.7 242.7 96 256 96C269.3 96 280 106.7 280 120V243.2L365.3 300C376.3 307.4 379.3 322.3 371.1 333.3C364.6 344.3 349.7 347.3 338.7 339.1L242.7 275.1C236 271.5 232 264 232 255.1L232 120zM256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0zM48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48C141.1 48 48 141.1 48 256z"></path>
+            <path
+              d="M232 120C232 106.7 242.7 96 256 96C269.3 96 280 106.7 280 120V243.2L365.3 300C376.3 307.4 379.3 322.3 371.1 333.3C364.6 344.3 349.7 347.3 338.7 339.1L242.7 275.1C236 271.5 232 264 232 255.1L232 120zM256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0zM48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48C141.1 48 48 141.1 48 256z">
+            </path>
           </svg>
           This Day In History
         </div>
 
         <div class="marketstoday quicksearch">
           <svg class="invert" role="img" viewBox="0 0 512 512" xmlns="https://www.w3.org/2000/svg">
-            <path d="M64 400C64 408.8 71.16 416 80 416H480C497.7 416 512 430.3 512 448C512 465.7 497.7 480 480 480H80C35.82 480 0 444.2 0 400V64C0 46.33 14.33 32 32 32C49.67 32 64 46.33 64 64V400zM342.6 278.6C330.1 291.1 309.9 291.1 297.4 278.6L240 221.3L150.6 310.6C138.1 323.1 117.9 323.1 105.4 310.6C92.88 298.1 92.88 277.9 105.4 265.4L217.4 153.4C229.9 140.9 250.1 140.9 262.6 153.4L320 210.7L425.4 105.4C437.9 92.88 458.1 92.88 470.6 105.4C483.1 117.9 483.1 138.1 470.6 150.6L342.6 278.6z"></path>
+            <path
+              d="M64 400C64 408.8 71.16 416 80 416H480C497.7 416 512 430.3 512 448C512 465.7 497.7 480 480 480H80C35.82 480 0 444.2 0 400V64C0 46.33 14.33 32 32 32C49.67 32 64 46.33 64 64V400zM342.6 278.6C330.1 291.1 309.9 291.1 297.4 278.6L240 221.3L150.6 310.6C138.1 323.1 117.9 323.1 105.4 310.6C92.88 298.1 92.88 277.9 105.4 265.4L217.4 153.4C229.9 140.9 250.1 140.9 262.6 153.4L320 210.7L425.4 105.4C437.9 92.88 458.1 92.88 470.6 105.4C483.1 117.9 483.1 138.1 470.6 150.6L342.6 278.6z">
+            </path>
           </svg>
           Markets Today
         </div>
 
-      <div class="newmovies quicksearch">
-        <svg class="invert" role="img" viewBox="0 0 512 512" xmlns="https://www.w3.org/2000/svg">
-          <path d="M463.1 32h-416C21.49 32-.0001 53.49-.0001 80v352c0 26.51 21.49 48 47.1 48h416c26.51 0 48-21.49 48-48v-352C511.1 53.49 490.5 32 463.1 32zM111.1 408c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 408zM111.1 280c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM111.1 152c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 152zM351.1 400c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V400zM351.1 208c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V208zM463.1 408c0 4.418-3.582 8-8 8h-47.1c-4.418 0-7.1-3.582-7.1-8l0-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V408zM463.1 280c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM463.1 152c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8l0-48c0-4.418 3.582-8 7.1-8h47.1c4.418 0 8 3.582 8 8V152z"></path>
-        </svg>
-        New Movies
-      </div>
+        <div class="newmovies quicksearch">
+          <svg class="invert" role="img" viewBox="0 0 512 512" xmlns="https://www.w3.org/2000/svg">
+            <path
+              d="M463.1 32h-416C21.49 32-.0001 53.49-.0001 80v352c0 26.51 21.49 48 47.1 48h416c26.51 0 48-21.49 48-48v-352C511.1 53.49 490.5 32 463.1 32zM111.1 408c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 408zM111.1 280c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM111.1 152c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 152zM351.1 400c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V400zM351.1 208c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V208zM463.1 408c0 4.418-3.582 8-8 8h-47.1c-4.418 0-7.1-3.582-7.1-8l0-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V408zM463.1 280c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM463.1 152c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8l0-48c0-4.418 3.582-8 7.1-8h47.1c4.418 0 8 3.582 8 8V152z">
+            </path>
+          </svg>
+          New Movies
+        </div>
 
-      <div class="topnews quicksearch">
-        <svg class="invert" role="img" viewBox="0 0 512 512" xmlns="https://www.w3.org/2000/svg">
-          <path d="M456 32h-304C121.1 32 96 57.13 96 88v320c0 13.22-10.77 24-24 24S48 421.2 48 408V112c0-13.25-10.75-24-24-24S0 98.75 0 112v296C0 447.7 32.3 480 72 480h352c48.53 0 88-39.47 88-88v-304C512 57.13 486.9 32 456 32zM464 392c0 22.06-17.94 40-40 40H139.9C142.5 424.5 144 416.4 144 408v-320c0-4.406 3.594-8 8-8h304c4.406 0 8 3.594 8 8V392zM264 272h-64C186.8 272 176 282.8 176 296S186.8 320 200 320h64C277.3 320 288 309.3 288 296S277.3 272 264 272zM408 272h-64C330.8 272 320 282.8 320 296S330.8 320 344 320h64c13.25 0 24-10.75 24-24S421.3 272 408 272zM264 352h-64c-13.25 0-24 10.75-24 24s10.75 24 24 24h64c13.25 0 24-10.75 24-24S277.3 352 264 352zM408 352h-64C330.8 352 320 362.8 320 376s10.75 24 24 24h64c13.25 0 24-10.75 24-24S421.3 352 408 352zM400 112h-192c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h192c17.67 0 32-14.33 32-32v-64C432 126.3 417.7 112 400 112z"></path>
-        </svg>
-        Top News
-      </div>
-      
+        <div class="topnews quicksearch">
+          <svg class="invert" role="img" viewBox="0 0 512 512" xmlns="https://www.w3.org/2000/svg">
+            <path
+              d="M456 32h-304C121.1 32 96 57.13 96 88v320c0 13.22-10.77 24-24 24S48 421.2 48 408V112c0-13.25-10.75-24-24-24S0 98.75 0 112v296C0 447.7 32.3 480 72 480h352c48.53 0 88-39.47 88-88v-304C512 57.13 486.9 32 456 32zM464 392c0 22.06-17.94 40-40 40H139.9C142.5 424.5 144 416.4 144 408v-320c0-4.406 3.594-8 8-8h304c4.406 0 8 3.594 8 8V392zM264 272h-64C186.8 272 176 282.8 176 296S186.8 320 200 320h64C277.3 320 288 309.3 288 296S277.3 272 264 272zM408 272h-64C330.8 272 320 282.8 320 296S330.8 320 344 320h64c13.25 0 24-10.75 24-24S421.3 272 408 272zM264 352h-64c-13.25 0-24 10.75-24 24s10.75 24 24 24h64c13.25 0 24-10.75 24-24S277.3 352 264 352zM408 352h-64C330.8 352 320 362.8 320 376s10.75 24 24 24h64c13.25 0 24-10.75 24-24S421.3 352 408 352zM400 112h-192c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h192c17.67 0 32-14.33 32-32v-64C432 126.3 417.7 112 400 112z">
+            </path>
+          </svg>
+          Top News
+        </div>
+
       </div>
 
     </div>
   </div>
 
-    <div class="widgetsmenu">
-      <img src="img/widgetsmenu.jpg">
+  <div class="widgetsmenu">
+    <img src="img/widgetsmenu.jpg">
+  </div>
+
+  <div class="taskbar">
+
+    <div class="taskbariconsleft">
+      <div class="taskbaricons widgetsbutton">
+        <img class="taskbariconsimg" src="img/widgets.png">
+      </div>
     </div>
 
-    <div class="taskbar">
+    <div class="taskbariconscenter">
 
-      <div class="taskbariconsleft">
-        <div class="taskbaricons widgetsbutton">
-          <img class="taskbariconsimg" src="img/widgets.png">
+      <div class="taskbaricons startbutton">
+        <img class="taskbariconsimg" src="img/favicon.ico">
+      </div>
+
+      <div class="taskbaricons searchbutton">
+        <img class="taskbariconsimg searchbuttonimg invert" src="img/search.png">
+      </div>
+
+      <div class="taskbaricons">
+        <img class="taskbariconsimg" src="img/taskview.png">
+      </div>
+
+      <div class="taskbaricons">
+        <img class="taskbariconsimg" src="img/chat.png">
+      </div>
+
+      <div class="taskbaricons explorertaskbaricon">
+        <img class="taskbariconsimg" src="img/explorer.png">
+        <div class="center">
+          <div class="taskbariconhighlight"></div>
         </div>
       </div>
 
-      <div class="taskbariconscenter">
-
-        <div class="taskbaricons startbutton">
-          <img class="taskbariconsimg" src="img/favicon.ico">
+      <div class="taskbaricons edgetaskbaricon">
+        <img class="taskbariconsimg" src="img/edge.png">
+        <div class="center">
+          <div class="taskbariconhighlight"></div>
         </div>
-
-        <div class="taskbaricons searchbutton">
-          <img class="taskbariconsimg searchbuttonimg invert" src="img/search.png">
-        </div>
-
-        <div class="taskbaricons">
-          <img class="taskbariconsimg" src="img/taskview.png">
-        </div>
-
-        <div class="taskbaricons">
-          <img class="taskbariconsimg" src="img/chat.png">
-        </div>
-
-        <div class="taskbaricons explorertaskbaricon">
-          <img class="taskbariconsimg" src="img/explorer.png">
-          <div class="center"><div class="taskbariconhighlight"></div></div>
-        </div>
-
-        <div class="taskbaricons edgetaskbaricon">
-          <img class="taskbariconsimg" src="img/edge.png">
-          <div class="center"><div class="taskbariconhighlight"></div></div>
-        </div>
-
-        <div class="taskbaricons storetaskbaricon">
-          <img class="taskbariconsimg" src="img/store.ico">
-          <div class="center"><div class="taskbariconhighlight"></div></div>
-        </div>
-
       </div>
 
-
-      <div class="taskbariconsright">
-
-        <div class="moreapps">
-          <img class="invert" src="img/moreapps.svg">
+      <div class="taskbaricons storetaskbaricon">
+        <img class="taskbariconsimg" src="img/store.ico">
+        <div class="center">
+          <div class="taskbariconhighlight"></div>
         </div>
-
-        <div class="actioncentericons">
-          <img class="invert" src="img/wifi.png">
-          <img class="invert" src="img/volume.png">
-          <img class="invert" src="img/battery.png">
-        </div>
-  
-        <div class="timeanddate">
-          <div class="time">
-            <p id="clock"></p>
-          </div>
-          <div class="date">
-            <p id="date"></p>
-          </div>
-        </div>
-  
-    </div>
-     
-    </div>
-
-    <div class="actioncenter">
-
-      <div class="quicksettings">
-        
-        <div class="quicksetting">
-          <div class="quicksettingimg">
-            <img class="invert" src="img/wifi.png">
-          </div>
-          <p align="center">Wifi</p>
-        </div>
-
-        <div class="quicksetting">
-          <div class="quicksettingimg">
-            <img class="invert" src="img/wifi.png">
-          </div>
-          <p align="center">Wifi</p>
-        </div>
-
-        <div class="quicksetting">
-          <div class="quicksettingimg">
-            <img class="invert" src="img/wifi.png">
-          </div>
-          <p align="center">Wifi</p>
-        </div>
-
-        <div class="quicksetting">
-          <div class="quicksettingimg">
-            <img class="invert" src="img/wifi.png">
-          </div>
-          <p align="center">Wifi</p>
-        </div>
-
-        <div class="quicksetting">
-          <div class="quicksettingimg">
-            <img class="invert" src="img/wifi.png">
-          </div>
-          <p align="center">Wifi</p>
-        </div>
-
-        <div class="quicksetting">
-          <div class="quicksettingimg">
-            <img class="invert" src="img/wifi.png">
-          </div>
-          <p align="center">Wifi</p>
-        </div>
-
-        <div class="quicksetting">
-          <div class="quicksettingimg">
-            <img class="invert" src="img/wifi.png">
-          </div>
-          <p align="center">Wifi</p>
-        </div>
-
-        <div class="quicksetting">
-          <div class="quicksettingimg">
-            <img class="invert" src="img/wifi.png">
-          </div>
-          <p align="center">Wifi</p>
-        </div>
-
-        <div class="quicksetting">
-          <div class="quicksettingimg">
-            <img class="invert" src="img/wifi.png">
-          </div>
-          <p align="center">Wifi</p>
-        </div>
-
       </div>
 
-      <div class="actioncentervolume">
+    </div>
+
+
+    <div class="taskbariconsright">
+
+      <div class="moreapps">
+        <img class="invert" src="img/moreapps.svg">
+      </div>
+
+      <div class="actioncentericons">
+        <img class="invert" src="img/wifi.png">
         <img class="invert" src="img/volume.png">
-        <div class="actioncentervolumeslider">
-          <div class="dragger"></div>
-        </div>
+        <img class="invert" src="img/battery.png">
       </div>
 
-      <div class="actioncenterbottom">
-        <div class="actioncenterbattery">
-          <img class="invert" src="img/battery.png">
-          <p>87%</p>
+      <div class="timeanddate">
+        <div class="time">
+          <p id="clock"></p>
+        </div>
+        <div class="date">
+          <p id="date"></p>
         </div>
       </div>
 
     </div>
-    
-    <div class="calendarandnotifications">
-      <div class="calendar">
-        <div class="calendarheader">
-          <p id="calendarheadertext"></p>
+
+  </div>
+
+  <div class="actioncenter">
+
+    <div class="quicksettings">
+
+      <div class="quicksetting">
+        <div class="quicksettingimg">
+          <img class="invert" src="img/wifi.png">
         </div>
-        <div id="dycalendar" class="dycalendar-container">
-            <div class="dycalendar-header" data-option="{&quot;target&quot;:&quot;#dycalendar&quot;,&quot;type&quot;:&quot;month&quot;,&quot;dayformat&quot;:&quot;ddd&quot;,&quot;monthformat&quot;:&quot;full&quot;,&quot;prevnextbutton&quot;:&quot;show&quot;,&quot;highlighttoday&quot;:true,&quot;month&quot;:4,&quot;year&quot;:2022,&quot;date&quot;:5,&quot;highlighttargetdate&quot;:false}"><span class="dycalendar-span-month-year">May 2022</span><span class="dycalendar-prev-next-btn prev-btn" data-date="5" data-month="4" data-year="2022" data-action="CALNPREV" data-btn="prev">▲</span><span class="dycalendar-prev-next-btn next-btn" data-date="5" data-month="4" data-year="2022" data-action="CALNNEXT" data-btn="next">▼</span></div>
+        <p align="center">Wifi</p>
+      </div>
+
+      <div class="quicksetting">
+        <div class="quicksettingimg">
+          <img class="invert" src="img/wifi.png">
         </div>
+        <p align="center">Wifi</p>
+      </div>
+
+      <div class="quicksetting">
+        <div class="quicksettingimg">
+          <img class="invert" src="img/wifi.png">
+        </div>
+        <p align="center">Wifi</p>
+      </div>
+
+      <div class="quicksetting">
+        <div class="quicksettingimg">
+          <img class="invert" src="img/wifi.png">
+        </div>
+        <p align="center">Wifi</p>
+      </div>
+
+      <div class="quicksetting">
+        <div class="quicksettingimg">
+          <img class="invert" src="img/wifi.png">
+        </div>
+        <p align="center">Wifi</p>
+      </div>
+
+      <div class="quicksetting">
+        <div class="quicksettingimg">
+          <img class="invert" src="img/wifi.png">
+        </div>
+        <p align="center">Wifi</p>
+      </div>
+
+      <div class="quicksetting">
+        <div class="quicksettingimg">
+          <img class="invert" src="img/wifi.png">
+        </div>
+        <p align="center">Wifi</p>
+      </div>
+
+      <div class="quicksetting">
+        <div class="quicksettingimg">
+          <img class="invert" src="img/wifi.png">
+        </div>
+        <p align="center">Wifi</p>
+      </div>
+
+      <div class="quicksetting">
+        <div class="quicksettingimg">
+          <img class="invert" src="img/wifi.png">
+        </div>
+        <p align="center">Wifi</p>
+      </div>
+
+    </div>
+
+    <div class="actioncentervolume">
+      <img class="invert" src="img/volume.png">
+      <div class="actioncentervolumeslider">
+        <div class="dragger"></div>
       </div>
     </div>
 
-    <div class="explorerapp app">
+    <div class="actioncenterbottom">
+      <div class="actioncenterbattery">
+        <img class="invert" src="img/battery.png">
+        <p>87%</p>
+      </div>
+    </div>
 
-      <div class="explorerresizer resizer top-left"></div>
-      <div class="explorerresizer resizer top-right"></div>
-      <div class="explorerresizer resizer bottom-left"></div>
-      <div class="explorerresizer resizer bottom-right"></div>
-      <div class="explorerresizer resizer resizertopbottom top"></div>
-      <div class="explorerresizer resizer resizerleftright left"></div>
-      <div class="explorerresizer resizer resizertopbottom bottom"></div>
-      <div class="explorerresizer resizer resizerleftright right"></div>
+  </div>
 
-      <div class="explorerappheader appheader">
+  <div class="calendarandnotifications">
+    <div class="calendar">
+      <div class="calendarheader">
+        <p id="calendarheadertext"></p>
+      </div>
+      <div id="dycalendar" class="dycalendar-container">
+        <div class="dycalendar-header"
+          data-option="{&quot;target&quot;:&quot;#dycalendar&quot;,&quot;type&quot;:&quot;month&quot;,&quot;dayformat&quot;:&quot;ddd&quot;,&quot;monthformat&quot;:&quot;full&quot;,&quot;prevnextbutton&quot;:&quot;show&quot;,&quot;highlighttoday&quot;:true,&quot;month&quot;:4,&quot;year&quot;:2022,&quot;date&quot;:5,&quot;highlighttargetdate&quot;:false}">
+          <span class="dycalendar-span-month-year">May 2022</span><span class="dycalendar-prev-next-btn prev-btn"
+            data-date="5" data-month="4" data-year="2022" data-action="CALNPREV" data-btn="prev">▲</span><span
+            class="dycalendar-prev-next-btn next-btn" data-date="5" data-month="4" data-year="2022"
+            data-action="CALNNEXT" data-btn="next">▼</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="headerleftside">
-          <img class="appheadericon" src="img/explorer.png">
-          File Explorer
+  <div class="explorerapp app">
+
+    <div class="explorerresizer resizer top-left"></div>
+    <div class="explorerresizer resizer top-right"></div>
+    <div class="explorerresizer resizer bottom-left"></div>
+    <div class="explorerresizer resizer bottom-right"></div>
+    <div class="explorerresizer resizer resizertopbottom top"></div>
+    <div class="explorerresizer resizer resizerleftright left"></div>
+    <div class="explorerresizer resizer resizertopbottom bottom"></div>
+    <div class="explorerresizer resizer resizerleftright right"></div>
+
+    <div class="explorerappheader appheader">
+
+      <div class="headerleftside">
+        <img class="appheadericon" src="img/explorer.png">
+        File Explorer
+      </div>
+
+      <div class="headerrightside invert">
+
+        <div class="explorerminimize minimize">
+          <img id="explorerminimize" src="img/minimize.png">
         </div>
 
-        <div class="headerrightside invert">
-
-          <div class="explorerminimize minimize">
-            <img id="explorerminimize" src="img/minimize.png">
-          </div>
-        
         <div class="maximizeandrestore">
 
           <div class="explorermaximize maximize">
@@ -320,211 +345,265 @@
           </div>
         </div>
 
-          <div class="explorerclose close">
-            <img id="explorerclose" src="img/close.png">
-          </div>
-        
-
-        </div>
-      </div>
-
-      <div class="explorertopbar">
-
-        <div class="explorertopbarsection">
-          <img src="img/explorer/new.png">
-          <p>New</p>
+        <div class="explorerclose close">
+          <img id="explorerclose" src="img/close.png">
         </div>
 
-        <div class="explorertopbarsection">
-          <img src="img/explorer/cut.png">
-          <img src="img/explorer/copy.png">
-          <img src="img/explorer/paste.png">
-          <img src="img/explorer/rename.png">
-        </div>
-
-        <div class="explorertopbarsection">
-          <img src="img/explorer/sort.png">
-          <p>Sort</p>
-          
-          <img src="img/explorer/view.png">
-          <p>View</p>
-        </div>
 
       </div>
+    </div>
 
-      <div class="explorerbottomsection">
+    <div class="explorertopbar">
 
-        <div class="explorernavsection">
+      <div class="explorertopbarsection">
+        <img src="img/explorer/new.png">
+        <p>New</p>
+      </div>
 
-          <div class="explorerarrow">
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 14px; height: 14px;"><path fill="currentColor" d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z"></path></svg>
-          </div>
+      <div class="explorertopbarsection">
+        <img src="img/explorer/cut.png">
+        <img src="img/explorer/copy.png">
+        <img src="img/explorer/paste.png">
+        <img src="img/explorer/rename.png">
+      </div>
 
-          <div class="explorerarrow">
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 14px; height: 14px;"><path fill="currentColor" d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"></path></svg>
-          </div>
+      <div class="explorertopbarsection">
+        <img src="img/explorer/sort.png">
+        <p>Sort</p>
 
-          <div class="explorerarrow">
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 14px; height: 14px;"><path fill="currentColor" d="M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z"></path></svg>
-          </div>
-
-          <div class="explorernavbox">
-
-            <img src="img/thispc.png">
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 8px; height: 8px;"><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
-            <p>This PC</p>
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 8px; height: 8px;"><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
-          </div>
-
-          <div class="explorernavbox explorersearchbox">
-            <img class="invert" src="img/search.png">
-            <input type="text" placeholder="Search This PC">
-          </div>
-
-        </div>
-
-        <div class="explorersidebarandmainsection">
-
-          <div class="explorersidebar">
-
-            <div class="explorersidebarsection">
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 10px; height: 10px;"><path fill="currentColor" d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
-              <img src="img/explorer/quickaccess.png">
-              <p>Quick Access</p>
-            </div>
-  
-            <div class="explorersidebarsection content">
-              <img src="img/explorer/desktop-sm.png">
-              <p>Desktop</p>
-              <img style="position: absolute;left:135px;" src="img/explorer/pinned.png">
-            </div>
-  
-            <div class="explorersidebarsection content">
-              <img src="img/explorer/downloads-sm.png">
-              <p>Downloads</p>
-              <img style="position: absolute;left:135px;" src="img/explorer/pinned.png">
-            </div>
-  
-            <div class="explorersidebarsection content">
-              <img src="img/explorer/documents-sm.png">
-              <p>Documents</p>
-              <img style="position: absolute;left:135px;" src="img/explorer/pinned.png">
-            </div>
-  
-            <div class="explorersidebarsection content">
-              <img src="img/explorer/recyclebinempty.png">
-              <p>Recycle Bin</p>
-              <img style="position: absolute;left:135px;" src="img/explorer/pinned.png">
-            </div>
-  
-            <div class="explorersidebarsection">
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 10px; height: 10px;"><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
-              <img src="img/explorer/onedrive-sm.png">
-              <p>OneDrive</p>
-            </div>
-  
-            <div class="explorersidebarsection">
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 10px; height: 10px;"><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg>
-              <img src="img/thispc.png">
-              <p>This PC</p>
-            </div>
-  
-          </div>
-
-            <div class="explorermainsection">
-
-              <h4 class="explorermainsectionheader">
-                Folders (6)
-              </h4>
-              
-              <div class="explorermainsectionentries">
-
-              <div class="explorermainsectionentry">
-                <img src="img/explorer/desktop.png">
-                <p>Desktop</p>
-              </div>
-
-              <div class="explorermainsectionentry">
-                <img src="img/explorer/documents.png">
-                <p>Documents</p>
-              </div>
-
-              <div class="explorermainsectionentry">
-                <img src="img/explorer/downloads.png">
-                <p>Downloads</p>
-              </div>
-
-              <div class="explorermainsectionentry">
-                <img src="img/explorer/music.png">
-                <p>Music</p>
-              </div>
-
-              <div class="explorermainsectionentry">
-                <img src="img/explorer/pictures.png">
-                <p>Pictures</p>
-              </div>
-
-              <div class="explorermainsectionentry">
-                <img src="img/explorer/videos.png">
-                <p>Videos</p>
-              </div>
-
-              </div>
-
-              <h4 class="explorermainsectionheader">
-                Devices and Drives (1)
-              </h4>
-
-              <div class="explorermainsectionentries">
-
-                <div class="explorermainsectionentry">
-                  <img src="img/explorer/disk-sm.png">
-                  <p>Local Disk</p>
-                </div>
-
-              </div>
-
-          </div>
-
-        </div>
-         
+        <img src="img/explorer/view.png">
+        <p>View</p>
       </div>
 
     </div>
 
-    <div class="edgeapp app" id="edgeapp">
+    <div class="explorerbottomsection">
 
-      <div class="edgeresizer resizer top-left"></div>
-      <div class="edgeresizer resizer top-right"></div>
-      <div class="edgeresizer resizer bottom-left"></div>
-      <div class="edgeresizer resizer bottom-right"></div>
-      <div class="edgeresizer resizer resizertopbottom top"></div>
-      <div class="edgeresizer resizer resizerleftright left"></div>
-      <div class="edgeresizer resizer resizertopbottom bottom"></div>
-      <div class="edgeresizer resizer resizerleftright right"></div>
+      <div class="explorernavsection">
 
-      <div class="edgeappheader appheader">
-
-        <div class="headerleftside">
-          <img class="appheadericon" src="img/edge.png">
-          Edge
-	        <div class="edgetab ">
-            <div class="edgetableft">
-	          <img class="invert" src="img/newtab.png">
-	          New Tab
-            </div>
-            <div class="edgetabright">
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-flip="false" data-invert="false" data-rounded="false" style="width: 10px; height: 10px;"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path></svg>
-            </div>
-	        </div>
+        <div class="explorerarrow">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" role="img"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-flip="false" data-invert="false"
+            data-rounded="false" style="width: 14px; height: 14px;">
+            <path fill="currentColor"
+              d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z">
+            </path>
+          </svg>
         </div>
 
-        <div class="headerrightside invert">
+        <div class="explorerarrow">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-flip="false" data-invert="false"
+            data-rounded="false" style="width: 14px; height: 14px;">
+            <path fill="currentColor"
+              d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z">
+            </path>
+          </svg>
+        </div>
 
-          <div class="edgeminimize minimize">
-            <img id="edgeminimize" src="img/minimize.png">
+        <div class="explorerarrow">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up" role="img"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-flip="false" data-invert="false"
+            data-rounded="false" style="width: 14px; height: 14px;">
+            <path fill="currentColor"
+              d="M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z">
+            </path>
+          </svg>
+        </div>
+
+        <div class="explorernavbox">
+
+          <img src="img/thispc.png">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-flip="false" data-invert="false"
+            data-rounded="false" style="width: 8px; height: 8px;">
+            <path fill="currentColor"
+              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
+            </path>
+          </svg>
+          <p>This PC</p>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-flip="false" data-invert="false"
+            data-rounded="false" style="width: 8px; height: 8px;">
+            <path fill="currentColor"
+              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
+            </path>
+          </svg>
+        </div>
+
+        <div class="explorernavbox explorersearchbox">
+          <img class="invert" src="img/search.png">
+          <input type="text" placeholder="Search This PC">
+        </div>
+
+      </div>
+
+      <div class="explorersidebarandmainsection">
+
+        <div class="explorersidebar">
+
+          <div class="explorersidebarsection">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-flip="false" data-invert="false"
+              data-rounded="false" style="width: 10px; height: 10px;">
+              <path fill="currentColor"
+                d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z">
+              </path>
+            </svg>
+            <img src="img/explorer/quickaccess.png">
+            <p>Quick Access</p>
           </div>
-        
+
+          <div class="explorersidebarsection content">
+            <img src="img/explorer/desktop-sm.png">
+            <p>Desktop</p>
+            <img style="position: absolute;left:135px;" src="img/explorer/pinned.png">
+          </div>
+
+          <div class="explorersidebarsection content">
+            <img src="img/explorer/downloads-sm.png">
+            <p>Downloads</p>
+            <img style="position: absolute;left:135px;" src="img/explorer/pinned.png">
+          </div>
+
+          <div class="explorersidebarsection content">
+            <img src="img/explorer/documents-sm.png">
+            <p>Documents</p>
+            <img style="position: absolute;left:135px;" src="img/explorer/pinned.png">
+          </div>
+
+          <div class="explorersidebarsection content">
+            <img src="img/explorer/recyclebinempty.png">
+            <p>Recycle Bin</p>
+            <img style="position: absolute;left:135px;" src="img/explorer/pinned.png">
+          </div>
+
+          <div class="explorersidebarsection">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-flip="false" data-invert="false"
+              data-rounded="false" style="width: 10px; height: 10px;">
+              <path fill="currentColor"
+                d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
+              </path>
+            </svg>
+            <img src="img/explorer/onedrive-sm.png">
+            <p>OneDrive</p>
+          </div>
+
+          <div class="explorersidebarsection">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-flip="false" data-invert="false"
+              data-rounded="false" style="width: 10px; height: 10px;">
+              <path fill="currentColor"
+                d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
+              </path>
+            </svg>
+            <img src="img/thispc.png">
+            <p>This PC</p>
+          </div>
+
+        </div>
+
+        <div class="explorermainsection">
+
+          <h4 class="explorermainsectionheader">
+            Folders (6)
+          </h4>
+
+          <div class="explorermainsectionentries">
+
+            <div class="explorermainsectionentry">
+              <img src="img/explorer/desktop.png">
+              <p>Desktop</p>
+            </div>
+
+            <div class="explorermainsectionentry">
+              <img src="img/explorer/documents.png">
+              <p>Documents</p>
+            </div>
+
+            <div class="explorermainsectionentry">
+              <img src="img/explorer/downloads.png">
+              <p>Downloads</p>
+            </div>
+
+            <div class="explorermainsectionentry">
+              <img src="img/explorer/music.png">
+              <p>Music</p>
+            </div>
+
+            <div class="explorermainsectionentry">
+              <img src="img/explorer/pictures.png">
+              <p>Pictures</p>
+            </div>
+
+            <div class="explorermainsectionentry">
+              <img src="img/explorer/videos.png">
+              <p>Videos</p>
+            </div>
+
+          </div>
+
+          <h4 class="explorermainsectionheader">
+            Devices and Drives (1)
+          </h4>
+
+          <div class="explorermainsectionentries">
+
+            <div class="explorermainsectionentry">
+              <img src="img/explorer/disk-sm.png">
+              <p>Local Disk</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="edgeapp app" id="edgeapp">
+
+    <div class="edgeresizer resizer top-left"></div>
+    <div class="edgeresizer resizer top-right"></div>
+    <div class="edgeresizer resizer bottom-left"></div>
+    <div class="edgeresizer resizer bottom-right"></div>
+    <div class="edgeresizer resizer resizertopbottom top"></div>
+    <div class="edgeresizer resizer resizerleftright left"></div>
+    <div class="edgeresizer resizer resizertopbottom bottom"></div>
+    <div class="edgeresizer resizer resizerleftright right"></div>
+
+    <div class="edgeappheader appheader">
+
+      <div class="headerleftside">
+        <img class="appheadericon" src="img/edge.png">
+        Edge
+        <div class="edgetab ">
+          <div class="edgetableft">
+            <img class="invert" src="img/newtab.png">
+            New Tab
+          </div>
+          <div class="edgetabright">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark"
+              class="svg-inline--fa fa-xmark " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+              data-flip="false" data-invert="false" data-rounded="false" style="width: 10px; height: 10px;">
+              <path fill="currentColor"
+                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z">
+              </path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="headerrightside invert">
+
+        <div class="edgeminimize minimize">
+          <img id="edgeminimize" src="img/minimize.png">
+        </div>
+
         <div class="maximizeandrestore">
 
           <div class="edgemaximize maximize">
@@ -536,51 +615,51 @@
           </div>
         </div>
 
-          <div class="edgeclose close">
-            <img id="edgeclose" src="img/close.png">
-          </div>
-        
-
+        <div class="edgeclose close">
+          <img id="edgeclose" src="img/close.png">
         </div>
-      </div>
 
-      <div class="edgeurlarea">
-        <img class="edgeurlareaicon invert" src="img/backarrow.svg" onclick="goBack()">
-        <img class="edgeurlareaicon invert" src="img/forwardarrow.svg" onclick="goForward()">
-        <img class="edgeurlareaicon invert" src="img/reload.png" onclick="edgereload()">
-        <input type="text" value="https://google.com/?igu=1" class="edgeurlbar edgeURL">
-        <img class="edgeurlareaicon invert" src="img/favorites.png">
-        <img class="edgeurlareaicon edgeprofilepicture" src="img/profilepicture.png">
-        <img class="edgeurlareaicon invert" src="img/more.png">
+
       </div>
-      <iframe class="edgeappIframe appIframe" id="edgeIframe"> </iframe>
-    
     </div>
 
-    <div class="internetexplorerapp app" id="internetexplorerapp">
+    <div class="edgeurlarea">
+      <img class="edgeurlareaicon invert" src="img/backarrow.svg" onclick="goBack()">
+      <img class="edgeurlareaicon invert" src="img/forwardarrow.svg" onclick="goForward()">
+      <img class="edgeurlareaicon invert" src="img/reload.png" onclick="edgereload()">
+      <input type="text" value="https://google.com/?igu=1" class="edgeurlbar edgeURL">
+      <img class="edgeurlareaicon invert" src="img/favorites.png">
+      <img class="edgeurlareaicon edgeprofilepicture" src="img/profilepicture.png">
+      <img class="edgeurlareaicon invert" src="img/more.png">
+    </div>
+    <iframe class="edgeappIframe appIframe" id="edgeIframe"> </iframe>
 
-      <div class="internetexplorerresizer resizer top-left"></div>
-      <div class="internetexplorerresizer resizer top-right"></div>
-      <div class="internetexplorerresizer resizer bottom-left"></div>
-      <div class="internetexplorerresizer resizer bottom-right"></div>
-      <div class="internetexplorerresizer resizer resizertopbottom top"></div>
-      <div class="internetexplorerresizer resizer resizerleftright left"></div>
-      <div class="internetexplorerresizer resizer resizertopbottom bottom"></div>
-      <div class="internetexplorerresizer resizer resizerleftright right"></div>
+  </div>
 
-      <div class="internetexplorerappheader appheader">
+  <div class="internetexplorerapp app" id="internetexplorerapp">
 
-        <div class="headerleftside">
-          <img class="appheadericon" src="img/ie.png">
-          Internet Explorer
+    <div class="internetexplorerresizer resizer top-left"></div>
+    <div class="internetexplorerresizer resizer top-right"></div>
+    <div class="internetexplorerresizer resizer bottom-left"></div>
+    <div class="internetexplorerresizer resizer bottom-right"></div>
+    <div class="internetexplorerresizer resizer resizertopbottom top"></div>
+    <div class="internetexplorerresizer resizer resizerleftright left"></div>
+    <div class="internetexplorerresizer resizer resizertopbottom bottom"></div>
+    <div class="internetexplorerresizer resizer resizerleftright right"></div>
+
+    <div class="internetexplorerappheader appheader">
+
+      <div class="headerleftside">
+        <img class="appheadericon" src="img/ie.png">
+        Internet Explorer
+      </div>
+
+      <div class="headerrightside invert">
+
+        <div class="internetexplorerminimize minimize">
+          <button id="internetexplorerminimize"></button>
         </div>
 
-        <div class="headerrightside invert">
-
-          <div class="internetexplorerminimize minimize">
-            <button id="internetexplorerminimize"></button>
-          </div>
-        
         <div class="maximizeandrestore">
 
           <div class="internetexplorermaximize maximize">
@@ -593,51 +672,51 @@
 
         </div>
 
-          <div class="internetexplorerclose close">
-            <button id="internetexplorerclose"></button>
-          </div>
-        
-
+        <div class="internetexplorerclose close">
+          <button id="internetexplorerclose"></button>
         </div>
-      </div>
 
-      <div class="internetexplorertitlebar">
-        <img src="img/ie/titlebar.png">
-        <img id="windows95icon" src="img/ie/windows95.png">
-      </div>
-      <div class="internetexplorerurlbar">
-        <p>Address:</p>
-        <input value="https://google.com/?igu=1" class="internetexplorerURL" type="text">
-      </div>
 
-      <iframe class="internetexplorerappIframe appIframe" id="internetexplorerIframe"> </iframe>
-    
+      </div>
     </div>
 
-    <div class="storeapp app" id="storeapp">
+    <div class="internetexplorertitlebar">
+      <img src="img/ie/titlebar.png">
+      <img id="windows95icon" src="img/ie/windows95.png">
+    </div>
+    <div class="internetexplorerurlbar">
+      <p>Address:</p>
+      <input value="https://google.com/?igu=1" class="internetexplorerURL" type="text">
+    </div>
 
-      <div class="storeresizer resizer top-left"></div>
-      <div class="storeresizer resizer top-right"></div>
-      <div class="storeresizer resizer bottom-left"></div>
-      <div class="storeresizer resizer bottom-right"></div>
-      <div class="storeresizer resizer resizertopbottom top"></div>
-      <div class="storeresizer resizer resizerleftright left"></div>
-      <div class="storeresizer resizer resizertopbottom bottom"></div>
-      <div class="storeresizer resizer resizerleftright right"></div>
+    <iframe class="internetexplorerappIframe appIframe" id="internetexplorerIframe"> </iframe>
 
-      <div class="storeappheader appheader">
+  </div>
 
-        <div class="headerleftside">
-          <img class="appheadericon" src="img/store.ico">
-          Store
+  <div class="storeapp app" id="storeapp">
+
+    <div class="storeresizer resizer top-left"></div>
+    <div class="storeresizer resizer top-right"></div>
+    <div class="storeresizer resizer bottom-left"></div>
+    <div class="storeresizer resizer bottom-right"></div>
+    <div class="storeresizer resizer resizertopbottom top"></div>
+    <div class="storeresizer resizer resizerleftright left"></div>
+    <div class="storeresizer resizer resizertopbottom bottom"></div>
+    <div class="storeresizer resizer resizerleftright right"></div>
+
+    <div class="storeappheader appheader">
+
+      <div class="headerleftside">
+        <img class="appheadericon" src="img/store.ico">
+        Store
+      </div>
+
+      <div class="headerrightside invert">
+
+        <div class="storeminimize minimize">
+          <img id="storeminimize" src="img/minimize.png">
         </div>
 
-        <div class="headerrightside invert">
-
-          <div class="storeminimize minimize">
-            <img id="storeminimize" src="img/minimize.png">
-          </div>
-        
         <div class="maximizeandrestore">
 
           <div class="storemaximize maximize">
@@ -649,43 +728,55 @@
           </div>
         </div>
 
-          <div class="storeclose close">
-            <img id="storeclose" src="img/close.png">
-          </div>
-        
-
+        <div class="storeclose close">
+          <img id="storeclose" src="img/close.png">
         </div>
-      </div>
 
-      <div class="storecontents">
+
+      </div>
+    </div>
+
+    <div class="storecontents">
 
       <div class="storesidebar">
 
         <div class="storesidebarimages">
           <svg role="img" viewBox="0 0 576 512" xmlns="https://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5z"></path>
+            <path fill="currentColor"
+              d="M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5z">
+            </path>
           </svg>
         </div>
 
         <div class="storesidebarimages">
           <svg role="img" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M448 32C483.3 32 512 60.65 512 96V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H448zM448 96H288V224H448V96zM448 288H288V416H448V288zM224 224V96H64V224H224zM64 416H224V288H64V416z"></path>          </svg>
+            <path fill="currentColor"
+              d="M448 32C483.3 32 512 60.65 512 96V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H448zM448 96H288V224H448V96zM448 288H288V416H448V288zM224 224V96H64V224H224zM64 416H224V288H64V416z">
+            </path>
+          </svg>
         </div>
-        
+
         <div class="storesidebarimages">
           <svg role="img" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M448 64H192C85.96 64 0 149.1 0 256s85.96 192 192 192h256c106 0 192-85.96 192-192S554 64 448 64zM247.1 280h-32v32c0 13.2-10.78 24-23.98 24c-13.2 0-24.02-10.8-24.02-24v-32L136 279.1C122.8 279.1 111.1 269.2 111.1 256c0-13.2 10.85-24.01 24.05-24.01L167.1 232v-32c0-13.2 10.82-24 24.02-24c13.2 0 23.98 10.8 23.98 24v32h32c13.2 0 24.02 10.8 24.02 24C271.1 269.2 261.2 280 247.1 280zM431.1 344c-22.12 0-39.1-17.87-39.1-39.1s17.87-40 39.1-40s39.1 17.88 39.1 40S454.1 344 431.1 344zM495.1 248c-22.12 0-39.1-17.87-39.1-39.1s17.87-40 39.1-40c22.12 0 39.1 17.88 39.1 40S518.1 248 495.1 248z"></path>
+            <path fill="currentColor"
+              d="M448 64H192C85.96 64 0 149.1 0 256s85.96 192 192 192h256c106 0 192-85.96 192-192S554 64 448 64zM247.1 280h-32v32c0 13.2-10.78 24-23.98 24c-13.2 0-24.02-10.8-24.02-24v-32L136 279.1C122.8 279.1 111.1 269.2 111.1 256c0-13.2 10.85-24.01 24.05-24.01L167.1 232v-32c0-13.2 10.82-24 24.02-24c13.2 0 23.98 10.8 23.98 24v32h32c13.2 0 24.02 10.8 24.02 24C271.1 269.2 261.2 280 247.1 280zM431.1 344c-22.12 0-39.1-17.87-39.1-39.1s17.87-40 39.1-40s39.1 17.88 39.1 40S454.1 344 431.1 344zM495.1 248c-22.12 0-39.1-17.87-39.1-39.1s17.87-40 39.1-40c22.12 0 39.1 17.88 39.1 40S518.1 248 495.1 248z">
+            </path>
           </svg>
         </div>
 
         <div class="storesidebarimages">
           <svg role="img" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M463.1 32h-416C21.49 32-.0001 53.49-.0001 80v352c0 26.51 21.49 48 47.1 48h416c26.51 0 48-21.49 48-48v-352C511.1 53.49 490.5 32 463.1 32zM111.1 408c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 408zM111.1 280c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM111.1 152c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 152zM351.1 400c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V400zM351.1 208c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V208zM463.1 408c0 4.418-3.582 8-8 8h-47.1c-4.418 0-7.1-3.582-7.1-8l0-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V408zM463.1 280c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM463.1 152c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8l0-48c0-4.418 3.582-8 7.1-8h47.1c4.418 0 8 3.582 8 8V152z"></path>          </svg>
+            <path fill="currentColor"
+              d="M463.1 32h-416C21.49 32-.0001 53.49-.0001 80v352c0 26.51 21.49 48 47.1 48h416c26.51 0 48-21.49 48-48v-352C511.1 53.49 490.5 32 463.1 32zM111.1 408c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 408zM111.1 280c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM111.1 152c0 4.418-3.582 8-8 8H55.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8L111.1 152zM351.1 400c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V400zM351.1 208c0 8.836-7.164 16-16 16H175.1c-8.836 0-16-7.164-16-16v-96c0-8.838 7.164-16 16-16h160c8.836 0 16 7.162 16 16V208zM463.1 408c0 4.418-3.582 8-8 8h-47.1c-4.418 0-7.1-3.582-7.1-8l0-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V408zM463.1 280c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8v-48c0-4.418 3.582-8 8-8h47.1c4.418 0 8 3.582 8 8V280zM463.1 152c0 4.418-3.582 8-8 8h-47.1c-4.418 0-8-3.582-8-8l0-48c0-4.418 3.582-8 7.1-8h47.1c4.418 0 8 3.582 8 8V152z">
+            </path>
+          </svg>
         </div>
 
         <div class="storesidebarimages">
           <svg role="img" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z"></path>
+            <path fill="currentColor"
+              d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z">
+            </path>
           </svg>
         </div>
 
@@ -693,38 +784,38 @@
 
       <div class="storeentriesbackground">
 
-      <div class="storeentries">
+        <div class="storeentries">
 
+        </div>
       </div>
+
+    </div>
+  </div>
+
+  <div class="notepadapp app" id="notepadapp">
+
+    <div class="notepadresizer resizer top-left"></div>
+    <div class="notepadresizer resizer top-right"></div>
+    <div class="notepadresizer resizer bottom-left"></div>
+    <div class="notepadresizer resizer bottom-right"></div>
+    <div class="notepadresizer resizer resizertopbottom top"></div>
+    <div class="notepadresizer resizer resizerleftright left"></div>
+    <div class="notepadresizer resizer resizertopbottom bottom"></div>
+    <div class="notepadresizer resizer resizerleftright right"></div>
+
+    <div class="notepadappheader appheader">
+
+      <div class="headerleftside">
+        <img class="appheadericon" src="img/notepad.ico">
+        Notepad
       </div>
-          
-    </div>
-    </div>
 
-    <div class="notepadapp app" id="notepadapp">
+      <div class="headerrightside invert">
 
-      <div class="notepadresizer resizer top-left"></div>
-      <div class="notepadresizer resizer top-right"></div>
-      <div class="notepadresizer resizer bottom-left"></div>
-      <div class="notepadresizer resizer bottom-right"></div>
-      <div class="notepadresizer resizer resizertopbottom top"></div>
-      <div class="notepadresizer resizer resizerleftright left"></div>
-      <div class="notepadresizer resizer resizertopbottom bottom"></div>
-      <div class="notepadresizer resizer resizerleftright right"></div>
-
-      <div class="notepadappheader appheader">
-
-        <div class="headerleftside">
-          <img class="appheadericon" src="img/notepad.ico">
-          Notepad
+        <div class="notepadminimize minimize">
+          <img id="notepadminimize" src="img/minimize.png">
         </div>
 
-        <div class="headerrightside invert">
-
-          <div class="notepadminimize minimize">
-            <img id="notepadminimize" src="img/minimize.png">
-          </div>
-        
         <div class="maximizeandrestore">
 
           <div class="notepadmaximize maximize">
@@ -736,49 +827,49 @@
           </div>
         </div>
 
-          <div class="notepadclose close">
-            <img id="notepadclose" src="img/close.png">
-          </div>
-        
-
+        <div class="notepadclose close">
+          <img id="notepadclose" src="img/close.png">
         </div>
+
+
       </div>
-
-      <div class="notepaddropdownmenus">
-        <p>File</p>
-        <p>Edit</p>
-        <p>View</p>
-      </div>
-
-      <textarea class="notepadtext" id="notepadtext" name="notepadtext"></textarea>
-
     </div>
 
-    <div class="terminalapp app" id="terminalapp">
-      
+    <div class="notepaddropdownmenus">
+      <p>File</p>
+      <p>Edit</p>
+      <p>View</p>
+    </div>
 
-      <div class="terminalresizer resizer top-left"></div>
-      <div class="terminalresizer resizer top-right"></div>
-      <div class="terminalresizer resizer bottom-left"></div>
-      <div class="terminalresizer resizer bottom-right"></div>
-      <div class="terminalresizer resizer resizertopbottom top"></div>
-      <div class="terminalresizer resizer resizerleftright left"></div>
-      <div class="terminalresizer resizer resizertopbottom bottom"></div>
-      <div class="terminalresizer resizer resizerleftright right"></div>
+    <textarea class="notepadtext" id="notepadtext" name="notepadtext"></textarea>
 
-      <div class="terminalappheader appheader">
+  </div>
 
-        <div class="headerleftside">
-          <img class="appheadericon" src="img/terminal.ico">
-          
+  <div class="terminalapp app" id="terminalapp">
+
+
+    <div class="terminalresizer resizer top-left"></div>
+    <div class="terminalresizer resizer top-right"></div>
+    <div class="terminalresizer resizer bottom-left"></div>
+    <div class="terminalresizer resizer bottom-right"></div>
+    <div class="terminalresizer resizer resizertopbottom top"></div>
+    <div class="terminalresizer resizer resizerleftright left"></div>
+    <div class="terminalresizer resizer resizertopbottom bottom"></div>
+    <div class="terminalresizer resizer resizerleftright right"></div>
+
+    <div class="terminalappheader appheader">
+
+      <div class="headerleftside">
+        <img class="appheadericon" src="img/terminal.ico">
+
+      </div>
+
+      <div class="headerrightside invert">
+
+        <div class="terminalminimize minimize">
+          <img id="terminalminimize" src="img/minimize.png">
         </div>
 
-        <div class="headerrightside invert">
-
-          <div class="terminalminimize minimize">
-            <img id="terminalminimize" src="img/minimize.png">
-          </div>
-        
         <div class="maximizeandrestore">
 
           <div class="terminalmaximize maximize">
@@ -790,112 +881,69 @@
           </div>
         </div>
 
-          <div class="terminalclose close">
-            <img id="terminalclose" src="img/close.png">
-          </div>
-
+        <div class="terminalclose close">
+          <img id="terminalclose" src="img/close.png">
         </div>
+
+      </div>
+    </div>
+
+    <div class="terminalmainsection">
+
+      <div class="terminaltext">
+        <pre>Microsoft Windows [Version 10.0.22621.382]</pre>
+      </div>
+      <div class="terminaltext">
+        <pre>(c) Microsoft Corporation. All rights reserved.</pre>
+      </div>
+      <div class="terminaltext">
+        <pre>‎</pre>
       </div>
 
-      <div class="terminalmainsection">
-
-        <div class="terminaltext">
-          <pre>Microsoft Windows [Version 10.0.22621.382]</pre>
-        </div>
-        <div class="terminaltext">
-          <pre>(c) Microsoft Corporation. All rights reserved.</pre>
-        </div>
-        <div class="terminaltext">
-          <pre>‎</pre>
-        </div>
-        
-        <div class="terminaltypesection active">
-          <p>C:\Users\notAperson\></p>
-          <input type="text">
-        </div>
-
+      <div class="terminaltypesection active">
+        <p>C:\Users\notAperson\></p>
+        <input type="text">
       </div>
 
     </div>
 
-    <div class="whiteboardapp app" id="whiteboardapp">
+  </div>
 
-      <div class="whiteboardresizer resizer top-left"></div>
-      <div class="whiteboardresizer resizer top-right"></div>
-      <div class="whiteboardresizer resizer bottom-left"></div>
-      <div class="whiteboardresizer resizer bottom-right"></div>
-      <div class="whiteboardresizer resizer resizertopbottom top"></div>
-      <div class="whiteboardresizer resizer resizerleftright left"></div>
-      <div class="whiteboardresizer resizer resizertopbottom bottom"></div>
-      <div class="whiteboardresizer resizer resizerleftright right"></div>
+  <script type='text/javascript'>
+    var zIndex = "1"
+    zIndex = zIndex - 2
+    zIndex = zIndex + 2
+  </script>
+  <script>
+    document.querySelectorAll("img").forEach(elmnt => {
+      elmnt.ondragstart = () => {
+        return false;
+      };
+    });
+  </script>
+  <script src="scripts/taskbar.js"></script>
+  <script src="scripts/appcreater.js"></script>
+  <script src="scripts/edgescript.js"></script>
+  <script src="scripts/applist.js"></script>
+  <script src="scripts/searchmenu.js"></script>
+  <script src="scripts/store.js"></script>
+  <script src="scripts/clock.js"></script>
+  <script src="scripts/dycalendar.js"></script>
+  <script src="scripts/theme.js"></script>
+  <script src="scripts/iescript.js"></script>
+  <script src="scripts/terminal.js"></script>
+  <script src="scripts/whiteboard.js"></script>
+  <script>
+    dycalendar.draw({
+      "target": "#dycalendar",
+      "type": "month",
+      "dayformat": "ddd",
+      "monthformat": "full",
+      "prevnextbutton": "show",
+      "highlighttoday": true,
+    });
+  </script>
 
-      <div class="whiteboardappheader appheader">
+</body>
 
-        <div class="headerleftside">
-          <img class="appheadericon" src="img/whiteboard.ico">
-          Whiteboard
-        </div>
-
-        <div class="headerrightside invert">
-
-          <div class="whiteboardminimize minimize">
-            <img id="whiteboardminimize" src="img/minimize.png">
-          </div>
-        
-        <div class="maximizeandrestore">
-
-          <div class="whiteboardmaximize maximize">
-            <img id="whiteboardmaximize" src="img/maximize.png">
-          </div>
-
-          <div class="whiteboardrestore restore">
-            <img id="whiteboardrestore" class="restoreimage" src="img/restore.png">
-          </div>
-        </div>
-
-          <div class="whiteboardclose close">
-            <img id="whiteboardclose" src="img/close.png">
-          </div>
-        
-          <canvas id="whiteboardcanvas"></canvas>
-
-        </div>
-      </div>
-    </div>
-    
-    <script type='text/javascript'>
-      var zIndex = "1"
-      zIndex = zIndex - 2
-      zIndex = zIndex + 2
-    </script>
-      <script>
-        document.querySelectorAll("img").forEach(elmnt =>{
-            elmnt.ondragstart = () => {
-                return false;
-            };
-        });
-    </script>
-    <script src="scripts/taskbar.js"></script>
-    <script src="scripts/appcreater.js"></script>
-    <script src="scripts/edgescript.js"></script>
-    <script src="scripts/applist.js"></script>
-    <script src="scripts/searchmenu.js"></script>
-    <script src="scripts/store.js"></script>
-    <script src="scripts/clock.js"></script>
-    <script src="scripts/dycalendar.js"></script>
-    <script src="scripts/theme.js"></script>
-    <script src="scripts/iescript.js"></script>
-    <script src="scripts/terminal.js"></script>
-    <script src="scripts/whiteboard.js"></script>
-    <script>
-      dycalendar.draw({
-        "target":"#dycalendar",
-        "type":"month",
-        "dayformat":"ddd",
-        "monthformat":"full",
-        "prevnextbutton":"show",
-        "highlighttoday":true,});
-    </script>
-    
-  </body>
 </html>

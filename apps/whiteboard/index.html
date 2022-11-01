@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="svg, painter, drawing board" />
+    <meta name="Description" content="This is a svg painter!" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" />
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/board.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="board">
+            <div class="main-toolbar">
+                <div class="board-panel tool">
+                    <div class="board-icon clearfix">
+                        <input type="hidden" id="tool_cancel" />
+                        <ul>
+                            <li id="tool_save"><img src="style/img/icon-1.png" alt="Save" title="Save (Ctrl+s)" />
+                            </li>
+                            <li id="tool_undo"><img src="style/img/icon-2.png" alt="Undo" title="Undo (Ctrl+z)" />
+                            </li>
+                            <li id="tool_redo"><img src="style/img/icon-3.png" alt="Redo" title="Redo (Ctrl+y)" />
+                            </li>
+                            <li class="handle_btn" id="tool_delete"><img src="style/img/icon-4.png" alt="Delete"
+                                    title="Delete" /></li>
+                            <li class="handle_btn" id="tool_pick"><img src="style/img/icon-18.png" alt="Mouse"
+                                    title="Mouse" /></li>
+                            <li class="handle_btn" title="Open (Ctrl+O)" id="tt">
+                                <img src="style/img/icon-5.png" alt="Open" title="Open" />
+                            </li>
+                            <li class="handle_btn" id="tool_pencil"><img src="style/img/icon-6.png" alt="Pencil"
+                                    title="Pencil" /></li>
+                            <li class="handle_btn" id="tool_fill"><img src="style/img/icon-8.png" alt="Fill"
+                                    title="Fill" /></li>
+                        </ul>
+                        <div class="clear-screen" id="clear_all"><img src="style/img/icon-20.png" alt="Clear All"
+                                title="Clear All" />
+                        </div>
+                    </div>
+                    <p class="board-text">Tool</p>
+                </div>
+                <div class="board-panel shape">
+                    <div class="board-icon clearfix">
+                        <ul class="shape-left">
+                            <li class="handle_btn" id="tool_rect"><img src="style/img/icon-9.png" alt="Rectangle"
+                                    title="Rectangle" /></li>
+                            <li class="handle_btn icon-size-2" id="tool_ellipse"><img src="style/img/icon-10.png"
+                                    alt="Ellipse" title="Ellipse" /></li>
+                            <li class="handle_btn" id="tool_circle"><img src="style/img/icon-19.png" alt="Circle"
+                                    title="Circle" /></li>
+                            <li class="handle_btn" id="tool_line"><img src="style/img/icon-11.png" alt="Line"
+                                    title="Line" /></li>
+                            <li class="handle_btn" id="tool_polyline"><img src="style/img/icon-12.png" alt="Polyline"
+                                    title="Polyline" /></li>
+                        </ul>
+                        <ul class="shape-right">
+                            <li class="icon-size-3 js-lineStyle">
+                                <img src="style/img/icon-13.png" alt="Line Size" title="Line Size" />
+                                <dl class="line-style" id="lineSize">
+                                    <dd class="h2 active" data-line-size="2">
+                                        <div class="line-inner"><span></span></div>
+                                    </dd>
+                                    <dd class="h3" data-line-size="4">
+                                        <div class="line-inner"><span></span></div>
+                                    </dd>
+                                    <dd class="h4" data-line-size="8">
+                                        <div class="line-inner"><span></span></div>
+                                    </dd>
+                                    <dd class="h5" data-line-size="16">
+                                        <div class="line-inner"><span></span></div>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="board-text">Shapes</p>
+                </div>
+                <div class="board-panel layer">
+                    <div class="board-icon clearfix">
+                        <ul>
+                            <li id="tool_layer_front"><img src="style/img/icon-14.png" alt="Bring To Front"
+                                    title="Bring To Front" />
+                            </li>
+                            <li id="tool_layer_back"><img src="style/img/icon-15.png" alt="Send to Back"
+                                    title="Send to Back" />
+                            </li>
+                            <li id="tool_layer_forward"><img src="style/img/icon-16.png" alt="Bring Forwards"
+                                    title="Bring Forwards" />
+                            </li>
+                            <li id="tool_layer_backward"><img src="style/img/icon-17.png" alt="Send Backwards"
+                                    title="Send Backwards" />
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="board-text">Layers</p>
+                </div>
+                <div class="board-panel color">
+                    <div class="board-icon clearfix">
+                        <ul class="color-left">
+                            <li class="icon-size-2 active" id="font_color">
+                                <div class="color-block"><span></span></div>
+                                <div class="color-text">Line Color</div>
+                            </li>
+                            <li class="icon-size-2" id="fill_color">
+                                <div class="color-block"><span></span></div>
+                                <div class="color-text">BG Color</div>
+                            </li>
+                        </ul>
+                        <div class="color-middle" id="colorPalettes"></div>
+                        <ul class="color-right">
+                            <li class="icon-size-4" id="customColor">
+                                <div class="color-edit">
+                                    <i></i>
+                                    <p>Change Color</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="board-text">Color</p>
+                </div>
+                <div class="board-panel font">
+                    <div class="board-form clearfix">
+                        <div class="form-row">
+                            <span class="text-tool handle_btn" id="tool_text"><img src="style/img/icon-7.png" alt="插入文本"
+                                    title="插入文本" /></span>
+                            <select class="chosen-select" style="width:110px;" id="fontFamily">
+                                <option value="SimSun" style="font-family:SimSun;" selected="selected" _msthash="397462"
+                                    _msttexthash="4244513">Song
+                                    body</option>
+                                <option value="SimHei" style="font-family:SimHei;" _msthash="397644"
+                                    _msttexthash="5811715">blackbody</option>
+                                <option value="Microsoft YaHei" style="font-family:Microsoft YaHei;" _msthash="397826"
+                                    _msttexthash="15848989">
+                                    Microsoft Yahei</option>
+                                <option value="NSimSun" style="font-family:Microsoft JhengHei;" _msthash="398008"
+                                    _msttexthash="17453488">Microsoft
+                                    is in bold</option>
+                                <option value="NSimSun" style="font-family:NSimSun;" _msthash="398190"
+                                    _msttexthash="7182071">Neo-Song Body</option>
+                                <option value="PMingLiU" style="font-family:PMingLiU;" _msthash="398372"
+                                    _msttexthash="11440780">New detail</option>
+                                <option value="MingLiU" style="font-family:MingLiU;" _msthash="398554"
+                                    _msttexthash="8046337">Detailed</option>
+                                <option value="DFKai-SB" style="font-family:DFKai-SB;" _msthash="398736"
+                                    _msttexthash="7607236">Standard italics
+                                </option>
+                                <option value="FangSong" style="font-family:FangSong;" _msthash="398918"
+                                    _msttexthash="4277533">Imitation Song
+                                </option>
+                                <option value="KaiTi" style="font-family:KaiTi;" _msthash="421694"
+                                    _msttexthash="4568837">Italics</option>
+                                <option value="FangSong_GB2312" style="font-family:FangSong_GB2312;" _msthash="421889"
+                                    _msttexthash="4342403">
+                                    Imitation Song _GB2312</option>
+                                <option value="KaiTi_GB2312" style="font-family:KaiTi_GB2312;" _msthash="422084"
+                                    _msttexthash="4633707">Italics
+                                    _GB2312</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <select class="chosen-select" style="width:60px;" id="fontSize">
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="14" selected="selected">14</option>
+                                <option value="16">16</option>
+                                <option value="18">18</option>
+                                <option value="20">20</option>
+                                <option value="22">22</option>
+                                <option value="24">24</option>
+                                <option value="26">26</option>
+                                <option value="28">28</option>
+                                <option value="36">36</option>
+                                <option value="48">48</option>
+                                <option value="72">72</option>
+                            </select>
+                            <ul class="font-style">
+                                <li class="b font_handle_btn" id="fontWeight"></li>
+                                <li class="i font_handle_btn" id="fontStyle"></li>
+                                <li class="u font_handle_btn" id="fontUnderline"></li>
+                                <li class="abc font_handle_btn" id="fontLineThrough"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="board-text">Font Styling</p>
+                </div>
+            </div>
+            <div id="drawingspace">
+                <svg tabindex=0 id="svgPanel" style="overflow:hidden;" xmlns="http://www.w3.org/2000/svg"></svg>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery/jquery.js"></script>
+    <link rel="stylesheet" href="js/spectrum/spectrum.css">
+    <script src="js/spectrum/spectrum.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            // -----------------------lineSize start-----------------------
+            $('.js-lineStyle').on('click', function () {
+                var _obj = $(this).find('dl');
+                if (_obj.css('display') == 'none') {
+                    _obj.show();
+                    $(this).addClass('active');
+                } else {
+                    _obj.hide();
+                    $(this).removeClass('active');
+                }
+            })
+            $(document).bind('click', function (e) {
+                var target = $(e.target);
+                if (target.closest('.js-lineStyle').length == 0) {
+                    $('.js-lineStyle').find('dl').hide();
+                    $('.js-lineStyle').removeClass('active');
+                }
+            })
+            $("#lineSize dd").on("click", function () {
+                $("#lineSize dd").removeClass("active");
+                $(this).addClass("active");
+            });
+            // -----------------------lineSize end-----------------------
+
+            // -----------------------color start-----------------------
+            $(".color-left li").on("click", function () {
+                $(".color-left li").removeClass("active");
+                $(this).addClass("active");
+            });
+
+            var spectrumColors = [
+                ["#ECECEC", "#184a7b", "#4a84bd", "#c6524a", "#9cbd5a", "#8463a5", "#4aadc6", "#000ff0", "#ffffff", "#000000"],
+                ["#c60000", "#ff0000", "#ffc600", "#ffff00", "#94d652", "#00b552", "#00b5f7", "#0073c6", "#002163", "#7331a5"]
+            ];
+            $("#colorPalettes").spectrum({
+                flat: true,
+                showPaletteOnly: true,
+                color: '#0073c6',
+                move: function (tinycolor) {
+                    console.log("color move");
+                    console.log(tinycolor.toHexString())
+                    if ($("#fill_color").hasClass("active")) {
+                        $("#fill_color").attr("data-color", tinycolor.toHexString());
+                        $("#fill_color span").eq(0).css("background", tinycolor.toHexString());
+
+                    } else if ($("#font_color").hasClass("active")) {
+                        $("#font_color").attr("data-color", tinycolor.toHexString());
+                        $("#font_color span").eq(0).css("background", tinycolor.toHexString());
+                    }
+
+                },
+
+                palette: spectrumColors
+            });
+
+            $("#customColor").spectrum({
+                cancelText: "取消",
+                chooseText: "确定",
+                allowEmpty: true,
+                change: function (tinycolor) {
+                    if ($("#fill_color").hasClass("active")) {
+                        $("#fill_color").attr("data-color", tinycolor.toHexString());
+                        $("#fill_color span").eq(0).css("background", tinycolor.toHexString());
+                    } else if ($("#font_color").hasClass("active")) {
+                        $("#font_color").attr("data-color", tinycolor.toHexString());
+                        $("#font_color span").eq(0).css("background", tinycolor.toHexString());
+                    }
+                }
+            });
+
+            $("#font_color span").css("background", GlobalStatus.defaultFontColor);
+            $("#font_color").attr("data-color", GlobalStatus.defaultFontColor);
+            $("#fill_color span").css("background", GlobalStatus.defaultFillColor);
+            $("#fill_color").attr("data-color", GlobalStatus.defaultFillColor);
+            // -----------------------color end-----------------------
+
+            // -----------------------handle_btn start-----------------------
+            $(".handle_btn").on("click", function () {
+                if ($(this).hasClass("active")) {
+                    return false;
+                } else {
+                    $(".handle_btn").removeClass("active");
+                    $(this).addClass("active");
+                }
+            });
+            // -----------------------handle_btn end-----------------------
+        })
+    </script>
+
+    <script src="js/core.js"></script>
+    <script src="js/svg/svg.js"></script>
+    <script src="js/svg/svg.draggable.js"></script>
+    <script src="js/global.status.js"></script>
+    <script src="js/svg.doc.extension.js"></script>
+    <script src="js/draw.tool.js"></script>
+    <script src="js/draw.tool.rect.js"></script>
+    <script src="js/draw.tool.pencil.js"></script>
+    <script src="js/draw.tool.ellipse.js"></script>
+    <script src="js/draw.tool.circle.js"></script>
+    <script src="js/draw.tool.line.js"></script>
+    <script src="js/draw.tool.polyline.js"></script>
+    <script src="js/draw.tool.pick.js"></script>
+    <script src="js/handle.border.js"></script>
+    <script src="js/handle.border.listener.js"></script>
+
+    <script type="text/javascript">
+        if (!SVG.supported) {
+            alert('SVG not supported');
+        }
+
+        var svgDraw = SVG("svgPanel").size('100%', '100%');
+        var svgDoc = svgDraw.doc();
+        var currentDrawTool = null;
+
+        function resetCurrentDrawTool() {
+            currentDrawTool && currentDrawTool.stop();
+            GlobalStatus.unPickAll();
+            $("#svgPanel").css("cursor", "default");
+        }
+
+        //bind handle_btn event
+        $("#tool_rect").on("click", function () {
+            resetCurrentDrawTool();
+            currentDrawTool = new DrawTool.Rect(svgDoc);
+        });
+        $("#tool_ellipse").on("click", function () {
+            resetCurrentDrawTool();
+            currentDrawTool = new DrawTool.Ellipse(svgDoc);
+        });
+
+        $("#tool_circle").on("click", function () {
+            resetCurrentDrawTool();
+            currentDrawTool = new DrawTool.Circle(svgDoc);
+        });
+        $("#tool_line").on("click", function () {
+            resetCurrentDrawTool();
+            currentDrawTool = new DrawTool.Line(svgDoc);
+        });
+        $("#tool_polyline").on("click", function () {
+            resetCurrentDrawTool();
+            currentDrawTool = new DrawTool.Polyline(svgDoc);
+        });
+        $("#tool_pencil").on("click", function () {
+            resetCurrentDrawTool();
+            currentDrawTool = new DrawTool.Pencil(svgDoc);
+            $("#svgPanel").css("cursor", "url(style/img/cur/tool_pencil.cur), auto");
+        });
+        $("#tool_pencil").on("dblclick", function () {
+            resetCurrentDrawTool();
+            currentDrawTool = new DrawTool.Pencil(svgDoc, 'T');
+            $("#svgPanel").css("cursor", "url(style/img/cur/tool_pencil.cur), auto");
+        });
+        $("#tool_pick").on("click", function () {
+            resetCurrentDrawTool();
+            currentDrawTool = new DrawTool.Pick(svgDoc);
+        });
+        $("#tool_layer_front").on("click", function () {
+            var elements = GlobalStatus.getPickeds();
+            if (elements.length > 0) {
+                $(elements).each(function () {
+                    this.front();
+                });
+            }
+        });
+        $("#tool_layer_back").on("click", function () {
+            var elements = GlobalStatus.getPickeds();
+            if (elements.length > 0) {
+                $(elements).each(function () {
+                    this.back();
+                });
+            }
+        });
+        $("#tool_layer_backward").on("click", function () {
+            var elements = GlobalStatus.getPickeds();
+            if (elements.length > 0) {
+                $(elements).each(function () {
+                    if (this.previous()) {
+                        //TODO 迭代 且使用白名单数组
+                        if (this.previous().type == "g") {
+                            this.backward();
+                        }
+                        this.backward();
+                    }
+                });
+            }
+        });
+        $("#tool_layer_forward").on("click", function () {
+            var elements = GlobalStatus.getPickeds();
+            if (elements.length > 0) {
+                $(elements).each(function () {
+                    if (this.next()) {
+                        if (this.next().type == "g") {
+                            this.forward();
+                        }
+                        this.forward();
+                    }
+                });
+            }
+        });
+        $("#tool_fill").on("click", function () {
+            resetCurrentDrawTool();
+        });
+        $("#tool_delete").on("click", function () {
+            resetCurrentDrawTool();
+        });
+        $("#clear_all").on("click", function () {
+            $(GlobalStatus.getAllElements()).each(function () {
+                this.handleBorder && this.handleBorder.hide()
+                this.remove();
+            });
+        });
+
+        $(function () {
+            $("#tool_pencil").click();
+        });
+    </script>
+</body>
+
+</html>

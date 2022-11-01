@@ -13,7 +13,7 @@
  */
 /*! dyCalendarJS | (c) 2016 Yusuf Shakeel | https://github.com/yusufshakeel/dyCalendarJS */
 
-(function(global) {
+(function (global) {
 
   "use strict";
 
@@ -388,7 +388,7 @@
    */
   function onClick() {
 
-    document.body.onclick = function(e) {
+    document.body.onclick = function (e) {
 
       //get event object (window.event for IE compatibility)
       e = global.event || e;
@@ -467,7 +467,7 @@
    * @param object option     user preferences
    * @return boolean          true if success, false otherwise
    */
-  dycalendar.draw = function(option) {
+  dycalendar.draw = function (option) {
 
     //check if option is passed or not
     if (typeof option === "undefined") {
